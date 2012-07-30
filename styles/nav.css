@@ -13,6 +13,8 @@ ul.dept-navbar {
   font-size: 14px;
   height: 36px;
   list-style: none;
+  margin: 0;
+  padding: 0;
   position: relative;
 }
 
@@ -151,18 +153,24 @@ ul.dept-navbar > li > div.menu h2 {
   margin: 0 0 8px;
 }
 
-ul.dept-navbar > li > div.menu li {
+ul.dept-navbar > li > div.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.dept-navbar > li > div.menu ul li {
   background: transparent url('../images/bullet-nav.png') no-repeat 0 6px;
   margin-bottom: 4px;
   padding-left: 14px;
 }
 
-ul.dept-navbar > li > div.menu li a {
+ul.dept-navbar > li > div.menu ul li a {
   color: #666666;
   text-decoration: none;
 }
 
-ul.dept-navbar > li > div.menu li a:hover {
+ul.dept-navbar > li > div.menu ul li a:hover {
   color: #333333;
   text-decoration: underline;
 }
