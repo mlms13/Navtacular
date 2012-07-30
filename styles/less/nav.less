@@ -1,0 +1,160 @@
+@navbg: #666;
+
+ul.dept-navbar {
+    background: @navbg;
+    background-image: url('../images/bg-nav.png');
+    background-image: -webkit-linear-gradient(transparent 10%, rgba(0,0,0,0.3));
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    font-size: 14px;
+    height: 36px;
+    list-style: none;
+    position: relative;
+
+    > li {
+        float: left;
+        height: 36px;
+
+        > a {
+            border-left: 1px solid lighten(@navbg, 6.6%);
+            border-right: 1px solid darken(@navbg, 20%);
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            font-weight: bold;
+            line-height: 16px;
+            padding: 10px 18px 10px 17px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: -1px -1px 1px rgba(0,0,0,0.4);
+            -webkit-transition: all 200ms;
+        }
+
+        &:first-child > a {
+            border-left: 0;
+        }
+
+        &:last-child > a:after, &.last-child > a:after {
+            border-left: 1px solid lighten(@navbg, 6.6%);
+            content: "";
+            height: 36px;
+            position: absolute;
+            right: -2px;
+            top: 0;
+        }
+
+        &:hover > a, > a:hover {
+            background-color: darken(@navbg, 13.2%);
+            background-image: url('../images/bg-selected.png');
+            background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.08) 50%, transparent 80%);
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
+            -webkit-transition: all 100ms;
+        }
+
+        &.menu-align-right {
+            position: relative;
+
+            > div.menu {
+                left: auto;
+                right: 0;
+            }
+        }
+
+        > div.menu {
+            background: rgba(255,255,255,0.97);
+            border-color: darken(@navbg, 10%);
+            border-style: solid;
+            border-width: 6px 2px 2px;
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+            font-size: 13px;
+            min-width: 200px;
+            padding: 24px;
+            position: absolute;
+            -webkit-transition: opacity 300ms linear, visibility 0 linear 300ms;
+            visibility: hidden;
+            z-index: 100;
+
+            .no-rgba & {
+                background-image: url('../images/w97.png');
+            }
+            .csstransitions & {
+                opacity: 0;
+            }
+            &.right {
+                right: 0;
+            }
+            &.cols {
+                .section {
+                    float: left;
+                    padding-left: 24px;
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                }
+            }
+            &.wide {
+                border-width: 6px 1px 1px;
+                left: 0;
+                width: 950px;
+
+                .section {
+                    float: left;
+                    margin: 0 2%;
+                    width: 29%;
+                    &.continued {
+                        padding-top: 28px;
+                    }
+                }
+            }
+            h2 {
+                font-size: 17px;
+                line-height: 20px;
+                margin: 0 0 8px;
+            }
+            li {
+                background: transparent url('../images/bullet-nav.png') no-repeat 0 6px;
+                margin-bottom: 4px;
+                padding-left: 14px;
+
+                a {
+                    color: #666;
+                    text-decoration: none;
+                    &:hover {
+                        color: #333;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .menu {
+                -webkit-transition: opacity 150ms linear;
+                visibility: visible;
+
+                .csstransitions & {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .flexbox &.full-width, .flexbox-legacy &.full-width {
+        display: -webkit-box;
+        width: 100%;
+
+        > li {
+            -webkit-box-flex: 1;
+            > a {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            &:last-child > a {
+                border-right: 0;
+                &:after {
+                    border-left: 0;
+                }
+            }
+        }
+    }
+}
