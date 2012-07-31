@@ -285,12 +285,16 @@ ul.dept-navbar.tan > li:last-child > a:after,ul.dept-navbar.tan > li.last-child 
 }
 
 ul.dept-navbar.tan > li > div.menu {
-  background: rgba(0, 57, 41, 0.88);
+  background: rgba(0, 57, 41, 0.94);
   border: 0;
   border-top: 4px solid #a29664;
   border-radius: 0 0 8px 8px;
   color: white;
   padding: 0;
+}
+
+.no-rgba ul.dept-navbar.tan > li > div.menu {
+  background-image: url('../images/g94.png');
 }
 
 ul.dept-navbar.tan > li > div.menu.wide {
