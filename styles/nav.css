@@ -216,3 +216,226 @@ ul.dept-navbar > li:hover .menu {
 .flexbox ul.dept-navbar.full-width > li:last-child > a:after,.flexbox-legacy ul.dept-navbar.full-width > li:last-child > a:after {
   border-left: 0;
 }
+
+/* Green theme for the CSS Navigation Bar */
+ul.dept-navbar.green {
+  background-color: #06765f;
+  border-radius: 8px;
+}
+
+ul.dept-navbar.green > li > a {
+  border-left-color: #0c8b69;
+  border-right-color: #034032;
+}
+
+ul.dept-navbar.green > li:hover > a,ul.dept-navbar.green > li > a:hover {
+  background-color: #03523c;
+}
+
+ul.dept-navbar.green > li:first-child > a {
+  border-radius: 8px 0 0 8px;
+}
+
+ul.dept-navbar.green > li:last-child > a:after,ul.dept-navbar.green > li.last-child > a:after {
+  border-left-color: #038e64;
+}
+
+ul.dept-navbar.green > li > div.menu {
+  border-color: #03573c;
+  min-width: 150px;
+}
+
+ul.dept-navbar.green > li > div.menu.wide {
+  left: 8px;
+  width: 936px;
+}
+
+ul.dept-navbar.green.full-width > li:last-child > a {
+  border-radius: 0 8px 8px 0;
+}
+
+/* Tan theme for the CSS Navigation Bar */
+ul.dept-navbar.tan {
+  background: #faf2e0;
+  border-bottom: 1px solid #00684d;
+
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+ul.dept-navbar.tan > li {
+  border-right: 1px solid white;
+}
+
+ul.dept-navbar.tan > li > a {
+  border: 0;
+  border-radius: 8px 8px 0 0;
+  color: #00563c;
+  text-shadow: 1px 1px 1px white;
+}
+
+ul.dept-navbar.tan > li:hover > a,ul.dept-navbar.tan > li > a:hover {
+  background-color: #004934;
+  color: white;
+  text-shadow: none;
+}
+
+ul.dept-navbar.tan > li:last-child > a:after,ul.dept-navbar.tan > li.last-child > a:after {
+  border-left: 0;
+}
+
+ul.dept-navbar.tan > li > div.menu {
+  background: rgba(0, 57, 41, 0.88);
+  border: 0;
+  border-top: 4px solid #a29664;
+  border-radius: 0 0 8px 8px;
+  color: white;
+  padding: 0;
+}
+
+ul.dept-navbar.tan > li > div.menu.wide {
+  width: 1000px;
+}
+
+ul.dept-navbar.tan > li > div.menu h2 {
+  background: black;
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  padding: 7px;
+  text-align: center;
+}
+
+ul.dept-navbar.tan > li > div.menu li {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+ul.dept-navbar.tan > li > div.menu li a {
+  color: #f2ead7;
+  display: block;
+  padding: 7px;
+}
+
+ul.dept-navbar.tan > li > div.menu li a:hover {
+  background: white;
+
+  background-image: -webkit-linear-gradient(white, #faf2e0);
+  background-image: -moz-linear-gradient(white, #faf2e0);
+  background-image: -o-linear-gradient(white, #faf2e0);
+  background-image: -ms-linear-gradient(white, #faf2e0);
+  background-image: linear-gradient(white, #faf2e0);
+  color: #333333;
+  text-decoration: none;
+}
+
+/* Light theme for the CSS Navigation Bar */
+ul.dept-navbar.light {
+  background-color: #f6f6f6;
+
+  background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.15));
+  background-image: -moz-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.15));
+  background-image: -ms-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+ul.dept-navbar.light > li > a {
+  border-left-color: #fafafa;
+  border-right-color: #bbbbbb;
+  color: #00684d;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+ul.dept-navbar.light > li:hover > a,ul.dept-navbar.light > li > a:hover {
+  background-color: #888888;
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+ul.dept-navbar.light > li:first-child > a {
+  border-radius: 4px 0 0 4px;
+}
+
+ul.dept-navbar.light > li:last-child > a:after,ul.dept-navbar.light > li.last-child > a:after {
+  border-left-color: #fafafa;
+}
+
+ul.dept-navbar.light > li > div.menu {
+  background: #e4e4e4;
+  border-color: #bbbbbb;
+  border-width: 2px 1px 1px;
+  padding: 0;
+}
+
+ul.dept-navbar.light > li > div.menu.wide {
+  left: 4px;
+  width: 992px;
+}
+
+ul.dept-navbar.light > li > div.menu h2 {
+  margin: 7px;
+  padding: 0;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+ul.dept-navbar.light > li > div.menu li {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+ul.dept-navbar.light > li > div.menu li a {
+  color: #666666;
+  display: block;
+  padding: 7px;
+}
+
+ul.dept-navbar.light > li > div.menu li a:hover {
+  background: #00684d;
+
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.15), transparent);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.15), transparent);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.15), transparent);
+  background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.15), transparent);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15), transparent);
+  color: white;
+  text-decoration: none;
+}
+
+ul.dept-navbar.light.full-width > li:last-child > a {
+  border-radius: 0 4px 4px 0;
+}
+
+/* Dark theme for the CSS Navigation Bar */
+ul.dept-navbar.dark {
+  height: 40px;
+}
+
+ul.dept-navbar.dark > li {
+  height: 40px;
+}
+
+ul.dept-navbar.dark > li > a {
+  font-weight: normal;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+ul.dept-navbar.dark > li:last-child > a:after,ul.dept-navbar.dark > li.last-child > a:after {
+  height: 40px;
+}
+
+ul.dept-navbar.dark > li > div.menu {
+  border-width: 6px 4px 4px;
+}
+
+ul.dept-navbar.dark > li > div.menu.wide {
+  border-width: 6px 1px 1px;
+}

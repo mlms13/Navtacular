@@ -1,0 +1,37 @@
+/* Green theme for the CSS Navigation Bar */
+ul.dept-navbar {
+    &.green {
+        background-color: #06765f;
+        border-radius: 8px;
+
+        > li {
+            > a {
+                border-left-color: #0c8b69;
+                border-right-color: #034032;
+            }
+            &:hover > a, > a:hover {
+                background-color: #03523c;
+            }
+            &:first-child > a {
+                border-radius: 8px 0 0 8px;
+            }
+            &:last-child > a, &.last-child > a {
+                &:after {
+                    border-left-color: #038e64;
+                }
+            }
+
+            > div.menu {
+                border-color: #03573c;
+                min-width: 150px;
+                &.wide {
+                    left: 8px;
+                    width: 936px;
+                }
+            }
+        }
+        &.full-width > li:last-child > a {
+            border-radius: 0 8px 8px 0;
+        }
+    }
+}

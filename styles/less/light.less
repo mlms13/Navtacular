@@ -1,0 +1,68 @@
+/* Light theme for the CSS Navigation Bar */
+ul.dept-navbar {
+    &.light {
+        background-color: #f6f6f6;
+        background-image: -webkit-linear-gradient(transparent 10%, rgba(0,0,0,0.15));
+        border-radius: 4px;
+        box-shadow: 0 0 4px rgba(0,0,0,0.25);
+
+        > li {
+            > a {
+                border-left-color: #fafafa;
+                border-right-color: #bbb;
+                color: #00684d;
+                text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+            }
+            &:hover > a, > a:hover {
+                background-color: #888;
+                color: #fff;
+                text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+            }
+            &:first-child > a {
+                border-radius: 4px 0 0 4px;
+            }
+            &:last-child > a, &.last-child > a {
+                &:after {
+                    border-left-color: #fafafa;
+                }
+            }
+            > div.menu {
+                background: #e4e4e4;
+                border-color: #bbb;
+                border-width: 2px 1px 1px;
+                padding: 0;
+
+                &.wide {
+                    left: 4px;
+                    width: 992px;
+                }
+
+                h2 {
+                    margin: 7px;
+                    padding: 0;
+                    border-bottom: 1px solid #aaa;
+                }
+                li {
+                    background: transparent;
+                    margin: 0;
+                    padding: 0;
+
+                    a {
+                        color: #666;
+                        display: block;
+                        padding: 7px;
+                        &:hover {
+                            background: #00684d;
+                            background-image: -webkit-linear-gradient(rgba(255,255,255,0.15), transparent);
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        &.full-width > li:last-child > a {
+            border-radius: 0 4px 4px 0;
+        }
+    }
+}

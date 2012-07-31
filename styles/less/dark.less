@@ -1,0 +1,26 @@
+/* Dark theme for the CSS Navigation Bar */
+ul.dept-navbar {
+    &.dark {
+        height: 40px;
+
+        > li {
+            height: 40px;
+            > a {
+                font-weight: normal;
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+            &:last-child > a, &.last-child > a {
+                &:after {
+                    height: 40px;
+                }
+            }
+            > div.menu {
+                border-width: 6px 4px 4px;
+                &.wide {
+                    border-width: 6px 1px 1px;
+                }
+            }
+        }
+    }
+}
