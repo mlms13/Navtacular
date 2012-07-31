@@ -7,16 +7,35 @@
         <style type="text/css">
             body {
                 font: 14px sans-serif;
-                margin: 40px;
+                margin: 0;
             }
-            nav {
+            section, header, nav {
                 margin: 0 auto;
                 max-width: 1000px;
             }
+            section {
+                margin-top: 20px;
+                overflow: hidden;
+            }
+            section h2 {
+                color: #5b2;
+                font-weight: normal;
+            }
+            section a {
+                color: #0ad;
+                text-decoration: none;
+            }
+            section a:hover {
+                text-decoration: underline;
+            }
         </style>
         <script type="text/javascript" src="./scripts/modernizr.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     </head>
     <body>
+        <header>
+            <h1>CSS Navigation Demo</h1>
+        </header>
         <nav>
             <ul class="dept-navbar">
                 <li><a href="#">Home</a></li>
@@ -72,5 +91,43 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <section>
+            <h2>Themes</h2>
+            <p>
+                You can toggle between different color themes using the following links: <a id="btn_light" href="#">Light</a> &#8226; <a id="btn_dark" href="#">Dark</a> &#8226; <a id="btn_green" href="#">Green</a> &#8226; <a id="btn_tan" href="#">Tan</a>
+            </p>
+            <p>
+                It's easy to develop your own themes using CSS. As an example, see the light, dark, green, and tan themes (written in <a href="http://lesscss.org/">LESS</a>) in the <code>/styles/less/</code> folder. You can view the compiled CSS at the end of <a href="./styles/nav.css"><code>nav.css</code></a>.
+            </p>
+        </section>
+        <script type=text/javascript>
+            (function () {
+                var ul = $('.dept-navbar')[0],
+                    btn_light = $('#btn_light')[0],
+                    btn_dark = $('#btn_dark')[0],
+                    btn_green = $('#btn_green')[0],
+                    btn_tan = $('#btn_tan')[0];
+
+                function addTheme(theme) {
+                    // remove any existing theme
+                    ul.className = ul.className.replace(' light', '').replace(' dark', '').replace(' green', '').replace(' tan', '');
+                    // and add the new one
+                    ul.className += ' ' + theme;
+                }
+                btn_light.onclick = function () {
+                    addTheme('light');
+                };
+                btn_dark.onclick = function () {
+                    addTheme('dark');
+                };
+                btn_green.onclick = function () {
+                    addTheme('green');
+                };
+                btn_tan.onclick = function () {
+                    addTheme('tan');
+                };
+            } ());
+        </script>
+
     </body>
 </html>
