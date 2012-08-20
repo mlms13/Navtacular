@@ -443,3 +443,30 @@ ul.dept-navbar.dark > li > div.menu {
 ul.dept-navbar.dark > li > div.menu.wide {
   border-width: 6px 1px 1px;
 }
+
+@media only screen and (max-width: 600px) {
+  ul.dept-navbar > li.menu-align-right {
+  position: static;
+}
+
+ul.dept-navbar > li > div.menu {
+  border-width: 6px 1px 1px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 0;
+  width: 100%;
+}
+
+ul.dept-navbar > li > div.menu.cols,ul.dept-navbar > li > div.menu.wide {
+  width: 100%;
+}
+
+ul.dept-navbar > li > div.menu.cols .section,ul.dept-navbar > li > div.menu.wide .section {
+  float: none;
+  width: 100%;
+}
+
+}

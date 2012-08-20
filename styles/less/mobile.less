@@ -1,0 +1,23 @@
+@media only screen and (max-width: 600px) {
+	ul.dept-navbar {
+		> li {
+			&.menu-align-right {
+				position: static;
+			}
+			> div.menu {
+                border-width: 6px 1px 1px;
+                box-sizing: border-box;
+                left: 0;
+                width: 100%;
+
+				&.cols, &.wide {
+					width: 100%;
+					.section {
+						float: none;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
