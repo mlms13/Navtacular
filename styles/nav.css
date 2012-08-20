@@ -18,6 +18,33 @@ ul.dept-navbar {
   position: relative;
 }
 
+.flexbox-legacy ul.dept-navbar.full-width {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  width: 100%;
+}
+
+.flexbox-legacy ul.dept-navbar.full-width > li {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+}
+
+.flexbox-legacy ul.dept-navbar.full-width > li > a {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.flexbox-legacy ul.dept-navbar.full-width > li:last-child > a {
+  border-right: 0;
+}
+
+.flexbox-legacy ul.dept-navbar.full-width > li:last-child > a:after {
+  border-left: 0;
+}
+
 ul.dept-navbar > li {
   float: left;
   height: 36px;
@@ -188,33 +215,6 @@ ul.dept-navbar > li:hover .menu {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
-}
-
-.flexbox ul.dept-navbar.full-width,.flexbox-legacy ul.dept-navbar.full-width {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  width: 100%;
-}
-
-.flexbox ul.dept-navbar.full-width > li,.flexbox-legacy ul.dept-navbar.full-width > li {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-box-flex: 1;
-  box-flex: 1;
-}
-
-.flexbox ul.dept-navbar.full-width > li > a,.flexbox-legacy ul.dept-navbar.full-width > li > a {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.flexbox ul.dept-navbar.full-width > li:last-child > a,.flexbox-legacy ul.dept-navbar.full-width > li:last-child > a {
-  border-right: 0;
-}
-
-.flexbox ul.dept-navbar.full-width > li:last-child > a:after,.flexbox-legacy ul.dept-navbar.full-width > li:last-child > a:after {
-  border-left: 0;
 }
 
 /* Green theme for the CSS Navigation Bar */

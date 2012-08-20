@@ -12,6 +12,25 @@ ul.dept-navbar {
     padding: 0;
     position: relative;
 
+    .flexbox-legacy &.full-width {
+        display: -webkit-box;
+        width: 100%;
+
+        > li {
+            -webkit-box-flex: 1;
+            > a {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            &:last-child > a {
+                border-right: 0;
+                &:after {
+                    border-left: 0;
+                }
+            }
+        }
+    }
+
     > li {
         float: left;
         height: 36px;
@@ -142,25 +161,6 @@ ul.dept-navbar {
 
                 .csstransitions & {
                     opacity: 1;
-                }
-            }
-        }
-    }
-
-    .flexbox &.full-width, .flexbox-legacy &.full-width {
-        display: -webkit-box;
-        width: 100%;
-
-        > li {
-            -webkit-box-flex: 1;
-            > a {
-                padding-left: 0;
-                padding-right: 0;
-            }
-            &:last-child > a {
-                border-right: 0;
-                &:after {
-                    border-left: 0;
                 }
             }
         }
