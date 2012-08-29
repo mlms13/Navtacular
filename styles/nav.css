@@ -1,15 +1,5 @@
 ul.dept-navbar {
-  background: #666666;
-  background-image: url('../images/bg-nav.png');
-
-  background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
-  background-image: -moz-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
-  background-image: -o-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
-  background-image: -ms-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
-  background-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
-
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  background: #eeeeee;
   font-size: 14px;
   height: 36px;
   list-style: none;
@@ -51,9 +41,8 @@ ul.dept-navbar > li {
 }
 
 ul.dept-navbar > li > a {
-  border-left: 1px solid #777777;
-  border-right: 1px solid #333333;
-  color: white;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   cursor: pointer;
   display: block;
   font-weight: bold;
@@ -62,7 +51,6 @@ ul.dept-navbar > li > a {
   position: relative;
   text-align: center;
   text-decoration: none;
-  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
 
   -webkit-transition: all 200ms;
   -moz-transition: all 200ms;
@@ -76,7 +64,7 @@ ul.dept-navbar > li:first-child > a {
 }
 
 ul.dept-navbar > li:last-child > a:after,ul.dept-navbar > li.last-child > a:after {
-  border-left: 1px solid #777777;
+  border-left: 1px solid black;
   content: "";
   height: 36px;
   position: absolute;
@@ -86,16 +74,7 @@ ul.dept-navbar > li:last-child > a:after,ul.dept-navbar > li.last-child > a:afte
 
 ul.dept-navbar > li:hover > a,ul.dept-navbar > li > a:hover {
   background-color: #444444;
-  background-image: url('../images/bg-selected.png');
-
-  background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
-  background-image: -moz-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
-  background-image: -o-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
-  background-image: -ms-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
-  background-image: radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
-
-  -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+  color: white;
 
   -webkit-transition: all 100ms;
   -moz-transition: all 100ms;
@@ -115,9 +94,8 @@ ul.dept-navbar > li.menu-align-right > div.menu {
 
 ul.dept-navbar > li > div.menu {
   background: rgba(255, 255, 255, 0.97);
-  border-color: #4d4d4d;
-  border-style: solid;
-  border-width: 6px 2px 2px;
+  border: 2px solid black;
+  border-top-width: 6px;
 
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
@@ -193,12 +171,10 @@ ul.dept-navbar > li > div.menu ul li {
 }
 
 ul.dept-navbar > li > div.menu ul li a {
-  color: #666666;
   text-decoration: none;
 }
 
 ul.dept-navbar > li > div.menu ul li a:hover {
-  color: #333333;
   text-decoration: underline;
 }
 
@@ -219,17 +195,25 @@ ul.dept-navbar > li:hover .menu {
 
 /* Green theme for the CSS Navigation Bar */
 ul.dept-navbar.green {
-  background-color: #06765f;
+  background: #06765f;
+  background-image: url('../images/bg-nav.png');
+
+  background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
+  background-image: -moz-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
+  background-image: -o-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
+  background-image: -ms-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
   border-radius: 8px;
+
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 ul.dept-navbar.green > li > a {
   border-left-color: #0c8b69;
   border-right-color: #034032;
-}
-
-ul.dept-navbar.green > li:hover > a,ul.dept-navbar.green > li > a:hover {
-  background-color: #03523c;
+  color: white;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
 }
 
 ul.dept-navbar.green > li:first-child > a {
@@ -240,14 +224,35 @@ ul.dept-navbar.green > li:last-child > a:after,ul.dept-navbar.green > li.last-ch
   border-left-color: #038e64;
 }
 
+ul.dept-navbar.green > li:hover > a,ul.dept-navbar.green > li > a:hover {
+  background-color: #03523c;
+  background-image: url('../images/bg-selected.png');
+
+  background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: -moz-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: -o-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: -ms-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+
+  -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
 ul.dept-navbar.green > li > div.menu {
   border-color: #03573c;
-  min-width: 150px;
 }
 
 ul.dept-navbar.green > li > div.menu.wide {
   left: 8px;
   width: 936px;
+}
+
+ul.dept-navbar.green > li > div.menu ul li a {
+  color: #666666;
+}
+
+ul.dept-navbar.green > li > div.menu ul li a:hover {
+  color: #333333;
 }
 
 ul.dept-navbar.green.full-width > li:last-child > a {
@@ -258,9 +263,6 @@ ul.dept-navbar.green.full-width > li:last-child > a {
 ul.dept-navbar.tan {
   background: #faf2e0;
   border-bottom: 1px solid #00684d;
-
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 
 ul.dept-navbar.tan > li {
@@ -274,14 +276,13 @@ ul.dept-navbar.tan > li > a {
   text-shadow: 1px 1px 1px white;
 }
 
-ul.dept-navbar.tan > li:hover > a,ul.dept-navbar.tan > li > a:hover {
-  background-color: #004934;
-  color: white;
-  text-shadow: none;
-}
-
 ul.dept-navbar.tan > li:last-child > a:after,ul.dept-navbar.tan > li.last-child > a:after {
   border-left: 0;
+}
+
+ul.dept-navbar.tan > li:hover > a,ul.dept-navbar.tan > li > a:hover {
+  background-color: #004934;
+  text-shadow: none;
 }
 
 ul.dept-navbar.tan > li > div.menu {
@@ -337,7 +338,8 @@ ul.dept-navbar.tan > li > div.menu li a:hover {
 
 /* Light theme for the CSS Navigation Bar */
 ul.dept-navbar.light {
-  background-color: #f6f6f6;
+  background: #f6f6f6;
+  background-image: url('../images/bg-nav.png');
 
   background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.15));
   background-image: -moz-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.15));
@@ -357,18 +359,27 @@ ul.dept-navbar.light > li > a {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
-ul.dept-navbar.light > li:hover > a,ul.dept-navbar.light > li > a:hover {
-  background-color: #888888;
-  color: white;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
-
 ul.dept-navbar.light > li:first-child > a {
   border-radius: 4px 0 0 4px;
 }
 
 ul.dept-navbar.light > li:last-child > a:after,ul.dept-navbar.light > li.last-child > a:after {
   border-left-color: #fafafa;
+}
+
+ul.dept-navbar.light > li:hover > a,ul.dept-navbar.light > li > a:hover {
+  background-color: #888888;
+  background-image: url('../images/bg-selected.png');
+
+  background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: -moz-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: -o-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: -ms-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+
+  -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
 ul.dept-navbar.light > li > div.menu {
@@ -419,6 +430,17 @@ ul.dept-navbar.light.full-width > li:last-child > a {
 
 /* Dark theme for the CSS Navigation Bar */
 ul.dept-navbar.dark {
+  background: #666666;
+  background-image: url('../images/bg-nav.png');
+
+  background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
+  background-image: -moz-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
+  background-image: -o-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
+  background-image: -ms-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
+
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   height: 40px;
 }
 
@@ -427,21 +449,49 @@ ul.dept-navbar.dark > li {
 }
 
 ul.dept-navbar.dark > li > a {
+  border-left-color: #777777;
+  border-right-color: #333333;
+  color: white;
   font-weight: normal;
   padding-top: 12px;
   padding-bottom: 12px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
 }
 
-ul.dept-navbar.dark > li:last-child > a:after,ul.dept-navbar.dark > li.last-child > a:after {
+ul.dept-navbar.dark > li:last-child a:after,ul.dept-navbar.dark > li.last-child a:after {
+  border-left-color: #777777;
   height: 40px;
 }
 
+ul.dept-navbar.dark > li:hover > a,ul.dept-navbar.dark > li > a:hover {
+  background-color: #444444;
+  background-image: url('../images/bg-selected.png');
+
+  background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: -moz-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: -o-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: -ms-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+
+  -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
 ul.dept-navbar.dark > li > div.menu {
+  border-color: #4d4d4d;
   border-width: 6px 4px 4px;
 }
 
 ul.dept-navbar.dark > li > div.menu.wide {
   border-width: 6px 1px 1px;
+}
+
+ul.dept-navbar.dark > li > div.menu ul li a {
+  color: #666666;
+}
+
+ul.dept-navbar.dark > li > div.menu ul li a:hover {
+  color: #333333;
 }
 
 @media only screen and (max-width: 600px) {

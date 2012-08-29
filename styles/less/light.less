@@ -1,7 +1,8 @@
 /* Light theme for the CSS Navigation Bar */
 ul.dept-navbar {
     &.light {
-        background-color: #f6f6f6;
+        background: #f6f6f6;
+        background-image: url('../images/bg-nav.png');
         background-image: -webkit-linear-gradient(transparent 10%, rgba(0,0,0,0.15));
         border-radius: 4px;
         box-shadow: 0 0 4px rgba(0,0,0,0.25);
@@ -13,11 +14,6 @@ ul.dept-navbar {
                 color: #00684d;
                 text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
             }
-            &:hover > a, > a:hover {
-                background-color: #888;
-                color: #fff;
-                text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-            }
             &:first-child > a {
                 border-radius: 4px 0 0 4px;
             }
@@ -25,6 +21,13 @@ ul.dept-navbar {
                 &:after {
                     border-left-color: #fafafa;
                 }
+            }
+            &:hover > a, > a:hover {
+                background-color: #888;
+                background-image: url('../images/bg-selected.png');
+                background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.08) 50%, transparent 80%);
+                box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
+                text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
             }
             > div.menu {
                 background: #e4e4e4;

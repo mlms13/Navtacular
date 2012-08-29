@@ -1,24 +1,53 @@
 /* Dark theme for the CSS Navigation Bar */
+@navbg: #666;
+
 ul.dept-navbar {
     &.dark {
+        background: @navbg;
+        background-image: url('../images/bg-nav.png');
+        background-image: -webkit-linear-gradient(transparent 10%, rgba(0,0,0,0.3));
+        box-shadow: 0 0 8px rgba(0,0,0,0.3);
         height: 40px;
 
         > li {
             height: 40px;
             > a {
+                border-left-color: lighten(@navbg, 6.6%);
+                border-right-color: darken(@navbg, 20%);
+                color: #fff;
                 font-weight: normal;
                 padding-top: 12px;
                 padding-bottom: 12px;
+                text-shadow: -1px -1px 1px rgba(0,0,0,0.4);
             }
-            &:last-child > a, &.last-child > a {
-                &:after {
+            &:last-child, &.last-child {
+                a:after {
+                    border-left-color: lighten(@navbg, 6.6%);
                     height: 40px;
                 }
             }
+            &:hover > a, > a:hover {
+                background-color: darken(@navbg, 13.2%);
+                background-image: url('../images/bg-selected.png');
+                background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.08) 50%, transparent 80%);
+                box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
+            }
             > div.menu {
+                border-color: darken(@navbg, 10%);
                 border-width: 6px 4px 4px;
+
                 &.wide {
                     border-width: 6px 1px 1px;
+                }
+                ul {
+                    li {
+                        a {
+                            color: #666;
+                            &:hover {
+                                color: #333;
+                            }
+                        }
+                    }
                 }
             }
         }

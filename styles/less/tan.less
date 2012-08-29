@@ -3,7 +3,6 @@ ul.dept-navbar {
     &.tan {
         background: #faf2e0;
         border-bottom: 1px solid #00684d;
-        box-shadow: none;
 
         > li {
             border-right: 1px solid #fff;
@@ -13,15 +12,14 @@ ul.dept-navbar {
                 color: #00563c;
                 text-shadow: 1px 1px 1px #fff;
             }
-            &:hover > a, > a:hover {
-                background-color: #004934;
-                color: #fff;
-                text-shadow: none;
-            }
             &:last-child > a, &.last-child > a {
                 &:after {
                     border-left: 0;
                 }
+            }
+            &:hover > a, > a:hover {
+                background-color: #004934;
+                text-shadow: none;
             }
 
             > div.menu {
