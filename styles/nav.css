@@ -123,10 +123,6 @@ ul.dept-navbar > li > div.menu {
   opacity: 0;
 }
 
-ul.dept-navbar > li > div.menu.right {
-  right: 0;
-}
-
 ul.dept-navbar > li > div.menu.cols .section {
   float: left;
   padding-left: 24px;
