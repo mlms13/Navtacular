@@ -8,11 +8,11 @@ ul.dept-navbar {
     position: relative;
 
     .flexbox-legacy &.full-width {
-        display: -webkit-box;
+        display: box;
         width: 100%; // Firefox doesn't stretch the flexbox without this
 
         > li {
-            -webkit-box-flex: 1;
+            box-flex: 1;
             > a {
                 padding-left: 0;
                 padding-right: 0;
@@ -41,7 +41,7 @@ ul.dept-navbar {
             position: relative;
             text-align: center;
             text-decoration: none;
-            -webkit-transition: all 200ms;
+            transition: all 200ms;
         }
 
         &:first-child > a {
@@ -62,7 +62,7 @@ ul.dept-navbar {
         &:hover > a, > a:hover {
             background-color: #444;
             color: #fff;
-            -webkit-transition: all 100ms;
+            transition: all 100ms;
         }
 
         &.menu-align-right {
@@ -82,7 +82,7 @@ ul.dept-navbar {
             min-width: 200px;
             padding: 24px;
             position: absolute;
-            -webkit-transition: opacity 300ms linear, visibility 0 linear 300ms;
+            transition: opacity 300ms linear, visibility 0 linear 300ms;
             visibility: hidden;
             z-index: 100;
 
@@ -150,7 +150,7 @@ ul.dept-navbar {
 
         &:hover {
             .menu {
-                -webkit-transition: opacity 150ms linear;
+                transition: opacity 150ms linear;
                 visibility: visible;
 
                 .csstransitions & {
