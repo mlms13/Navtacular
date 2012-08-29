@@ -1,23 +1,56 @@
 @media only screen and (max-width: 600px) {
-	ul.dept-navbar {
-		> li {
-			&.menu-align-right {
-				position: static;
-			}
-			> div.menu {
+    ul.dept-navbar {
+        &, &.dark {
+            background-image: none;
+            height: auto;
+
+            > li {
+                height: auto;
+
+                > a {
+                    font-size: 16px;
+                    line-height: 30px;
+                    padding: 0 16px;
+                }
+            }
+        }
+
+        .flexbox-legacy &.full-width {
+            display: block;
+
+            > li > a {
+                padding-left: 16px;
+            }
+        }
+        > li {
+            float: none;
+
+            &.menu-align-right {
+                position: static;
+            }
+            > a {
+                text-align: left;
+            }
+            > div.menu {
                 border-width: 6px 1px 1px;
                 box-sizing: border-box;
+                box-shadow: none;
+                display: none;
                 left: 0;
+                position: relative;
                 width: 100%;
 
-				&.cols, &.wide {
-					width: 100%;
-					.section {
-						float: none;
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
+                &.cols, &.wide {
+                    width: 100%;
+                    .section {
+                        float: none;
+                        width: 100%;
+                    }
+                }
+            }
+            &:hover .menu {
+                display: block;
+            }
+        }
+    }
 }
