@@ -189,7 +189,6 @@ ul.dept-navbar > li:hover .menu {
   opacity: 1;
 }
 
-/* Green theme for the CSS Navigation Bar */
 ul.dept-navbar.green {
   background: #06765f;
   background-image: url('../images/bg-nav.png');
@@ -205,9 +204,13 @@ ul.dept-navbar.green {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
+.flexbox-legacy ul.dept-navbar.green.full-width > li:last-child > a {
+  border-radius: 0 8px 8px 0;
+}
+
 ul.dept-navbar.green > li > a {
-  border-left-color: #0c8b69;
-  border-right-color: #034032;
+  border-left-color: #0b8b70;
+  border-right-color: #033c30;
   color: white;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
 }
@@ -217,11 +220,11 @@ ul.dept-navbar.green > li:first-child > a {
 }
 
 ul.dept-navbar.green > li:last-child > a:after,ul.dept-navbar.green > li.last-child > a:after {
-  border-left-color: #038e64;
+  border-left-color: #0b8b70;
 }
 
 ul.dept-navbar.green > li:hover > a,ul.dept-navbar.green > li > a:hover {
-  background-color: #03523c;
+  background-color: #044a3c;
   background-image: url('../images/bg-selected.png');
 
   background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
@@ -235,12 +238,12 @@ ul.dept-navbar.green > li:hover > a,ul.dept-navbar.green > li > a:hover {
 }
 
 ul.dept-navbar.green > li > div.menu {
-  border-color: #03573c;
+  border-color: #044a3c;
 }
 
 ul.dept-navbar.green > li > div.menu.wide {
   left: 8px;
-  width: 936px;
+  width: 934px;
 }
 
 ul.dept-navbar.green > li > div.menu ul li a {
@@ -251,11 +254,6 @@ ul.dept-navbar.green > li > div.menu ul li a:hover {
   color: #333333;
 }
 
-ul.dept-navbar.green.full-width > li:last-child > a {
-  border-radius: 0 8px 8px 0;
-}
-
-/* Tan theme for the CSS Navigation Bar */
 ul.dept-navbar.tan {
   background: #faf2e0;
   border-bottom: 1px solid #00684d;
@@ -332,7 +330,6 @@ ul.dept-navbar.tan > li > div.menu li a:hover {
   text-decoration: none;
 }
 
-/* Light theme for the CSS Navigation Bar */
 ul.dept-navbar.light {
   background: #f6f6f6;
   background-image: url('../images/bg-nav.png');
@@ -346,6 +343,10 @@ ul.dept-navbar.light {
 
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.flexbox-legacy ul.dept-navbar.light.full-width > li:last-child > a {
+  border-radius: 0 4px 4px 0;
 }
 
 ul.dept-navbar.light > li > a {
@@ -391,24 +392,24 @@ ul.dept-navbar.light > li > div.menu.wide {
 }
 
 ul.dept-navbar.light > li > div.menu h2 {
+  border-bottom: 1px solid #aaaaaa;
   margin: 7px;
   padding: 0;
-  border-bottom: 1px solid #aaaaaa;
 }
 
-ul.dept-navbar.light > li > div.menu li {
+ul.dept-navbar.light > li > div.menu ul li {
   background: transparent;
   margin: 0;
   padding: 0;
 }
 
-ul.dept-navbar.light > li > div.menu li a {
+ul.dept-navbar.light > li > div.menu ul li a {
   color: #666666;
   display: block;
   padding: 7px;
 }
 
-ul.dept-navbar.light > li > div.menu li a:hover {
+ul.dept-navbar.light > li > div.menu ul li a:hover {
   background: #00684d;
 
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.15), transparent);
@@ -420,11 +421,6 @@ ul.dept-navbar.light > li > div.menu li a:hover {
   text-decoration: none;
 }
 
-ul.dept-navbar.light.full-width > li:last-child > a {
-  border-radius: 0 4px 4px 0;
-}
-
-/* Dark theme for the CSS Navigation Bar */
 ul.dept-navbar.dark {
   background: #666666;
   background-image: url('../images/bg-nav.png');
@@ -449,12 +445,11 @@ ul.dept-navbar.dark > li > a {
   border-right-color: #333333;
   color: white;
   font-weight: normal;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  line-height: 20px;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
 }
 
-ul.dept-navbar.dark > li:last-child a:after,ul.dept-navbar.dark > li.last-child a:after {
+ul.dept-navbar.dark > li:last-child > a:after,ul.dept-navbar.dark > li.last-child > a:after {
   border-left-color: #777777;
   height: 40px;
 }
