@@ -1,19 +1,6 @@
 @media only screen and (max-width: 600px) {
     ul.dept-navbar {
-        &, &.dark {
-            background-image: none;
-            height: auto;
-
-            > li {
-                height: auto;
-
-                > a {
-                    font-size: 16px;
-                    line-height: 30px;
-                    padding: 0 16px;
-                }
-            }
-        }
+        height: auto;
 
         .flexbox-legacy &.full-width {
             display: block;
@@ -24,11 +11,15 @@
         }
         > li {
             float: none;
+            height: auto;
 
             &.menu-align-right {
                 position: static;
             }
             > a {
+                font-size: 16px;
+                line-height: 30px;
+                padding: 0 30px;
                 text-align: left;
             }
             > div.menu {
