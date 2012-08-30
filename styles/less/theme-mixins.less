@@ -1,0 +1,36 @@
+//-------- Mixins --------//
+
+// These mixins are used by themes to create properties only if the properties override the defaults.
+// For example, we don't set `height: 36px` because that height is already set in nav.css
+
+// Set border-radius if the theme sets @rad to something other than 0
+.radius (@r) when not (@r = 0) {
+    border-radius: @r;
+}
+.first-rad (@r) when not (@r = 0) {
+    border-radius: @r 0 0 @r;
+}
+.last-rad (@r) when not (@r = 0) {
+    border-radius: 0 @r @r 0;
+}
+
+// If the theme uses are border-radius, indent wide menus to the inside of the radius.
+// The navbar border-radius will never be greater than the 1/2 of the height,
+// so make sure we don't indent the menu farther than needed.
+.menu-width (@r, @h) when (@r >= (@h / 2)) {
+    left: (@h / 2);
+    width: (950px - @height);
+}
+.menu-width (@r, @h) when (@r < (@h / 2)) and not (@r = 0) {
+    left: @r;
+    width: (950px - (@r * 2));
+}
+
+// If the theme sets @height to something other than the default (36px),
+// adjust height and line-height as needed
+.height (@h) when not (@h = 36px) {
+    height: @h;
+}
+.lineheight (@h) when not (@h = 36px) {
+    line-height: (@h - 20px);
+}

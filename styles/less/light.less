@@ -1,6 +1,8 @@
 // Theme name: Light
 // Theme author: Michael Martin-Smucker
 
+@import "theme-mixins.less";
+
 //-------- Variables --------//
 
 @bg: #f6f6f6; // background color of the navbar
@@ -8,38 +10,7 @@
 @rad: 4px; // a border-radius value for all four corners
 @text: #00684d; // text color of the menu items
 
-//-------- Mixins --------//
-
-// Set border-radius if @rad is set to something other than 0
-.radius (@r) when not (@r = 0) {
-    border-radius: @r;
-}
-.first-rad (@r) when not (@r = 0) {
-    border-radius: @r 0 0 @r;
-}
-.last-rad (@r) when not (@r = 0) {
-    border-radius: 0 @r @r 0;
-}
-
-// If @rad is set, adjust the width and position of wide menus
-.menu-width (@r) when (@r >= (@height / 2)) {
-    left: (@height / 2);
-    width: (950px - @height);
-}
-.menu-width (@r) when (@r < (@height / 2)) and not (@r = 0) {
-    left: @r;
-    width: (950px - (@r * 2));
-}
-
-// If @height is not set to the default (36px), adjust height and line-height where needed
-.height (@h) when not (@h = 36px) {
-    height: @h;
-}
-.lineheight (@h) when not (@h = 36px) {
-    line-height: (@h - 20px);
-}
-
-//-------- Style --------//
+//-------- Styles --------//
 
 ul.dept-navbar {
     &.light {
