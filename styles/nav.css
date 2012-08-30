@@ -135,7 +135,7 @@ ul.dept-navbar > li > div.menu.cols .section:first-child {
 ul.dept-navbar > li > div.menu.wide {
   border-width: 6px 1px 1px;
   left: 0;
-  width: 950px;
+  right: 0;
 }
 
 ul.dept-navbar > li > div.menu.wide .section {
@@ -243,7 +243,7 @@ ul.dept-navbar.green > li > div.menu {
 
 ul.dept-navbar.green > li > div.menu.wide {
   left: 8px;
-  width: 934px;
+  right: 8px;
 }
 
 ul.dept-navbar.green > li > div.menu ul li a {
@@ -291,10 +291,6 @@ ul.dept-navbar.tan > li > div.menu {
 
 .no-rgba ul.dept-navbar.tan > li > div.menu {
   background-image: url('../images/g94.png');
-}
-
-ul.dept-navbar.tan > li > div.menu.wide {
-  width: 1000px;
 }
 
 ul.dept-navbar.tan > li > div.menu h2 {
@@ -390,7 +386,7 @@ ul.dept-navbar.light > li > div.menu {
 
 ul.dept-navbar.light > li > div.menu.wide {
   left: 4px;
-  width: 992px;
+  right: 4px;
 }
 
 ul.dept-navbar.light > li > div.menu h2 {

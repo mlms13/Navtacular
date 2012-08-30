@@ -19,11 +19,11 @@
 // so make sure we don't indent the menu farther than needed.
 .menu-width (@r, @h) when (@r >= (@h / 2)) {
     left: (@h / 2);
-    width: (950px - @height);
+    right: (@h / 2);
 }
 .menu-width (@r, @h) when (@r < (@h / 2)) and not (@r = 0) {
     left: @r;
-    width: (950px - (@r * 2));
+    right: @r;
 }
 
 // If the theme sets @height to something other than the default (36px),
