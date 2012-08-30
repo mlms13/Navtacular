@@ -276,6 +276,7 @@ ul.dept-navbar.tan > li:last-child > a:after,ul.dept-navbar.tan > li.last-child 
 
 ul.dept-navbar.tan > li:hover > a,ul.dept-navbar.tan > li > a:hover {
   background-color: #004934;
+  color: white;
   text-shadow: none;
 }
 
@@ -376,6 +377,7 @@ ul.dept-navbar.light > li:hover > a,ul.dept-navbar.light > li > a:hover {
 
   -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+  color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
