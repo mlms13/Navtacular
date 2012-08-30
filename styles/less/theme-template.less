@@ -1,9 +1,9 @@
-// Theme name: Green
+// Theme name: Template
 // Theme author: Michael Martin-Smucker
 
 //-------- Variables --------//
 
-@bg: #06765f; // background color of the navbar
+@bg: #666; // background color of the navbar
 @height: 36px; // height of the navbar
 @rad: 8px; // a border-radius value for all four corners
 @text: #fff; // text color of the menu items
@@ -39,10 +39,11 @@
     line-height: (@h - 20px);
 }
 
-//-------- Style --------//
+//-------- Styles --------//
 
 ul.dept-navbar {
-    &.green {
+    // replace "template" with the name of your theme
+    &.template {
         background: @bg;
         background-image: url('../images/bg-nav.png'); // a fallback for browsers that don't support gradients
         background-image: linear-gradient(transparent 10%, rgba(0,0,0,0.3)); // a gradient overlay
@@ -59,8 +60,8 @@ ul.dept-navbar {
             .height(@height); // conditionally add a height property
 
             > a {
-                border-left-color: lighten(desaturate(@bg, 5%), 5%);
-                border-right-color: darken(@bg, 12%);
+                border-left-color: lighten(@bg, 6.6%);
+                border-right-color: darken(@bg, 20%);
                 color: @text;
                 .lineheight(@height); // automatically adjusts line-height based on navbar height
                 text-shadow: -1px -1px 1px rgba(0,0,0,0.4);
@@ -70,18 +71,18 @@ ul.dept-navbar {
             }
             &:last-child, &.last-child {
                 > a:after {
-                    border-left-color: lighten(desaturate(@bg, 5%), 5%);
+                    border-left-color: lighten(@bg, 6.6%);
                     .height(@height); // match the navbar height
                 }
             }
             &:hover > a, > a:hover {
-                background-color: darken(@bg, 9%);
+                background-color: darken(@bg, 13.2%);
                 background-image: url('../images/bg-selected.png'); // a fallback for the hovered background gradient
                 background-image: radial-gradient(center 120px, ellipse cover, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.08) 50%, transparent 80%);
                 box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
             }
             > div.menu {
-                border-color: darken(@bg, 9%);
+                border-color: darken(@bg, 10%);
 
                 &.wide {
                     .menu-width(@rad); // adjust menu position with respect to border-radius
