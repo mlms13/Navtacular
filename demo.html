@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CSS Navigation Demo</title>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.3" />
+
+        <title>CSS Navigation Demo</title>
+
         <link rel="stylesheet" href="styles/nav.css" />
         <style type="text/css">
             body {
@@ -27,6 +30,9 @@
             }
             section a:hover {
                 text-decoration: underline;
+            }
+            @media only screen and (max-width: 600px) {
+                body {padding-left: 6px; padding-right: 6px;}
             }
         </style>
         <script type="text/javascript" src="./scripts/modernizr.js"></script>
