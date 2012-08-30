@@ -3,16 +3,17 @@
 
 @import "theme-mixins.less";
 
-//-------- Variables --------//
-
-@bg: #666; // background color of the navbar
-@height: 36px; // height of the navbar
-@rad: 8px; // a border-radius value for all four corners
-@text: #fff; // text color of the menu items
-
-//-------- Styles --------//
-
 ul.dept-navbar {
+
+    //-------- Variables --------//
+
+    @bg: #666; // background color of the navbar
+    @height: 36px; // height of the navbar
+    @rad: 8px; // a border-radius value for all four corners
+    @text: #fff; // text color of the menu items
+
+    //-------- Styles --------//
+
     // replace "template" with the name of your theme
     &.template {
         background: @bg;
@@ -21,7 +22,6 @@ ul.dept-navbar {
         .radius(@rad); // add border-radius if the variable has been set
         box-shadow: 0 0 8px rgba(0,0,0,0.3); // a subtle shadow behind the navbar
         .height(@height); // conditionally add a height property
-
 
         .flexbox-legacy &.full-width > li:last-child > a {
             .last-rad(@rad); // border radius for last child
