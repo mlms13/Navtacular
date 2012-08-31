@@ -20,10 +20,6 @@ ul.dept-navbar {
         box-shadow: 0 0 8px rgba(0,0,0,0.3); // a subtle shadow behind the navbar
         .height(@height); // conditionally add a height property
 
-        .flexbox-legacy &.full-width > li:last-child > a {
-            .last-rad(@rad); // border radius for last child
-        }
-
         > li {
             .height(@height); // conditionally add a height property
 
@@ -34,9 +30,6 @@ ul.dept-navbar {
                 font-weight: normal;
                 .lineheight(@height); // automatically adjusts line-height based on navbar height
                 text-shadow: -1px -1px 1px rgba(0,0,0,0.4);
-            }
-            &:first-child > a {
-                .first-rad(@rad); // border radius for first child
             }
             &:last-child, &.last-child {
                 > a:after {

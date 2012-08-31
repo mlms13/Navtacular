@@ -6,12 +6,18 @@
 // Set border-radius if the theme sets @rad to something other than 0
 .radius (@r) when not (@r = 0) {
     border-radius: @r;
+
+    .flexbox-legacy &.full-width > li:last-child > a {
+        border-radius: 0 @r @r 0;
+    }
+    > li {
+        &:first-child > a {
+            border-radius: @r 0 0 @r;
+        }
+    }
 }
-.first-rad (@r) when not (@r = 0) {
-    border-radius: @r 0 0 @r;
-}
-.last-rad (@r) when not (@r = 0) {
-    border-radius: 0 @r @r 0;
+.radius (@r) {
+    // a default mixin is currently required by the compiler
 }
 
 // If the theme uses are border-radius, indent wide menus to the inside of the radius.
@@ -25,12 +31,21 @@
     left: @r;
     right: @r;
 }
+.menu-width (@r, @h) {
+    // a default mixin is currently required by the compiler
+}
 
 // If the theme sets @height to something other than the default (36px),
 // adjust height and line-height as needed
 .height (@h) when not (@h = 36px) {
     height: @h;
 }
+.height (@h) {
+    // a default mixin is currently required by the compiler
+}
 .lineheight (@h) when not (@h = 36px) {
     line-height: (@h - 20px);
+}
+.lineheight (@h) {
+    // a default mixin is currently required by the compiler
 }
