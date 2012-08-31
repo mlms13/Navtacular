@@ -17,10 +17,16 @@
                 position: static;
             }
             > a {
+                border: 0;
                 font-size: 16px;
                 line-height: 30px;
                 padding: 0 16px;
                 text-align: left;
+            }
+            &:last-child, &.last-child {
+                > a:after {
+                    border: 0;
+                }
             }
             > div.menu {
                 border-width: 6px 1px 1px;
