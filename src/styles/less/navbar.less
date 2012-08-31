@@ -64,6 +64,17 @@ ul.dept-navbar {
             transition: all 100ms;
         }
 
+        &:hover {
+            > div.menu {
+                transition: opacity 150ms linear;
+                visibility: visible;
+
+                .csstransitions & {
+                    opacity: 1;
+                }
+            }
+        }
+
         &.menu-align-right {
             position: relative;
             > div.menu {
@@ -138,17 +149,6 @@ ul.dept-navbar {
                             text-decoration: underline;
                         }
                     }
-                }
-            }
-        }
-
-        &:hover {
-            .menu {
-                transition: opacity 150ms linear;
-                visibility: visible;
-
-                .csstransitions & {
-                    opacity: 1;
                 }
             }
         }

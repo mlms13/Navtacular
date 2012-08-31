@@ -82,6 +82,21 @@ ul.dept-navbar > li:hover > a,ul.dept-navbar > li > a:hover {
   transition: all 100ms;
 }
 
+ul.dept-navbar > li:hover > div.menu {
+  -webkit-transition: opacity 150ms linear;
+  -moz-transition: opacity 150ms linear;
+  -o-transition: opacity 150ms linear;
+  -ms-transition: opacity 150ms linear;
+  transition: opacity 150ms linear;
+  visibility: visible;
+}
+
+.csstransitions ul.dept-navbar > li:hover > div.menu {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
 ul.dept-navbar > li.menu-align-right {
   position: relative;
 }
@@ -171,21 +186,6 @@ ul.dept-navbar > li > div.menu ul li a {
 
 ul.dept-navbar > li > div.menu ul li a:hover {
   text-decoration: underline;
-}
-
-ul.dept-navbar > li:hover .menu {
-  -webkit-transition: opacity 150ms linear;
-  -moz-transition: opacity 150ms linear;
-  -o-transition: opacity 150ms linear;
-  -ms-transition: opacity 150ms linear;
-  transition: opacity 150ms linear;
-  visibility: visible;
-}
-
-.csstransitions ul.dept-navbar > li:hover .menu {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
-  opacity: 1;
 }
 
 ul.dept-navbar.green {
