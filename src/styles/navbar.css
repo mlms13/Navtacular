@@ -541,7 +541,7 @@ ul.navbar.dark > li {
 }
 
 ul.navbar.dark > li > a {
-  line-height: 30px;
+  line-height: 40px;
 }
 
 ul.navbar.dark > li > div.menu {
@@ -578,7 +578,7 @@ ul.navbar > li.menu-align-right {
 ul.navbar > li > a {
   border: 0;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 40px;
   text-align: left;
 }
 
