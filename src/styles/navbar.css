@@ -37,7 +37,6 @@ ul.dept-navbar {
 
 ul.dept-navbar > li {
   float: left;
-  height: 36px;
 }
 
 ul.dept-navbar > li > a {
@@ -487,10 +486,6 @@ ul.dept-navbar.dark {
   height: 40px;
 }
 
-ul.dept-navbar.dark > li {
-  height: 40px;
-}
-
 ul.dept-navbar.dark > li > a {
   border-left-color: #777777;
   border-right-color: #333333;
@@ -566,7 +561,6 @@ ul.dept-navbar.dark > li > div.menu {
 
 ul.dept-navbar > li {
   float: none;
-  height: auto;
 }
 
 ul.dept-navbar > li.menu-align-right {
