@@ -45,8 +45,8 @@ ul.dept-navbar > li > a {
   cursor: pointer;
   display: block;
   font-weight: bold;
-  line-height: 16px;
-  padding: 10px 18px 10px 17px;
+  line-height: 36px;
+  padding: 0 16px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -491,7 +491,7 @@ ul.dept-navbar.dark > li > a {
   border-right-color: #333333;
   color: white;
   font-weight: normal;
-  line-height: 20px;
+  line-height: 40px;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -575,7 +575,6 @@ ul.dept-navbar > li > a {
   border: 0;
   font-size: 16px;
   line-height: 30px;
-  padding: 0 16px;
   text-align: left;
 }
 
