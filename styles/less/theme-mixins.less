@@ -19,6 +19,19 @@
 .radius (@r) {
     // a default mixin is currently required by the compiler
 }
+.mobile-radius (@r) when not (@r = 0) {
+    > li {
+        &:first-child > a {
+            border-radius: @r @r 0 0;
+        }
+        &:last-child > a {
+            border-radius: 0 0 @r @r;
+        }
+    }
+}
+.mobile-radius (@r) {
+    // a default mixin is currently required by the compiler
+}
 
 // If the theme uses are border-radius, indent wide menus to the inside of the radius.
 // The navbar border-radius will never be greater than the 1/2 of the height,

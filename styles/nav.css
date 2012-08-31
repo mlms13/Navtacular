@@ -255,7 +255,15 @@ ul.dept-navbar.green > li > div.menu ul li a:hover {
 }
 
 @media only screen and (max-width: 600px) {
-  ul.dept-navbar.green > li > div.menu.wide {
+  ul.dept-navbar.green > li:first-child > a {
+  border-radius: 8px 8px 0 0;
+}
+
+ul.dept-navbar.green > li:last-child > a {
+  border-radius: 0 0 8px 8px;
+}
+
+ul.dept-navbar.green > li > div.menu.wide {
   left: 0;
   right: 0;
 }
@@ -443,7 +451,15 @@ ul.dept-navbar.light > li > div.menu ul li a:hover {
 }
 
 @media only screen and (max-width: 600px) {
-  ul.dept-navbar.light > li > div.menu.wide {
+  ul.dept-navbar.light > li:first-child > a {
+  border-radius: 4px 4px 0 0;
+}
+
+ul.dept-navbar.light > li:last-child > a {
+  border-radius: 0 0 4px 4px;
+}
+
+ul.dept-navbar.light > li > div.menu.wide {
   left: 0;
   right: 0;
 }

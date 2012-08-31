@@ -68,6 +68,7 @@ ul.dept-navbar {
         @media only screen and (max-width: 600px) {
             & {
                 .mobile-height(@height); // reset height if theme adjusted it
+                .mobile-radius(@rad); // round the correct corners when menu collapses
 
                 > li > div.menu {
                     border-width: 6px 1px 1px;
