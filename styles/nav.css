@@ -349,6 +349,7 @@ ul.dept-navbar.tan > li > div.menu li a:hover {
 }
 
 ul.dept-navbar.tan > li > div.menu {
+  border-top: 0;
   border-radius: 0;
 }
 
@@ -459,6 +460,11 @@ ul.dept-navbar.light > li:last-child > a {
   border-radius: 0 0 4px 4px;
 }
 
+ul.dept-navbar.light > li > div.menu {
+  border-top: 0;
+  border-bottom: 0;
+}
+
 ul.dept-navbar.light > li > div.menu.wide {
   left: 0;
   right: 0;
@@ -540,7 +546,7 @@ ul.dept-navbar.dark > li > a {
 }
 
 ul.dept-navbar.dark > li > div.menu {
-  border-width: 6px 1px 1px;
+  border-width: 0 1px;
 }
 
 }
@@ -580,7 +586,7 @@ ul.dept-navbar > li:last-child > a:after,ul.dept-navbar > li.last-child > a:afte
 }
 
 ul.dept-navbar > li > div.menu {
-  border-width: 6px 1px 1px;
+  border-width: 0 1px;
 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -589,13 +595,23 @@ ul.dept-navbar > li > div.menu {
 
   -webkit-box-shadow: none;
   box-shadow: none;
-  display: none;
   left: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
   position: relative;
+
+  -webkit-transition: all 0 500ms, max-height 500ms 0, padding-top 200ms 200ms, padding-bottom 200ms 200ms;
+  -moz-transition: all 0 500ms, max-height 500ms 0, padding-top 200ms 200ms, padding-bottom 200ms 200ms;
+  -o-transition: all 0 500ms, max-height 500ms 0, padding-top 200ms 200ms, padding-bottom 200ms 200ms;
+  -ms-transition: all 0 500ms, max-height 500ms 0, padding-top 200ms 200ms, padding-bottom 200ms 200ms;
+  transition: all 0 500ms, max-height 500ms 0, padding-top 200ms 200ms, padding-bottom 200ms 200ms;
   width: 100%;
 }
 
 ul.dept-navbar > li > div.menu.cols,ul.dept-navbar > li > div.menu.wide {
+  border-width: 0 1px;
   width: 100%;
 }
 
@@ -605,7 +621,15 @@ ul.dept-navbar > li > div.menu.cols .section,ul.dept-navbar > li > div.menu.wide
 }
 
 ul.dept-navbar > li:hover .menu {
-  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  max-height: 1000px;
+
+  -webkit-transition: max-height 1s, padding-top 200ms, padding-bottom 200ms;
+  -moz-transition: max-height 1s, padding-top 200ms, padding-bottom 200ms;
+  -o-transition: max-height 1s, padding-top 200ms, padding-bottom 200ms;
+  -ms-transition: max-height 1s, padding-top 200ms, padding-bottom 200ms;
+  transition: max-height 1s, padding-top 200ms, padding-bottom 200ms;
 }
 
 }
