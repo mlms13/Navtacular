@@ -502,10 +502,6 @@ ul.dept-navbar.dark > li > div.menu {
   border-width: 6px 4px 4px;
 }
 
-ul.dept-navbar.dark > li > div.menu.wide {
-  border-width: 6px 1px 1px;
-}
-
 ul.dept-navbar.dark > li > div.menu ul li a {
   color: #666666;
 }
@@ -525,6 +521,10 @@ ul.dept-navbar.dark > li {
 
 ul.dept-navbar.dark > li > a {
   line-height: 30px;
+}
+
+ul.dept-navbar.dark > li > div.menu {
+  border-width: 6px 1px 1px;
 }
 
 }

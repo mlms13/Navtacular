@@ -49,7 +49,6 @@ ul.dept-navbar {
 
                 &.wide {
                     .menu-width(@rad, @height); // adjust menu position with respect to border-radius
-                    border-width: 6px 1px 1px;
                 }
 
                 ul {
@@ -71,6 +70,7 @@ ul.dept-navbar {
                 .mobile-height(@height); // reset height if theme adjusted it
 
                 > li > div.menu {
+                    border-width: 6px 1px 1px;
                     &.wide {
                         .mobile-menu-width(@rad); // reset menu position if theme has a border radius
                     }
