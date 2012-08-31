@@ -1,7 +1,9 @@
-//-------- Mixins --------//
+// This is a collection of common mixins used by themes.
+// These mixins generate properties only if those properties override the default values provided by navbar.less.
+// For example, border-radius is only set if a theme sets the @rad variable to a value other than 0.
+// Similarly, the height property will only be set if a theme overrides the default 36px.
 
-// These mixins are used by themes to create properties only if the properties override the defaults.
-// For example, we don't set `height: 36px` because that height is already set in nav.css
+//-------- Mixins --------//
 
 // Set border-radius if the theme sets @rad to something other than 0
 .radius (@r) when not (@r = 0) {
