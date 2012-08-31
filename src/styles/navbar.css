@@ -253,7 +253,7 @@ ul.navbar.green > li > div.menu ul li a:hover {
   color: #333333;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   ul.navbar.green > li:first-child > a {
   border-radius: 8px 8px 0 0;
 }
@@ -342,7 +342,7 @@ ul.navbar.tan > li > div.menu li a:hover {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   ul.navbar.tan > li > a {
   border-radius: 0;
 }
@@ -450,7 +450,7 @@ ul.navbar.light > li > div.menu ul li a:hover {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   ul.navbar.light > li:first-child > a {
   border-radius: 4px 4px 0 0;
 }
@@ -531,7 +531,7 @@ ul.navbar.dark > li > div.menu ul li a:hover {
   color: #333333;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   ul.navbar.dark {
   height: auto;
 }
@@ -554,7 +554,7 @@ ul.navbar.dark > li > div.menu.wide {
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   ul.navbar {
   height: auto;
 }
