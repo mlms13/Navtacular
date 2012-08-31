@@ -548,6 +548,10 @@ ul.dept-navbar.dark > li > div.menu {
   border-width: 0 1px;
 }
 
+ul.dept-navbar.dark > li > div.menu.wide {
+  border-width: 0 1px;
+}
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -617,7 +621,7 @@ ul.dept-navbar > li > div.menu.cols .section,ul.dept-navbar > li > div.menu.wide
   width: 100%;
 }
 
-ul.dept-navbar > li:hover .menu {
+ul.dept-navbar > li:hover > div.menu {
   padding-top: 24px;
   padding-bottom: 24px;
   max-height: 1000px;
