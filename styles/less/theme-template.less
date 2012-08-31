@@ -3,14 +3,14 @@
 
 // Themes developed independently will need to import theme-mixins.less.
 // Default themes (those included in nav.less) should not import this pack of mixins.
-// @import "theme-mixins";
+@import "theme-mixins";
 
 ul.dept-navbar {
 
     //-------- Variables --------//
 
     @bg: #666; // background color of the navbar
-    @height: 36px; // height of the navbar
+    @height: 40px; // height of the navbar
     @rad: 8px; // a border-radius value for all four corners
     @text: #fff; // text color of the menu items
 
@@ -62,6 +62,19 @@ ul.dept-navbar {
                                 color: #333;
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        //-------- Mobile --------//
+        @media only screen and (max-width: 600px) {
+            & {
+                .mobile-height(@height); // reset height if theme adjusted it
+
+                > li > div.menu {
+                    &.wide {
+                        .mobile-menu-width(@rad); // reset menu position if theme has a border radius
                     }
                 }
             }

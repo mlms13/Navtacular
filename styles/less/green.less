@@ -61,5 +61,18 @@ ul.dept-navbar {
                 }
             }
         }
+
+        //-------- Mobile --------//
+        @media only screen and (max-width: 600px) {
+            & {
+                .mobile-height(@height); // reset height if theme adjusted it
+
+                > li > div.menu {
+                    &.wide {
+                        .mobile-menu-width(@rad); // reset menu position if theme has a border radius
+                    }
+                }
+            }
+        }
     }
 }

@@ -65,5 +65,25 @@ ul.dept-navbar {
                 }
             }
         }
+
+        //-------- Mobile --------//
+        @media only screen and (max-width: 600px) {
+            & {
+                > li {
+                    > a {
+                        border-radius: 0;
+                    }
+                    > div.menu {
+                        border-radius: 0;
+
+                        &.cols, &.wide {
+                            .section {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

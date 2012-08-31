@@ -208,15 +208,15 @@ ul.dept-navbar.green {
   border-radius: 0 8px 8px 0;
 }
 
+ul.dept-navbar.green > li:first-child > a {
+  border-radius: 8px 0 0 8px;
+}
+
 ul.dept-navbar.green > li > a {
   border-left-color: #0b8b70;
   border-right-color: #033c30;
   color: white;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
-}
-
-ul.dept-navbar.green > li:first-child > a {
-  border-radius: 8px 0 0 8px;
 }
 
 ul.dept-navbar.green > li:last-child > a:after,ul.dept-navbar.green > li.last-child > a:after {
@@ -252,6 +252,14 @@ ul.dept-navbar.green > li > div.menu ul li a {
 
 ul.dept-navbar.green > li > div.menu ul li a:hover {
   color: #333333;
+}
+
+@media only screen and (max-width: 600px) {
+  ul.dept-navbar.green > li > div.menu.wide {
+  left: 0;
+  right: 0;
+}
+
 }
 
 ul.dept-navbar.tan {
@@ -327,6 +335,21 @@ ul.dept-navbar.tan > li > div.menu li a:hover {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 600px) {
+  ul.dept-navbar.tan > li > a {
+  border-radius: 0;
+}
+
+ul.dept-navbar.tan > li > div.menu {
+  border-radius: 0;
+}
+
+ul.dept-navbar.tan > li > div.menu.cols .section,ul.dept-navbar.tan > li > div.menu.wide .section {
+  margin: 0;
+}
+
+}
+
 ul.dept-navbar.light {
   background: #f6f6f6;
   background-image: url('../images/bg-nav.png');
@@ -346,15 +369,15 @@ ul.dept-navbar.light {
   border-radius: 0 4px 4px 0;
 }
 
+ul.dept-navbar.light > li:first-child > a {
+  border-radius: 4px 0 0 4px;
+}
+
 ul.dept-navbar.light > li > a {
   border-left-color: #fafafa;
   border-right-color: #bbbbbb;
   color: #00684d;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
-}
-
-ul.dept-navbar.light > li:first-child > a {
-  border-radius: 4px 0 0 4px;
 }
 
 ul.dept-navbar.light > li:last-child > a:after,ul.dept-navbar.light > li.last-child > a:after {
@@ -417,6 +440,14 @@ ul.dept-navbar.light > li > div.menu ul li a:hover {
   background-image: linear-gradient(rgba(255, 255, 255, 0.15), transparent);
   color: white;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  ul.dept-navbar.light > li > div.menu.wide {
+  left: 0;
+  right: 0;
+}
+
 }
 
 ul.dept-navbar.dark {
@@ -484,6 +515,21 @@ ul.dept-navbar.dark > li > div.menu ul li a:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  ul.dept-navbar.dark {
+  height: auto;
+}
+
+ul.dept-navbar.dark > li {
+  height: auto;
+}
+
+ul.dept-navbar.dark > li > a {
+  line-height: 30px;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
   ul.dept-navbar {
   height: auto;
 }
@@ -508,7 +554,7 @@ ul.dept-navbar > li.menu-align-right {
 ul.dept-navbar > li > a {
   font-size: 16px;
   line-height: 30px;
-  padding: 0 30px;
+  padding: 0 16px;
   text-align: left;
 }
 
