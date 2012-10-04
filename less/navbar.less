@@ -64,97 +64,10 @@ ul.navbar {
             color: #fff;
             transition: all 100ms;
         }
-
-        &:hover {
-            > div.menu {
-                transition: opacity 150ms linear;
-                visibility: visible;
-
-                .csstransitions & {
-                    opacity: 1;
-                }
-            }
-        }
-
-        &.menu-align-right {
-            position: relative;
-            > div.menu {
-                left: auto;
-                right: 0;
-            }
-        }
-
-        > div.menu {
-            background: rgba(255,255,255,0.97);
-            border: 2px solid #000;
-            border-top-width: 6px;
-            box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
-            font-size: 13px;
-            min-width: 200px;
-            padding: 24px;
-            position: absolute;
-            transition: opacity 300ms linear, visibility 0 linear 300ms;
-            visibility: hidden;
-            z-index: 100;
-
-            .no-rgba & {
-                background-image: url('../images/w97.png');
-            }
-            .csstransitions & {
-                // Prefixr adds the MS filter property, which breaks menus in IE
-                // So I wrapped it in a Modernizr check, causing IE to ignore it
-                // IE10 supports CSS transitions, so this will break
-                opacity: 0;
-            }
-            &.cols {
-                .section {
-                    float: left;
-                    padding-left: 24px;
-                    &:first-child {
-                        padding-left: 0;
-                    }
-                }
-            }
-            &.wide {
-                border-width: 6px 1px 1px;
-                left: 0;
-                right: 0;
-
-                .section {
-                    float: left;
-                    margin: 0 2%;
-                    width: 29%;
-                    &.continued {
-                        padding-top: 28px;
-                    }
-                }
-            }
-            h2 {
-                font-size: 17px;
-                line-height: 20px;
-                margin: 0 0 8px;
-            }
-            ul {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-
-                li {
-                    background: transparent url('../images/bullet-nav.png') no-repeat 0 6px;
-                    margin-bottom: 4px;
-                    padding-left: 14px;
-
-                    a {
-                        text-decoration: none;
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-                }
-            }
-        }
     }
 }
+// Import the drop-down menu system
+@import "menu";
 
 // Import comon mixins used by all themes
 @import "themes/common";

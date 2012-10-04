@@ -12,9 +12,6 @@
         > li {
             float: none;
 
-            &.menu-align-right {
-                position: static;
-            }
             > a {
                 border: 0;
                 font-size: 16px;
@@ -25,39 +22,6 @@
                 > a:after {
                     border: 0;
                 }
-            }
-            > div.menu {
-                border-width: 0 1px;
-                box-sizing: border-box;
-                box-shadow: none;
-                left: 0;
-                max-height: 0;
-                overflow: hidden;
-                padding-top: 0;
-                padding-bottom: 0;
-                position: relative;
-                transition: all 0 500ms,
-                    max-height 500ms 0,
-                    padding-top 200ms 200ms,
-                    padding-bottom 200ms 200ms;
-                width: 100%;
-
-                &.cols, &.wide {
-                    border-width: 0 1px;
-                    width: 100%;
-                    .section {
-                        float: none;
-                        width: 100%;
-                    }
-                }
-            }
-            &:hover > div.menu {
-                padding-top: 24px;
-                padding-bottom: 24px;
-                max-height: 1000px;
-                transition: max-height 1s,
-                    padding-top 200ms,
-                    padding-bottom 200ms
             }
         }
     }
