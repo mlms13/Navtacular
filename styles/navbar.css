@@ -190,8 +190,7 @@ ul.navbar > li > div.menu ul li a:hover {
 }
 
 ul.navbar.green {
-  background: #06765f;
-  background-image: url('../images/bg-nav.png');
+  background: #06765f url('../images/bg-nav.png') repeat-x 0 bottom;
 
   background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
   background-image: -moz-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
@@ -360,8 +359,7 @@ ul.navbar.tan > li > div.menu.cols .section,ul.navbar.tan > li > div.menu.wide .
 }
 
 ul.navbar.light {
-  background: #f6f6f6;
-  background-image: url('../images/bg-nav.png');
+  background: #f6f6f6 url('../images/bg-nav.png') repeat-x 0 bottom;
 
   background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.15));
   background-image: -moz-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.15));
@@ -473,8 +471,7 @@ ul.navbar.light > li > div.menu.wide {
 }
 
 ul.navbar.dark {
-  background: #666666;
-  background-image: url('../images/bg-nav.png');
+  background: #666666 url('../images/bg-nav.png') repeat-x 0 bottom;
 
   background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
   background-image: -moz-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));

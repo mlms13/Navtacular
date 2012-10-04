@@ -13,8 +13,7 @@ ul.navbar {
     //-------- Styles --------//
 
     &.dark {
-        background: @bg;
-        background-image: url('../../images/bg-nav.png'); // a fallback for browsers that don't support gradients
+        background: @bg url('../../images/bg-nav.png') repeat-x 0 bottom; // a fallback for browsers that don't support gradients
         background-image: linear-gradient(transparent 10%, rgba(0,0,0,0.3)); // a gradient overlay
         .radius(@rad); // add border-radius if the variable has been set
         box-shadow: 0 0 8px rgba(0,0,0,0.3); // a subtle shadow behind the navbar
