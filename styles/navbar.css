@@ -1,7 +1,7 @@
 ul.navbar {
   background: #eeeeee;
   font-size: 14px;
-  height: 36px;
+  min-height: 36px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -392,7 +392,7 @@ ul.navbar.dark {
   background-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  height: 40px;
+  min-height: 40px;
 }
 ul.navbar.dark > li > a {
   border-left-color: #777777;
@@ -405,7 +405,7 @@ ul.navbar.dark > li > a {
 ul.navbar.dark > li:last-child > a:after,
 ul.navbar.dark > li.last-child > a:after {
   border-left-color: #777777;
-  height: 40px;
+  min-height: 40px;
 }
 ul.navbar.dark > li:hover > a,
 ul.navbar.dark > li > a:hover {
@@ -433,9 +433,6 @@ ul.navbar.dark > li > div.menu ul li a:hover {
   ul.navbar.dark {
     height: auto;
   }
-  ul.navbar.dark  > li {
-    height: auto;
-  }
   ul.navbar.dark  > li > a {
     line-height: 40px;
   }
@@ -447,9 +444,6 @@ ul.navbar.dark > li > div.menu ul li a:hover {
   }
 }
 @media only screen and (max-width: 630px) {
-  ul.navbar {
-    height: auto;
-  }
   .flexbox-legacy ul.navbar.full-width {
     display: block;
   }

@@ -60,7 +60,7 @@
 // If the theme sets @height to something other than the default (36px),
 // adjust height and line-height as needed
 .height (@h) when not (@h = 36px) {
-    height: @h;
+    min-height: @h;
 }
 .height (@h) {
     // a default mixin is currently required by the compiler
@@ -74,7 +74,6 @@
 .mobile-height (@h) when not (@h = 36px) {
     height: auto;
     > li {
-        height: auto;
         > a {
             line-height: 40px;
         }
