@@ -8,11 +8,16 @@ ul.navbar {
     position: relative;
 
     .flexbox-legacy &.full-width {
+        display: -webkit-box;
+        display: -moz-box;
         display: box;
         width: 100%; // Firefox doesn't stretch the flexbox without this
 
         > li {
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
             box-flex: 1;
+
             > a {
                 padding-left: 0;
                 padding-right: 0;
@@ -40,6 +45,7 @@ ul.navbar {
             position: relative;
             text-align: center;
             text-decoration: none;
+            -webkit-transition: all 200ms;
             transition: all 200ms;
             zoom: 1; // fix a line-height bug related to hasLayout in IE7
         }
@@ -62,6 +68,7 @@ ul.navbar {
         &:hover > a, > a:hover {
             background-color: #444;
             color: #fff;
+            -webkit-transition: all 100ms;
             transition: all 100ms;
         }
     }
