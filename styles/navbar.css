@@ -66,6 +66,7 @@ ul.navbar > li > a:hover {
   transition: all 100ms;
 }
 ul.navbar > li > div.menu {
+  background: url('../images/w97.png');
   background: rgba(255, 255, 255, 0.97);
   border: 2px solid black;
   border-top-width: 6px;
@@ -80,9 +81,6 @@ ul.navbar > li > div.menu {
   transition: opacity 300ms linear, visibility 0 linear 300ms;
   visibility: hidden;
   z-index: 100;
-}
-.no-rgba ul.navbar > li > div.menu {
-  background-image: url('../images/w97.png');
 }
 ul.navbar > li > div.menu.cols .section {
   float: left;
@@ -258,15 +256,13 @@ ul.navbar.tan > li > a:hover {
   text-shadow: none;
 }
 ul.navbar.tan > li > div.menu {
+  background: url('../images/g94.png');
   background: rgba(0, 57, 41, 0.94);
   border: 0;
   border-top: 4px solid #a29664;
   border-radius: 0 0 8px 8px;
   color: white;
   padding: 0;
-}
-.no-rgba ul.navbar.tan > li > div.menu {
-  background-image: url('../images/g94.png');
 }
 ul.navbar.tan > li > div.menu h2 {
   background: black;
