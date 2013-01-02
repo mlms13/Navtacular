@@ -65,7 +65,7 @@ ul.navbar > li > a:hover {
   transition: all 100ms;
 }
 ul.navbar > li > div.menu {
-  background: url('../images/w97.png');
+  background: white;
   background: rgba(255, 255, 255, 0.97);
   border: 2px solid black;
   border-top-width: 6px;
@@ -107,14 +107,13 @@ ul.navbar > li > div.menu h2 {
   margin: 0 0 8px;
 }
 ul.navbar > li > div.menu ul {
-  list-style: none;
+  color: #777777;
+  list-style: square;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 18px;
 }
 ul.navbar > li > div.menu ul li {
-  background: transparent url('../images/bullet-nav.png') no-repeat 0 6px;
   margin-bottom: 4px;
-  padding-left: 14px;
 }
 ul.navbar > li > div.menu ul li a {
   text-decoration: none;
