@@ -7,16 +7,15 @@ ul.navbar {
     padding: 0;
     position: relative;
 
-    .flexbox-legacy &.full-width {
-        display: -webkit-box;
-        display: -moz-box;
-        display: box;
-        width: 100%; // Firefox doesn't stretch the flexbox without this
+    .flexbox &.full-width {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
 
         > li {
-            -webkit-box-flex: 1;
-            -moz-box-flex: 1;
-            box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
 
             > a {
                 padding-left: 0;

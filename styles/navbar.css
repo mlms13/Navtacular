@@ -7,25 +7,24 @@ ul.navbar {
   padding: 0;
   position: relative;
 }
-.flexbox-legacy ul.navbar.full-width {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  width: 100%;
+.flexbox ul.navbar.full-width {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
-.flexbox-legacy ul.navbar.full-width > li {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
+.flexbox ul.navbar.full-width > li {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
-.flexbox-legacy ul.navbar.full-width > li > a {
+.flexbox ul.navbar.full-width > li > a {
   padding-left: 0;
   padding-right: 0;
 }
-.flexbox-legacy ul.navbar.full-width > li:last-child > a {
+.flexbox ul.navbar.full-width > li:last-child > a {
   border-right: 0;
 }
-.flexbox-legacy ul.navbar.full-width > li:last-child > a:after {
+.flexbox ul.navbar.full-width > li:last-child > a:after {
   border-left: 0;
 }
 ul.navbar > li {
@@ -444,10 +443,10 @@ ul.navbar.dark > li > div.menu ul li a:hover {
   }
 }
 @media only screen and (max-width: 630px) {
-  .flexbox-legacy ul.navbar.full-width {
+  .flexbox ul.navbar.full-width {
     display: block;
   }
-  .flexbox-legacy ul.navbar.full-width > li > a {
+  .flexbox ul.navbar.full-width > li > a {
     padding-left: 16px;
   }
   ul.navbar > li {
