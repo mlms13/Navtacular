@@ -72,7 +72,7 @@ ul.navbar > li > div.menu {
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   font-size: 13px;
-  min-width: 200px;
+  min-width: 160px;
   opacity: 0;
   padding: 24px;
   position: absolute;
@@ -114,12 +114,25 @@ ul.navbar > li > div.menu ul {
 }
 ul.navbar > li > div.menu ul li {
   margin-bottom: 4px;
+  position: relative;
 }
-ul.navbar > li > div.menu ul li a {
+ul.navbar > li > div.menu ul li > a {
   text-decoration: none;
 }
-ul.navbar > li > div.menu ul li a:hover {
+ul.navbar > li > div.menu ul li > a:hover {
   text-decoration: underline;
+}
+ul.navbar > li > div.menu ul li.has-menu > ul {
+  background: white;
+  border: 1px solid black;
+  display: none;
+  left: 100%;
+  min-width: 100px;
+  position: absolute;
+  top: 0;
+}
+ul.navbar > li > div.menu ul li.has-menu:hover > ul {
+  display: block;
 }
 ul.navbar > li:hover > div.menu {
   opacity: 1;

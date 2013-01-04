@@ -7,7 +7,7 @@ ul.navbar > li {
         -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
         box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
         font-size: 13px;
-        min-width: 200px;
+        min-width: 160px;
         opacity: 0;
         padding: 24px;
         position: absolute;
@@ -53,13 +53,30 @@ ul.navbar > li {
 
             li {
                 margin-bottom: 4px;
+                position: relative;
 
-                a {
+                > a {
                     text-decoration: none;
                     &:hover {
                         text-decoration: underline;
                     }
                 }
+                // Seriously, another level of menus? Yes.
+                &.has-menu {
+                    > ul {
+                        background: #fff;
+                        border: 1px solid #000;
+                        display: none;
+                        left: 100%;
+                        min-width: 100px;
+                        position: absolute;
+                        top: 0;
+                    }
+                    &:hover > ul {
+                        display: block;
+                    }
+                }
+
             }
         }
     }
