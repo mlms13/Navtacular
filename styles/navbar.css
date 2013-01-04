@@ -193,7 +193,7 @@ ul.navbar.green {
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
-.flexbox-legacy ul.navbar.green.full-width > li:last-child > a {
+.flexbox ul.navbar.green.full-width > li:last-child > a {
   border-radius: 0 8px 8px 0;
 }
 ul.navbar.green > li:first-child > a {
@@ -251,7 +251,7 @@ ul.navbar.light {
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
-.flexbox-legacy ul.navbar.light.full-width > li:last-child > a {
+.flexbox ul.navbar.light.full-width > li:last-child > a {
   border-radius: 0 4px 4px 0;
 }
 ul.navbar.light > li:first-child > a {
