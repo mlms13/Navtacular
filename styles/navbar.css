@@ -108,9 +108,9 @@ ul.navbar > li > div.menu h2 {
 }
 ul.navbar > li > div.menu ul {
   color: #777777;
-  list-style: square;
+  list-style: none;
   margin: 0;
-  padding: 0 0 0 18px;
+  padding: 0;
 }
 ul.navbar > li > div.menu ul li {
   margin-bottom: 4px;
@@ -225,6 +225,10 @@ ul.navbar.green > li > div.menu.wide {
   left: 8px;
   right: 8px;
 }
+ul.navbar.green > li > div.menu ul {
+  list-style: square;
+  padding-left: 18px;
+}
 ul.navbar.green > li > div.menu ul li a {
   color: #666666;
 }
@@ -294,7 +298,6 @@ ul.navbar.light > li > div.menu h2 {
   padding: 0;
 }
 ul.navbar.light > li > div.menu ul li {
-  background: transparent;
   margin: 0;
   padding: 0;
 }
@@ -362,6 +365,10 @@ ul.navbar.dark > li > div.menu {
 }
 ul.navbar.dark > li > div.menu.wide {
   border-width: 6px 1px 1px;
+}
+ul.navbar.dark > li > div.menu ul {
+  list-style: square;
+  padding-left: 18px;
 }
 ul.navbar.dark > li > div.menu ul li a {
   color: #666666;
