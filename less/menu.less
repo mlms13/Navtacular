@@ -62,6 +62,12 @@ ul.navbar > li {
                 }
                 // Seriously, another level of menus? Yes.
                 &.has-menu {
+                    &:after {
+                        color: #999;
+                        content: "›";
+                        position: absolute;
+                        right: 10px;
+                    }
                     > ul {
                         background: #fff;
                         border: 1px solid #000;

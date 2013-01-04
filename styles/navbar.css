@@ -74,7 +74,6 @@ ul.navbar > li > div.menu {
   font-size: 13px;
   min-width: 160px;
   opacity: 0;
-  padding: 24px;
   position: absolute;
   -webkit-transition: opacity 300ms linear, visibility 0 linear 300ms;
   transition: opacity 300ms linear, visibility 0 linear 300ms;
@@ -121,6 +120,12 @@ ul.navbar > li > div.menu ul li > a {
 }
 ul.navbar > li > div.menu ul li > a:hover {
   text-decoration: underline;
+}
+ul.navbar > li > div.menu ul li.has-menu:after {
+  color: #999999;
+  content: "›";
+  position: absolute;
+  right: 10px;
 }
 ul.navbar > li > div.menu ul li.has-menu > ul {
   background: white;
@@ -306,12 +311,23 @@ ul.navbar.light > li > div.menu ul li a {
   display: block;
   padding: 7px;
 }
-ul.navbar.light > li > div.menu ul li a:hover {
+ul.navbar.light > li > div.menu ul li:hover > a,
+ul.navbar.light > li > div.menu ul li > a:hover {
   background: #00684d;
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.15), transparent);
   background-image: linear-gradient(rgba(255, 255, 255, 0.15), transparent);
   color: white;
   text-decoration: none;
+}
+ul.navbar.light > li > div.menu ul li.has-menu:after {
+  font-size: 20px;
+  top: 2px;
+}
+ul.navbar.light > li > div.menu ul li.has-menu > ul {
+  background: #e4e4e4;
+  border: 0;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 @media only screen and (max-width: 630px) {
   ul.navbar.light  > li:first-child > a {
@@ -362,6 +378,7 @@ ul.navbar.dark > li > a:hover {
 ul.navbar.dark > li > div.menu {
   border-color: #4d4d4d;
   border-width: 6px 4px 4px;
+  padding: 24px;
 }
 ul.navbar.dark > li > div.menu.wide {
   border-width: 6px 1px 1px;

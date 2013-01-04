@@ -70,13 +70,26 @@ ul.navbar {
                             color: #666;
                             display: block;
                             padding: 7px;
+                        }
+                        &:hover > a, > a:hover {
+                            background: #00684d;
+                            background-image: -webkit-linear-gradient(rgba(255,255,255,0.15), transparent);
+                            background-image: linear-gradient(rgba(255,255,255,0.15), transparent);
+                            color: #fff;
+                            text-decoration: none;
 
-                            &:hover {
-                                background: #00684d;
-                                background-image: -webkit-linear-gradient(rgba(255,255,255,0.15), transparent);
-                                background-image: linear-gradient(rgba(255,255,255,0.15), transparent);
-                                color: #fff;
-                                text-decoration: none;
+                        }
+                        &.has-menu {
+                            &:after {
+                                font-size: 20px;
+                                top: 2px;
+                            }
+
+                            > ul {
+                                background: #e4e4e4;
+                                border: 0;
+                                -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+                                box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
                             }
                         }
                     }
