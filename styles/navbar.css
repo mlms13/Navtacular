@@ -72,9 +72,8 @@ ul.navbar > li > div.menu {
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   font-size: 13px;
-  min-width: 200px;
+  min-width: 160px;
   opacity: 0;
-  padding: 24px;
   position: absolute;
   -webkit-transition: opacity 300ms linear, visibility 0 linear 300ms;
   transition: opacity 300ms linear, visibility 0 linear 300ms;
@@ -108,18 +107,37 @@ ul.navbar > li > div.menu h2 {
 }
 ul.navbar > li > div.menu ul {
   color: #777777;
-  list-style: square;
+  list-style: none;
   margin: 0;
-  padding: 0 0 0 18px;
+  padding: 0;
 }
 ul.navbar > li > div.menu ul li {
   margin-bottom: 4px;
+  position: relative;
 }
-ul.navbar > li > div.menu ul li a {
+ul.navbar > li > div.menu ul li > a {
   text-decoration: none;
 }
-ul.navbar > li > div.menu ul li a:hover {
+ul.navbar > li > div.menu ul li > a:hover {
   text-decoration: underline;
+}
+ul.navbar > li > div.menu ul li.has-menu:after {
+  color: #999999;
+  content: "›";
+  position: absolute;
+  right: 10px;
+}
+ul.navbar > li > div.menu ul li.has-menu > ul {
+  background: white;
+  border: 1px solid black;
+  display: none;
+  left: 100%;
+  min-width: 100px;
+  position: absolute;
+  top: 0;
+}
+ul.navbar > li > div.menu ul li.has-menu:hover > ul {
+  display: block;
 }
 ul.navbar > li:hover > div.menu {
   opacity: 1;
@@ -180,7 +198,7 @@ ul.navbar.green {
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
-.flexbox-legacy ul.navbar.green.full-width > li:last-child > a {
+.flexbox ul.navbar.green.full-width > li:last-child > a {
   border-radius: 0 8px 8px 0;
 }
 ul.navbar.green > li:first-child > a {
@@ -212,6 +230,10 @@ ul.navbar.green > li > div.menu.wide {
   left: 8px;
   right: 8px;
 }
+ul.navbar.green > li > div.menu ul {
+  list-style: square;
+  padding-left: 18px;
+}
 ul.navbar.green > li > div.menu ul li a {
   color: #666666;
 }
@@ -238,7 +260,7 @@ ul.navbar.light {
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
-.flexbox-legacy ul.navbar.light.full-width > li:last-child > a {
+.flexbox ul.navbar.light.full-width > li:last-child > a {
   border-radius: 0 4px 4px 0;
 }
 ul.navbar.light > li:first-child > a {
@@ -281,7 +303,6 @@ ul.navbar.light > li > div.menu h2 {
   padding: 0;
 }
 ul.navbar.light > li > div.menu ul li {
-  background: transparent;
   margin: 0;
   padding: 0;
 }
@@ -290,12 +311,23 @@ ul.navbar.light > li > div.menu ul li a {
   display: block;
   padding: 7px;
 }
-ul.navbar.light > li > div.menu ul li a:hover {
+ul.navbar.light > li > div.menu ul li:hover > a,
+ul.navbar.light > li > div.menu ul li > a:hover {
   background: #00684d;
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.15), transparent);
   background-image: linear-gradient(rgba(255, 255, 255, 0.15), transparent);
   color: white;
   text-decoration: none;
+}
+ul.navbar.light > li > div.menu ul li.has-menu:after {
+  font-size: 20px;
+  top: 2px;
+}
+ul.navbar.light > li > div.menu ul li.has-menu > ul {
+  background: #e4e4e4;
+  border: 0;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 @media only screen and (max-width: 630px) {
   ul.navbar.light  > li:first-child > a {
@@ -346,9 +378,14 @@ ul.navbar.dark > li > a:hover {
 ul.navbar.dark > li > div.menu {
   border-color: #4d4d4d;
   border-width: 6px 4px 4px;
+  padding: 24px;
 }
 ul.navbar.dark > li > div.menu.wide {
   border-width: 6px 1px 1px;
+}
+ul.navbar.dark > li > div.menu ul {
+  list-style: square;
+  padding-left: 18px;
 }
 ul.navbar.dark > li > div.menu ul li a {
   color: #666666;
