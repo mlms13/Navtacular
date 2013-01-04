@@ -9,7 +9,7 @@
 .radius (@r) when not (@r = 0) {
     border-radius: @r;
 
-    .flexbox-legacy &.full-width > li:last-child > a {
+    .flexbox &.full-width > li:last-child > a {
         border-radius: 0 @r @r 0;
     }
     > li {
