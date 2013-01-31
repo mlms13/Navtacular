@@ -76,11 +76,20 @@ ul.navbar {
                 .mobile-height(@height); // reset height if theme adjusted it
                 .mobile-radius(@rad); // round the correct corners when menu collapses
 
-                > li > div.menu {
-                    border-width: 0 1px;
-                    &.wide {
+                > li {
+                    > div.menu {
                         border-width: 0 1px;
-                        .mobile-menu-width(@rad); // reset menu position if theme has a border radius
+                        padding-top: 0;
+                        padding-bottom: 0;
+
+                        &.wide {
+                            border-width: 0 1px;
+                            .mobile-menu-width(@rad); // reset menu position if theme has a border radius
+                        }
+                    }
+                    &:hover > div.menu {
+                        padding-top: 24px;
+                        padding-bottom: 24px;
                     }
                 }
             }
