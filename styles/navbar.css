@@ -402,9 +402,15 @@ ul.navbar.dark > li > div.menu ul li a:hover {
   }
   ul.navbar.dark  > li > div.menu {
     border-width: 0 1px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   ul.navbar.dark  > li > div.menu.wide {
     border-width: 0 1px;
+  }
+  ul.navbar.dark  > li:hover > div.menu {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 @media only screen and (max-width: 630px) {
