@@ -107,7 +107,7 @@
         <section>
             <h2>Themes</h2>
             <p>
-                You can toggle between different color themes using the following links: <a id="btn_light" href="#">Light</a> &#8226; <a id="btn_dark" href="#">Dark</a> &#8226; <a id="btn_green" href="#">Green</a>
+                You can toggle between different color themes using the following links: <a id="btn_dark" href="#">Dark</a>.
             </p>
             <p>
                 It's easy to develop your own themes using CSS. As an example, see the light, dark, and green themes (written in <a href="http://lesscss.org/">LESS</a>) in the <code>/styles/less/</code> folder. You can view the compiled CSS at the end of <a href="./styles/navbar.css"><code>navbar.css</code></a>.
@@ -127,14 +127,8 @@
                     // and add the new one
                     ul.className += ' ' + theme;
                 }
-                btn_light.onclick = function () {
-                    addTheme('light');
-                };
                 btn_dark.onclick = function () {
                     addTheme('dark');
-                };
-                btn_green.onclick = function () {
-                    addTheme('green');
                 };
             } ());
         </script>
