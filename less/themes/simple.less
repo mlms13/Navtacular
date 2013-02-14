@@ -1,0 +1,82 @@
+// Theme name: Simple
+// Theme author: Michael Martin-Smucker
+
+ul.navbar {
+    &.theme-simple {
+        > li {
+            > a {
+                border-left: 0;
+                border-right-color: #999;
+                color: #999;
+                font-weight: normal;
+                line-height: 18px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+
+                strong {
+                    color: #298;
+                    display: block;
+                    font-weight: bold;
+                }
+            }
+            &:last-child, &.last-child {
+                > a:after {
+                    border-left: 0;
+                }
+            }
+            &:hover > a, > a:hover {
+                background: #a5a5a6;
+                color: #fff;
+                -webkit-transition: color 500ms ease-out, background 200ms ease-in;
+                transition: color 500ms ease-out, background 200ms ease-in;
+
+                strong {
+                    color: #fff;
+                }
+            }
+            > div.menu {
+                background: #eaeaea;
+                border: 0;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+                -webkit-transform-origin: 50% 0%;
+                transform-origin: 50% 0%;
+                -webkit-transform: rotateX(90deg);
+                transform: rotateX(90deg);
+                -webkit-transition: 300ms;
+                transition: 300ms;
+
+                h2 {
+                    margin: 8px 12px;
+                }
+
+                ul li {
+                    &.has-menu {
+                        &:after {
+                            font-size: 20px;
+                            top: 2px;
+                        }
+                        &:hover:after {
+                            color: #fff;
+                        }
+                    }
+                    a {
+                        color: #444;
+                        display: block;
+                        padding: 6px 12px;
+
+                        &:hover {
+                            background: #298;
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            &:hover > div.menu {
+                -webkit-transform: rotateX(0deg);
+                transform: rotateX(0deg);
+                opacity: 1;
+            }
+        }
+    }
+}

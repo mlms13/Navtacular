@@ -106,7 +106,7 @@
         <section>
             <h2>Themes</h2>
             <p>
-                You can toggle between different color themes using the following links: <a href="#" class="theme-switch" data-theme="theme-dark">Dark</a> - <a href="#" class="theme-switch" data-theme="theme-tan">Tan</a> - <a href="#" class="theme-switch" data-theme="theme-blue">Blue</a>.
+                You can toggle between different color themes using the following links: <a href="#" class="theme-switch" data-theme="theme-dark">Dark</a> - <a href="#" class="theme-switch" data-theme="theme-tan">Tan</a> - <a href="#" class="theme-switch" data-theme="theme-blue">Blue</a> - <a href="#" class="theme-switch" data-theme="theme-simple">Simple</a>.
             </p>
             <p>
                 It's easy to develop your own themes using CSS. As an example, see the light, dark, and green themes (written in <a href="http://lesscss.org/">LESS</a>) in the <code>/less/</code> folder. You can view the compiled CSS at the end of <a href="./styles/navbar.css"><code>navbar.css</code></a>.
@@ -120,7 +120,7 @@
                     $navbar = $('.navbar');
 
                 // remove any existing theme and add the new one
-                $navbar.removeClass('theme-dark theme-tan theme-blue').addClass($this.data('theme'));
+                $navbar.removeClass('theme-dark theme-tan theme-blue theme-simple').addClass($this.data('theme'));
             });
         </script>
 
