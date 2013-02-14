@@ -35,8 +35,7 @@
                 body {padding-left: 6px; padding-right: 6px;}
             }
         </style>
-        <script type="text/javascript" src="./scripts/modernizr.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/modernizr.js"></script>
     </head>
     <body>
         <header>
@@ -107,30 +106,22 @@
         <section>
             <h2>Themes</h2>
             <p>
-                You can toggle between different color themes using the following links: <a id="btn_dark" href="#">Dark</a>.
+                You can toggle between different color themes using the following links: <a href="#" class="theme-switch" data-theme="dark">Dark</a> - <a href="#" class="theme-switch" data-theme="tan">Tan</a>.
             </p>
             <p>
-                It's easy to develop your own themes using CSS. As an example, see the light, dark, and green themes (written in <a href="http://lesscss.org/">LESS</a>) in the <code>/styles/less/</code> folder. You can view the compiled CSS at the end of <a href="./styles/navbar.css"><code>navbar.css</code></a>.
+                It's easy to develop your own themes using CSS. As an example, see the light, dark, and green themes (written in <a href="http://lesscss.org/">LESS</a>) in the <code>/less/</code> folder. You can view the compiled CSS at the end of <a href="./styles/navbar.css"><code>navbar.css</code></a>.
             </p>
         </section>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script type="text/javascript" src="scripts/navbar.js"></script>
         <script type=text/javascript>
-            (function () {
-                var ul = $('.navbar')[0],
-                    btn_light = $('#btn_light')[0],
-                    btn_dark = $('#btn_dark')[0],
-                    btn_green = $('#btn_green')[0];
+            $('.theme-switch').on('click', function () {
+                var $this = $(this),
+                    $navbar = $('.navbar');
 
-                function addTheme(theme) {
-                    // remove any existing theme
-                    ul.className = ul.className.replace(' light', '').replace(' dark', '').replace(' green', '');
-                    // and add the new one
-                    ul.className += ' ' + theme;
-                }
-                btn_dark.onclick = function () {
-                    addTheme('dark');
-                };
-            } ());
+                // remove any existing theme and add the new one
+                $navbar.removeClass('dark tan').addClass($this.data('theme'));
+            });
         </script>
 
     </body>
