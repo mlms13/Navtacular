@@ -79,4 +79,29 @@ ul.navbar {
             }
         }
     }
+    @media screen and (max-width: 1000px) {
+        & {
+            > li {
+                > a {
+                    border-left: 0;
+                    border-right-color: #ddd;
+                    color: #999;
+                    font-weight: normal;
+                    line-height: 18px;
+                    padding: 4px 32px 4px 10px;
+                    text-align: left;
+                    -webkit-transition: background 250ms;
+                    transition: background 250ms;
+                    -webkit-transition: padding 450ms;
+                    transition: padding 450ms;
+
+                    > strong {
+                        color: #298;
+                        display: block;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
 }
