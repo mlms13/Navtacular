@@ -1,148 +1,152 @@
-> div.menu {
-    background: #fff;
-    background: rgba(255,255,255,0.97);
-    border: 2px solid #000;
-    border-top-width: 6px;
-    -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
-    font-size: 13px;
-    min-width: 160px;
-    opacity: 0;
-    position: absolute;
-    -webkit-transition: opacity 300ms linear, visibility 0 linear 300ms;
-    transition: opacity 300ms linear, visibility 0 linear 300ms;
-    visibility: hidden;
-    z-index: 100;
-
-    &.cols {
-        .section {
-            float: left;
-            padding-left: 24px;
-            &:first-child {
-                padding-left: 0;
-            }
-        }
-    }
-    &.wide {
-        border-width: 6px 1px 1px;
-        left: 0;
-        right: 0;
-
-        .section {
-            float: left;
-            margin: 0 2%;
-            width: 29%;
-            &.continued {
-                padding-top: 28px;
-            }
-        }
-    }
-
-    h2 {
-        font-size: 17px;
-        line-height: 20px;
-        margin: 0 0 8px;
-    }
-    ul {
-        color: #777;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-            margin-bottom: 4px;
-            position: relative;
-
-            > a {
-                text-decoration: none;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-            // Seriously, another level of menus? Yes.
-            &.has-menu {
-                &:after {
-                    color: #999;
-                    content: "›";
-                    position: absolute;
-                    right: 10px;
-                }
-                > ul {
-                    background: #fff;
-                    border: 1px solid #000;
-                    display: none;
-                    left: 100%;
-                    min-width: 100px;
-                    position: absolute;
-                    top: 0;
-                }
-                &:hover > ul {
-                    display: block;
-                }
-            }
-
-        }
-    }
-}
-&:hover {
+nav.navbar > ul > li {
     > div.menu {
-        opacity: 1;
-        -webkit-transition: opacity 150ms linear;
-        transition: opacity 150ms linear;
-        visibility: visible;
-    }
-}
-&.menu-align-right {
-    position: relative;
-    > div.menu {
-        left: auto;
-        right: 0;
-    }
-}
-@media only screen and (max-width: 630px) {
-    &.menu-align-right {
-        position: static;
-    }
-    > div.menu {
-        border-width: 0 1px;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        left: 0;
-        max-height: 0;
-        overflow: hidden;
-        padding-top: 0;
-        padding-bottom: 0;
-        position: relative;
-        -webkit-transition: all 0 500ms,
-            max-height 500ms 0,
-            padding-top 200ms 200ms,
-            padding-bottom 200ms 200ms;
-        transition: all 0 500ms,
-            max-height 500ms 0,
-            padding-top 200ms 200ms,
-            padding-bottom 200ms 200ms;
-        width: 100%;
+        background: #fff;
+        background: rgba(255,255,255,0.97);
+        border: 2px solid #000;
+        border-top-width: 6px;
+        -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+        font-size: 13px;
+        min-width: 160px;
+        opacity: 0;
+        position: absolute;
+        -webkit-transition: opacity 300ms linear, visibility 0 linear 300ms;
+        transition: opacity 300ms linear, visibility 0 linear 300ms;
+        visibility: hidden;
+        z-index: 100;
 
-        &.cols, &.wide {
-            border-width: 0 1px;
-            width: 100%;
+        &.cols {
             .section {
-                float: none;
-                width: 100%;
+                float: left;
+                padding-left: 24px;
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+        &.wide {
+            border-width: 6px 1px 1px;
+            left: 0;
+            right: 0;
+
+            .section {
+                float: left;
+                margin: 0 2%;
+                width: 29%;
+                &.continued {
+                    padding-top: 28px;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 17px;
+            line-height: 20px;
+            margin: 0 0 8px;
+        }
+        ul {
+            color: #777;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-bottom: 4px;
+                position: relative;
+
+                > a {
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                // Seriously, another level of menus? Yes.
+                &.has-menu {
+                    &:after {
+                        color: #999;
+                        content: "›";
+                        position: absolute;
+                        right: 10px;
+                    }
+                    > ul {
+                        background: #fff;
+                        border: 1px solid #000;
+                        display: none;
+                        left: 100%;
+                        min-width: 100px;
+                        position: absolute;
+                        top: 0;
+                    }
+                    &:hover > ul {
+                        display: block;
+                    }
+                }
+
             }
         }
     }
-    &:hover > div.menu {
-        padding-top: 24px;
-        padding-bottom: 24px;
-        max-height: 1000px;
-        -webkit-transition: max-height 1s,
-            padding-top 200ms,
-            padding-bottom 200ms;
-        transition: max-height 1s,
-            padding-top 200ms,
-            padding-bottom 200ms;
+    &:hover {
+        > div.menu {
+            opacity: 1;
+            -webkit-transition: opacity 150ms linear;
+            transition: opacity 150ms linear;
+            visibility: visible;
+        }
+    }
+    &.menu-align-right {
+        position: relative;
+        > div.menu {
+            left: auto;
+            right: 0;
+        }
+    }
+    & {
+        @media only screen and (max-width: 630px) {
+            &.menu-align-right {
+                position: static;
+            }
+            > div.menu {
+                border-width: 0 1px;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                left: 0;
+                max-height: 0;
+                overflow: hidden;
+                padding-top: 0;
+                padding-bottom: 0;
+                position: relative;
+                -webkit-transition: all 0 500ms,
+                    max-height 500ms 0,
+                    padding-top 200ms 200ms,
+                    padding-bottom 200ms 200ms;
+                transition: all 0 500ms,
+                    max-height 500ms 0,
+                    padding-top 200ms 200ms,
+                    padding-bottom 200ms 200ms;
+                width: 100%;
+
+                &.cols, &.wide {
+                    border-width: 0 1px;
+                    width: 100%;
+                    .section {
+                        float: none;
+                        width: 100%;
+                    }
+                }
+            }
+            &:hover > div.menu {
+                padding-top: 24px;
+                padding-bottom: 24px;
+                max-height: 1000px;
+                -webkit-transition: max-height 1s,
+                    padding-top 200ms,
+                    padding-bottom 200ms;
+                transition: max-height 1s,
+                    padding-top 200ms,
+                    padding-bottom 200ms;
+            }
+        }
     }
 }

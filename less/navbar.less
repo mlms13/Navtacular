@@ -1,7 +1,3 @@
-
-// Import comon mixins used by all themes
-@import "themes/common";
-
 nav.navbar {
     > h1 {
         // The heading identifying our nav section can be hidden in the full desktop view
@@ -55,9 +51,6 @@ nav.navbar {
                 -webkit-transition: 100ms;
                 transition: 100ms;
             }
-
-            // Import the drop-down menu system
-            @import "menu";
         }
     }
 
@@ -85,9 +78,16 @@ nav.navbar {
             }
         }
     }
-    // Import the core responsive stuff
-    @import "mobile";
-
-    // Import the basic theme
-    @import "themes/dark";
 }
+
+// Import the drop-down menu system
+@import "menu";
+
+// Import comon mixins used by all themes
+@import "themes/common";
+
+// Import the basic theme
+@import "themes/dark";
+
+// Import the core responsive stuff
+@import "mobile";
