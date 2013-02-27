@@ -100,53 +100,51 @@ nav.navbar > ul > li {
             right: 0;
         }
     }
-    & {
-        @media only screen and (max-width: 630px) {
-            &.menu-align-right {
-                position: static;
-            }
-            > div.menu {
-                border-width: 0 1px;
-                -moz-box-sizing: border-box;
-                box-sizing: border-box;
-                -webkit-box-shadow: none;
-                box-shadow: none;
-                left: 0;
-                max-height: 0;
-                overflow: hidden;
-                padding-top: 0;
-                padding-bottom: 0;
-                position: relative;
-                -webkit-transition: all 0 500ms,
-                    max-height 500ms 0,
-                    padding-top 200ms 200ms,
-                    padding-bottom 200ms 200ms;
-                transition: all 0 500ms,
-                    max-height 500ms 0,
-                    padding-top 200ms 200ms,
-                    padding-bottom 200ms 200ms;
-                width: 100%;
+    @media only screen and (max-width: 630px) {
+        &.menu-align-right {
+            position: static;
+        }
+        > div.menu {
+            border-width: 0 1px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            left: 0;
+            max-height: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+            position: relative;
+            -webkit-transition: all 0 500ms,
+                max-height 500ms 0,
+                padding-top 200ms 200ms,
+                padding-bottom 200ms 200ms;
+            transition: all 0 500ms,
+                max-height 500ms 0,
+                padding-top 200ms 200ms,
+                padding-bottom 200ms 200ms;
+            width: 100%;
 
-                &.cols, &.wide {
-                    border-width: 0 1px;
+            &.cols, &.wide {
+                border-width: 0 1px;
+                width: 100%;
+                .section {
+                    float: none;
                     width: 100%;
-                    .section {
-                        float: none;
-                        width: 100%;
-                    }
                 }
             }
-            &:hover > div.menu {
-                padding-top: 24px;
-                padding-bottom: 24px;
-                max-height: 1000px;
-                -webkit-transition: max-height 1s,
-                    padding-top 200ms,
-                    padding-bottom 200ms;
-                transition: max-height 1s,
-                    padding-top 200ms,
-                    padding-bottom 200ms;
-            }
+        }
+        &:hover > div.menu {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            max-height: 1000px;
+            -webkit-transition: max-height 1s,
+                padding-top 200ms,
+                padding-bottom 200ms;
+            transition: max-height 1s,
+                padding-top 200ms,
+                padding-bottom 200ms;
         }
     }
 }
