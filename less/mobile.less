@@ -1,25 +1,26 @@
 @media only screen and (max-width: 630px) {
-    ul.navbar {
-        .flexbox &.full-width {
+    nav.navbar {
+        .flexbox &.full-width > ul {
             display: block;
 
             > li > a {
                 padding-left: 16px;
             }
         }
-        > li {
-            float: none;
-
-            > a {
-                border: 0;
-                font-size: 16px;
-                line-height: 40px;
-                padding-left: 16px;
-                text-align: left;
-            }
-            &:last-child, &.last-child {
-                > a:after {
+        > ul {
+            > li {
+                float: none;
+                > a {
                     border: 0;
+                    font-size: 16px;
+                    line-height: 40px;
+                    padding-left: 16px;
+                    text-align: left;
+                }
+                &:last-child, &.last-child {
+                    > a:after {
+                        border: 0;
+                    }
                 }
             }
         }
