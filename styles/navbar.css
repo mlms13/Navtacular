@@ -260,61 +260,61 @@ nav.navbar.theme-dark > ul > li > div.menu ul li a:hover {
     padding-bottom: 24px;
   }
 }
-ul.navbar.theme-tan {
+nav.navbar.theme-tan > ul {
   background: #eae8db;
   -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   min-height: 40px;
 }
-ul.navbar.theme-tan > li > a {
+nav.navbar.theme-tan > ul > li > a {
   border-left-color: #fcfaf4;
   border-right-color: #d2cbc6;
   color: #00684d;
   line-height: 40px;
   padding: 0 20px;
 }
-ul.navbar.theme-tan > li:last-child > a:after,
-ul.navbar.theme-tan > li.last-child > a:after {
+nav.navbar.theme-tan > ul > li:last-child > a:after,
+nav.navbar.theme-tan > ul > li.last-child > a:after {
   border-left-color: #fcfaf4;
   height: 40px;
 }
-ul.navbar.theme-tan > li:hover > a,
-ul.navbar.theme-tan > li > a:hover {
+nav.navbar.theme-tan > ul > li:hover > a,
+nav.navbar.theme-tan > ul > li > a:hover {
   background-color: #00684d;
   border-color: #00684d;
   color: white;
 }
-ul.navbar.theme-tan > li > div.menu {
+nav.navbar.theme-tan > ul > li > div.menu {
   background: #00684d;
   border: 0;
   -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
 }
-ul.navbar.theme-tan > li > div.menu h2 {
+nav.navbar.theme-tan > ul > li > div.menu h2 {
   border-bottom: 1px solid #007255;
   color: #dddac4;
   margin: 0 24px;
   padding: 8px 0 0;
 }
-ul.navbar.theme-tan > li > div.menu ul li {
+nav.navbar.theme-tan > ul > li > div.menu ul li {
   margin: 0;
 }
-ul.navbar.theme-tan > li > div.menu ul li a {
+nav.navbar.theme-tan > ul > li > div.menu ul li a {
   color: white;
   display: block;
   padding: 8px 24px;
 }
-ul.navbar.theme-tan > li > div.menu ul li:hover > a,
-ul.navbar.theme-tan > li > div.menu ul li > a:hover {
+nav.navbar.theme-tan > ul > li > div.menu ul li:hover > a,
+nav.navbar.theme-tan > ul > li > div.menu ul li > a:hover {
   background: #228866;
   text-decoration: none;
 }
-ul.navbar.theme-tan > li > div.menu ul li.has-menu:after {
+nav.navbar.theme-tan > ul > li > div.menu ul li.has-menu:after {
   color: #dddddd;
   font-size: 20px;
   top: 2px;
 }
-ul.navbar.theme-tan > li > div.menu ul li.has-menu > ul {
+nav.navbar.theme-tan > ul > li > div.menu ul li.has-menu > ul {
   background: #00684d;
   border: 0;
   -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
