@@ -1,5 +1,5 @@
 nav.navbar > ul > li {
-    > div.menu {
+    > .navbar-menu {
         background: #fff;
         background: rgba(255,255,255,0.97);
         border: 2px solid #000;
@@ -86,7 +86,7 @@ nav.navbar > ul > li {
         }
     }
     &:hover {
-        > div.menu {
+        > .navbar-menu {
             opacity: 1;
             -webkit-transition: opacity 150ms linear;
             transition: opacity 150ms linear;
@@ -95,7 +95,7 @@ nav.navbar > ul > li {
     }
     &.menu-align-right {
         position: relative;
-        > div.menu {
+        > .navbar-menu {
             left: auto;
             right: 0;
         }
@@ -104,7 +104,7 @@ nav.navbar > ul > li {
         &.menu-align-right {
             position: static;
         }
-        > div.menu {
+        > .navbar-menu {
             border-width: 0 1px;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -135,7 +135,7 @@ nav.navbar > ul > li {
                 }
             }
         }
-        &:hover > div.menu {
+        &:hover > .navbar-menu {
             padding-top: 24px;
             padding-bottom: 24px;
             max-height: 1000px;
