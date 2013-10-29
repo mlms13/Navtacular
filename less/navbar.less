@@ -1,9 +1,4 @@
 nav.navbar {
-    > h1 {
-        // The heading identifying our nav section can be hidden in the full desktop view
-        display: none;
-    }
-
     > ul {
         font-size: 14px;
         min-height: 36px;
@@ -77,6 +72,13 @@ nav.navbar {
                 }
             }
         }
+    }
+}
+
+.navbar-label {
+    @media (min-width: 630px) {
+        // The nav section label can be hidden in the full desktop view
+        display: none;
     }
 }
 
