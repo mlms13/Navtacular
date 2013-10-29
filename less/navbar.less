@@ -1,7 +1,9 @@
+@navHeight: 36px;
+
 nav.navbar {
     > ul {
         font-size: 14px;
-        min-height: 36px;
+        min-height: @navHeight;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -16,8 +18,9 @@ nav.navbar {
                 cursor: pointer;
                 display: block;
                 font-weight: bold;
-                line-height: 36px;
-                min-height: 36px; // fix a line-height bug related to hasLayout in IE7
+                line-height: @navHeight;
+                // fix a line-height bug related to hasLayout in IE7
+                min-height: @navHeight;
                 padding: 0 16px;
                 position: relative;
                 text-decoration: none;
@@ -33,7 +36,7 @@ nav.navbar {
                 > a:after {
                     border-left: 1px solid;
                     content: "";
-                    min-height: 36px;
+                    min-height: @navHeight;
                     position: absolute;
                     right: -2px;
                     top: 0;
