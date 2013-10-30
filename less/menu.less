@@ -38,6 +38,39 @@
         }
     }
 
+    @media (max-width: 630px) {
+        border-width: 0 1px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        left: 0;
+        max-height: 0;
+        overflow: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+        position: relative;
+        -webkit-transition: all 0 500ms,
+            max-height 500ms 0,
+            padding-top 200ms 200ms,
+            padding-bottom 200ms 200ms;
+        transition: all 0 500ms,
+            max-height 500ms 0,
+            padding-top 200ms 200ms,
+            padding-bottom 200ms 200ms;
+        width: 100%;
+
+        &.cols, &.mega {
+            border-width: 0 1px;
+            width: 100%;
+
+            .navbar-menu-group {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+
     h2 {
         font-size: 17px;
         line-height: 20px;
@@ -70,54 +103,8 @@
     -webkit-transition: opacity 150ms linear;
     transition: opacity 150ms linear;
     visibility: visible;
-}
 
-// when the parent `li` is set to align the menu to the right, do it
-.menu-align-right {
-    position: relative;
-
-    .navbar-menu {
-        left: auto;
-        right: 0;
-    }
-}
-
-@media only screen and (max-width: 630px) {
-    &.menu-align-right {
-        position: static;
-    }
-    > .navbar-menu {
-        border-width: 0 1px;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        left: 0;
-        max-height: 0;
-        overflow: hidden;
-        padding-top: 0;
-        padding-bottom: 0;
-        position: relative;
-        -webkit-transition: all 0 500ms,
-            max-height 500ms 0,
-            padding-top 200ms 200ms,
-            padding-bottom 200ms 200ms;
-        transition: all 0 500ms,
-            max-height 500ms 0,
-            padding-top 200ms 200ms,
-            padding-bottom 200ms 200ms;
-        width: 100%;
-
-        &.cols, &.wide {
-            border-width: 0 1px;
-            width: 100%;
-            .navbar-menu-group {
-                float: none;
-                width: 100%;
-            }
-        }
-    }
-    &:hover > .navbar-menu {
+    @media (max-width: 630px) {
         padding-top: 24px;
         padding-bottom: 24px;
         max-height: 1000px;
@@ -127,5 +114,18 @@
         transition: max-height 1s,
             padding-top 200ms,
             padding-bottom 200ms;
+    }
+}
+
+// on large screens, when the parent `li` is
+// set to align the menu to the right, do it
+@media (min-width: 630px) {
+    .menu-align-right {
+        position: relative;
+
+        .navbar-menu {
+            left: auto;
+            right: 0;
+        }
     }
 }
