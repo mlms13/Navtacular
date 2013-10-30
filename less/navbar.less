@@ -1,4 +1,5 @@
 @navHeight: 36px;
+@mqBreakpoint: 630px;
 
 .navbar {
     font-size: 14px;
@@ -13,7 +14,7 @@
 .navbar-item {
     float: left;
 
-    @media (max-width: 630px) {
+    @media (max-width: @mqBreakpoint) {
         float: none;
     }
 }
@@ -42,7 +43,7 @@
         position: absolute;
         right: -2px;
         top: 0;
-        @media (max-width: 630px) {
+        @media (max-width: @mqBreakpoint) {
             border-left: 0;
         }
     }
@@ -55,7 +56,7 @@
         transition: 100ms;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: @mqBreakpoint) {
         border: 0;
         font-size: 16px;
         line-height: 40px;
@@ -68,7 +69,7 @@
         display: -ms-flexbox;
         display: flex;
 
-        @media (max-width: 630px) {
+        @media (max-width: @mqBreakpoint) {
             display: block;
         }
     }
@@ -90,14 +91,14 @@
             border-left: 0;
         }
 
-        @media (max-width: 630px) {
+        @media (max-width: @mqBreakpoint) {
             padding-left: 16px;
         }
     }
 }
 
 .navbar-label {
-    @media (min-width: 630px) {
+    @media (min-width: @mqBreakpoint) {
         // The nav section label can be hidden in the full desktop view
         display: none;
     }
