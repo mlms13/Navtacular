@@ -20,6 +20,10 @@
     @media (min-width: @mqBreakpoint) {
         display: table-cell;
         text-align: center;
+
+        .no-display-table & {
+            float: left;
+        }
     }
 }
 .navbar-link {
@@ -43,6 +47,13 @@
         color: #fff;
         -webkit-transition: 100ms;
         transition: 100ms;
+    }
+
+    @media (min-width: @mqBreakpoint) {
+        .no-display-table & {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
     }
 
     @media (max-width: @mqBreakpoint) {
