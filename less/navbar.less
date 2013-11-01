@@ -2,12 +2,16 @@
 
 .navbar {
     font-size: @baseFontSize;
+
+    // a helper class for ULs inside the navbar
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 }
 .navbar-list {
     min-height:  @navHeight;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     position: relative;
 
     @media (min-width: @mqBreakpoint) {
