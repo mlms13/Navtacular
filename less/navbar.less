@@ -35,6 +35,8 @@
     line-height: @navHeight;
     // fix a line-height bug related to hasLayout in IE7
     min-height: @navHeight;
+    padding-left: 16px;
+    padding-right: 16px;
     position: relative;
     text-decoration: none;
     -webkit-transition: 200ms;
@@ -50,19 +52,13 @@
     }
 
     @media (min-width: @mqBreakpoint) {
+        padding-left: 0;
+        padding-right: 0;
+
         .no-display-table & {
             padding-left: 16px;
             padding-right: 16px;
         }
-    }
-
-    @media (max-width: @mqBreakpoint) {
-        border: 0;
-        font-size: 16px;
-        line-height: 40px;
-        padding-left: 16px;
-        padding-right: 16px;
-        text-align: left;
     }
 }
 

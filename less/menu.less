@@ -3,72 +3,61 @@
 .navbar-menu {
     background: #fff;
     background: rgba(255,255,255,0.97);
-    border: 2px solid #000;
-    border-top-width: 6px;
-    -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    border-color: #000;
+    border-style: solid;
+    border-width: 0 1px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     font-size: 13px;
-    min-width: 160px;
+    max-height: 0;
     opacity: 0;
-    position: absolute;
-    -webkit-transition: opacity 300ms linear, visibility 0 linear 300ms;
-    transition: opacity 300ms linear, visibility 0 linear 300ms;
-    visibility: hidden;
-    z-index: 100;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0 500ms,
+        max-height 500ms 0,
+        padding-top 200ms 200ms,
+        padding-bottom 200ms 200ms;
+    transition: all 0 500ms,
+        max-height 500ms 0,
+        padding-top 200ms 200ms,
+        padding-bottom 200ms 200ms;
 
-    &.cols {
-        .navbar-menu-group {
+    @media (min-width: @mqBreakpoint) {
+        border-width: 6px 2px 2px;
+        -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+        max-height: none;
+        min-width: 160px;
+        position: absolute;
+        -webkit-transition: opacity 300ms linear, visibility 0 linear 300ms;
+        transition: opacity 300ms linear, visibility 0 linear 300ms;
+        visibility: hidden;
+        z-index: 100;
+    }
+
+    .navbar-menu-group {
+        @media (min-width: @mqBreakpoint) {
             float: left;
-            padding-left: 24px;
-            &:first-child {
-                padding-left: 0;
-            }
+            padding: 0 24px;   
         }
     }
+
     &.mega {
-        border-width: 6px 1px 1px;
-        left: 0;
-        right: 0;
+        @media (min-width: @mqBreakpoint) {
+            border-width: 6px 1px 1px;
+            left: 0;
+            right: 0;
+        }
+
 
         .navbar-menu-group {
-            float: left;
-            margin: 0 2%;
-            width: 29%;
-            &.continued {
-                padding-top: 28px;
-            }
-        }
-    }
-
-    @media (max-width: 630px) {
-        border-width: 0 1px;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        left: 0;
-        max-height: 0;
-        overflow: hidden;
-        padding-top: 0;
-        padding-bottom: 0;
-        position: relative;
-        -webkit-transition: all 0 500ms,
-            max-height 500ms 0,
-            padding-top 200ms 200ms,
-            padding-bottom 200ms 200ms;
-        transition: all 0 500ms,
-            max-height 500ms 0,
-            padding-top 200ms 200ms,
-            padding-bottom 200ms 200ms;
-        width: 100%;
-
-        &.cols, &.mega {
-            border-width: 0 1px;
-            width: 100%;
-
-            .navbar-menu-group {
-                float: none;
-                width: 100%;
+            @media (min-width @mqBreakpoint) {
+                // replace this with box-sizing and display:table
+                margin: 0 2%;
+                width: 29%;
+                &.continued {
+                    padding-top: 28px;
+                }
             }
         }
     }
@@ -97,31 +86,34 @@
 
         }
     }
-}
 
-// when the parent `li` is hovered, transition the menu
-:hover > .navbar-menu {
-    opacity: 1;
-    -webkit-transition: opacity 150ms linear;
-    transition: opacity 150ms linear;
-    visibility: visible;
-
-    @media (max-width: 630px) {
+    // when the parent `li` is hovered, transition the menu
+    :hover > & {
+        max-height: 1000px;
+        opacity: 1;
         padding-top: 24px;
         padding-bottom: 24px;
-        max-height: 1000px;
         -webkit-transition: max-height 1s,
             padding-top 200ms,
             padding-bottom 200ms;
         transition: max-height 1s,
             padding-top 200ms,
             padding-bottom 200ms;
+
+        @media (min-width: @mqBreakpoint) {
+            max-height: none;
+            padding-top: 0;
+            padding-bottom: 0;
+            -webkit-transition: opacity 150ms linear;
+            transition: opacity 150ms linear;
+            visibility: visible;
+        }
     }
 }
 
 // on large screens, when the parent `li` is
 // set to align the menu to the right, do it
-@media (min-width: 630px) {
+@media (min-width: @mqBreakpoint) {
     .menu-align-right {
         position: relative;
 
