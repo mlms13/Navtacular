@@ -8,25 +8,15 @@
     border-width: 0 1px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    display: none;
     font-size: 13px;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
     position: relative;
-    -webkit-transition: all 0 500ms,
-        max-height 500ms 0,
-        padding-top 200ms 200ms,
-        padding-bottom 200ms 200ms;
-    transition: all 0 500ms,
-        max-height 500ms 0,
-        padding-top 200ms 200ms,
-        padding-bottom 200ms 200ms;
 
     @media (min-width: @mqBreakpoint) {
         border-width: 6px 2px 2px;
         -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
         box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
-        max-height: none;
+        opacity: 0;
         min-width: 160px;
         position: absolute;
         -webkit-transition: opacity 300ms linear, visibility 0 linear 300ms;
@@ -86,19 +76,12 @@
 
     // when the parent `li` is hovered, transition the menu
     :hover > & {
-        max-height: 1000px;
-        opacity: 1;
+        display: block;
         padding-top: 24px;
         padding-bottom: 24px;
-        -webkit-transition: max-height 1s,
-            padding-top 200ms,
-            padding-bottom 200ms;
-        transition: max-height 1s,
-            padding-top 200ms,
-            padding-bottom 200ms;
 
         @media (min-width: @mqBreakpoint) {
-            max-height: none;
+            opacity: 1;
             padding-top: 0;
             padding-bottom: 0;
             -webkit-transition: opacity 150ms linear;
