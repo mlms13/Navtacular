@@ -11,9 +11,20 @@ module.exports = function (grunt) {
                     "css/navbar.css": "less/navbar.less"
                 }
             }
+        },
+        autoprefixer: {
+            options: {
+                browsers: ['> 1%', 'last 2 versions', 'ie 8', 'ie 7']
+            },
+            build: {
+                files: {
+                    "css/navbar.css": "css/navbar.css"
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.registerTask('default', ['less']);
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.registerTask('default', ['less', 'autoprefixer']);
 };
