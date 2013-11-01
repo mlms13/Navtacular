@@ -3,15 +3,12 @@
 .navbar-menu {
     background: #fff;
     background: rgba(255,255,255,0.97);
-    border-color: #000;
-    border-style: solid;
-    border-width: 0 1px;
     display: none;
     font-size: 13px;
     position: relative;
 
     @media (min-width: @mqBreakpoint) {
-        border-width: 6px 2px 2px;
+        border: 1px solid #000;
         -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
         box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
         opacity: 0;
@@ -32,7 +29,6 @@
 
     &.mega {
         @media (min-width: @mqBreakpoint) {
-            border-width: 6px 1px 1px;
             left: 0;
             right: 0;
         }
