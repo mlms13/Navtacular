@@ -81,6 +81,7 @@
     border: 1px solid #000;
     -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    display: table;
     opacity: 0;
     min-width: 160px;
     position: absolute;
@@ -91,10 +92,33 @@
   }
 }
 
+:hover > .navbar-menu {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+@media (min-width: 630px) {
+  :hover > .navbar-menu {
+    display: table;
+    opacity: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+    -webkit-transition: opacity 150ms linear;
+    transition: opacity 150ms linear;
+    visibility: visible;
+  }
+}
+
 @media (min-width: 630px) {
   .navbar-menu .navbar-menu-group {
-    float: left;
+    display: table-cell;
     padding: 0 24px;
+  }
+
+  .no-display-table .navbar-menu .navbar-menu-group {
+    float: left;
+    max-width: 33%;
   }
 }
 
@@ -102,13 +126,7 @@
   .navbar-menu.mega {
     left: 0;
     right: 0;
-  }
-}
-
-@media (min-width 630px) {
-  .navbar-menu.mega .navbar-menu-group {
-    margin: 0 2%;
-    width: 29%;
+    width: 100%;
   }
 }
 
@@ -136,23 +154,6 @@
 
 .navbar-menu ul li > a:hover {
   text-decoration: underline;
-}
-
-:hover > .navbar-menu {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-@media (min-width: 630px) {
-  :hover > .navbar-menu {
-    opacity: 1;
-    padding-top: 0;
-    padding-bottom: 0;
-    -webkit-transition: opacity 150ms linear;
-    transition: opacity 150ms linear;
-    visibility: visible;
-  }
 }
 
 @media (min-width: 630px) {

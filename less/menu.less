@@ -10,6 +10,7 @@
     @media (min-width: @mqBreakpoint) {
         border: 1px solid #000;
         box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+        display: table;
         opacity: 0;
         min-width: 160px;
         position: absolute;
@@ -18,10 +19,31 @@
         z-index: 100;
     }
 
+    // when the parent `li` is hovered, transition the menu
+    :hover > & {
+        display: block;
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        @media (min-width: @mqBreakpoint) {
+            display: table;
+            opacity: 1;
+            padding-top: 0;
+            padding-bottom: 0;
+            transition: opacity 150ms linear;
+            visibility: visible;
+        }
+    }
+
     .navbar-menu-group {
         @media (min-width: @mqBreakpoint) {
-            float: left;
-            padding: 0 24px;   
+            display: table-cell;
+            padding: 0 24px;
+
+            .no-display-table & {
+                float: left;
+                max-width: 33%;
+            }
         }
     }
 
@@ -29,15 +51,7 @@
         @media (min-width: @mqBreakpoint) {
             left: 0;
             right: 0;
-        }
-
-
-        .navbar-menu-group {
-            @media (min-width @mqBreakpoint) {
-                // replace this with box-sizing and display:table
-                margin: 0 2%;
-                width: 29%;
-            }
+            width: 100%;
         }
     }
 
@@ -62,22 +76,6 @@
                     text-decoration: underline;
                 }
             }
-
-        }
-    }
-
-    // when the parent `li` is hovered, transition the menu
-    :hover > & {
-        display: block;
-        padding-top: 24px;
-        padding-bottom: 24px;
-
-        @media (min-width: @mqBreakpoint) {
-            opacity: 1;
-            padding-top: 0;
-            padding-bottom: 0;
-            transition: opacity 150ms linear;
-            visibility: visible;
         }
     }
 }
