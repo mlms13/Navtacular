@@ -72,7 +72,7 @@
   background: #fff;
   background: rgba(255, 255, 255, 0.97);
   display: none;
-  font-size: 13px;
+  font-size: 12.6px;
   position: relative;
 }
 
@@ -131,7 +131,7 @@
 }
 
 .navbar-menu h2 {
-  font-size: 17px;
+  font-size: 16.8px;
   line-height: 20px;
   margin: 0 0 8px;
 }
