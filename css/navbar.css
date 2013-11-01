@@ -9,7 +9,6 @@
 }
 
 .navbar-list {
-  min-height: 36px;
   position: relative;
 }
 
@@ -135,7 +134,6 @@
 
 .navbar-menu h2 {
   font-size: 16.8px;
-  line-height: 20px;
   margin: 0 0 8px;
 }
 
