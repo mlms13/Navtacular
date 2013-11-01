@@ -21,10 +21,22 @@ module.exports = function (grunt) {
                     "css/navbar.css": "css/navbar.css"
                 }
             }
+        },
+        cssmin: {
+            options: {
+                report: "gzip"
+            },
+            build: {
+                files: {
+                    "css/navbar.min.css": "css/navbar.css"
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.registerTask('default', ['less', 'autoprefixer']);
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+    grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin']);
 };
