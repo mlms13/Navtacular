@@ -5,6 +5,8 @@
     background: rgba(255,255,255,0.97);
     display: none;
     font-size: (@baseFontSize * 0.9);
+    padding-top: 24px;
+    padding-bottom: 24px;
     position: relative;
 
     @media (min-width: @mqBreakpoint) {
@@ -22,8 +24,6 @@
     // when the parent `li` is hovered, transition the menu
     :hover > & {
         display: block;
-        padding-top: 24px;
-        padding-bottom: 24px;
 
         @media (min-width: @mqBreakpoint) {
             display: table;
