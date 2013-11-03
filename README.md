@@ -30,7 +30,7 @@ Structure your HTML thusly:
 
 ```html
 <nav class="navbar">
-  <h1class="navbar-label">Navigation</h1>
+  <h1 class="navbar-label">Navigation</h1>
   <ul class="navbar-list">
     <li class="navbar-item"><a class="navbar-link" href="#">Home</a></li>
     <li class="navbar-item">
