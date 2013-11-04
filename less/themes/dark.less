@@ -1,98 +1,70 @@
 // Theme name: Dark
 // Theme author: Michael Martin-Smucker
 
-nav.navbar.theme-dark {
+@import "../variables";
 
-    //-------- Variables --------//
-
+.navbar-theme-dark {
     @bg: #666; // background color of the navbar
     @height: 40px; // height of the navbar
-    @rad: 0; // a border-radius value for all four corners
     @text: #fff; // text color of the menu items
 
-    //-------- Styles --------//
+    .navbar-list {
+        background-color: @bg;
+        background-image: linear-gradient(rgba(0,0,0,0) 10%, rgba(0,0,0,0.3));
+        box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    }
+    .navbar-link {
+        border-style: solid;
+        border-width: 0 1px;
+        border-left-color: lighten(@bg, 6.6%);
+        border-right-color: darken(@bg, 20%);
+        color: @text;
+        font-weight: normal;
+        line-height: @height;
+        min-height: @height;
+        text-align: center;
+        text-shadow: -1px -1px 1px rgba(0,0,0,0.4);
+    }
+    .navbar-item {
+        &:first-child > .navbar-link {
+            border-left: 0;
+        }
+        &:last-child > .navbar-link {
+            border-right: 0;
+        }
+    }
+    .navbar-item:hover > .navbar-link,
+    .navbar-link:hover {
+        background-color: darken(@bg, 13.2%);
+        background-image: radial-gradient(center 120px, ellipse cover, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.08) 50%, transparent 80%);
+        box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
+        color: @text;
+    }
+    .navbar-menu {
+        border-color: darken(@bg, 10%);
+        border-width: 0 1px;
+        // work around chrome bug #103543
+        padding: 24px 0;
 
-    > ul {
-        background: @bg url('../../images/bg-nav.png') repeat-x 0 bottom; // a fallback for browsers that don't support gradients
-        background-image: -webkit-linear-gradient(transparent 10%, rgba(0,0,0,0.3)); // a gradient overlay
-        background-image: linear-gradient(transparent 10%, rgba(0,0,0,0.3)); // a gradient overlay
-        .radius(@rad); // add border-radius if the variable has been set
-        -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3); // a subtle shadow behind the navbar
-        box-shadow: 0 0 8px rgba(0,0,0,0.3); // a subtle shadow behind the navbar
-        .height(@height); // conditionally add a height property
-
-        > li {
-            > a {
-                border-left-color: lighten(@bg, 6.6%);
-                border-right-color: darken(@bg, 20%);
-                color: @text;
-                font-weight: normal;
-                .lineheight(@height); // automatically adjusts line-height based on navbar height
-                text-align: center;
-                text-shadow: -1px -1px 1px rgba(0,0,0,0.4);
-            }
-            &:last-child, &.last-child {
-                > a:after {
-                    border-left-color: lighten(@bg, 6.6%);
-                    .height(@height); // match the navbar height
-                }
-            }
-            &:hover > a, > a:hover {
-                background-color: darken(@bg, 13.2%);
-                background-image: url('../../images/bg-selected.png'); // a fallback for the hovered background gradient
-                background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.08) 50%, transparent 80%);
-                background-image: radial-gradient(center 120px, ellipse cover, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.08) 50%, transparent 80%);
-                -webkit-box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
-                box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
-            }
-            > div.menu {
-                border-color: darken(@bg, 10%);
-                border-width: 6px 4px 4px;
-                padding: 24px;
-
-                &.wide {
-                    border-width: 6px 1px 1px;
-                    .menu-width(@rad, @height); // adjust menu position with respect to border-radius
-                }
-
-                ul {
-                    list-style: square;
-                    padding-left: 18px;
-
-                    li {
-                        a {
-                            color: #666;
-                            &:hover {
-                                color: #333;
-                            }
-                        }
-                    }
-                }
-            }
+        @media (min-width: @mqBreakpoint) {
+            border-width: 6px 4px 4px;
         }
 
-        //-------- Mobile --------//
-        @media only screen and (max-width: 630px) {
-            & {
-                .mobile-height(@height); // reset height if theme adjusted it
-                .mobile-radius(@rad); // round the correct corners when menu collapses
+        &.mega {
+            @media (min-width: @mqBreakpoint)
+            {
+                border-width: 6px 1px 1px;
+            }
+        }
+        ul {
+            list-style: square;
+            padding-left: 18px;
+        }
+        a {
+            color: #666;
 
-                > li {
-                    > div.menu {
-                        border-width: 0 1px;
-                        padding-top: 0;
-                        padding-bottom: 0;
-
-                        &.wide {
-                            border-width: 0 1px;
-                            .mobile-menu-width(@rad); // reset menu position if theme has a border radius
-                        }
-                    }
-                    &:hover > div.menu {
-                        padding-top: 24px;
-                        padding-bottom: 24px;
-                    }
-                }
+            &:hover {
+                color: #333;
             }
         }
     }
