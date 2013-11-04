@@ -15,12 +15,14 @@
 
     @media (min-width: @mqBreakpoint) {
         display: table;
+        display: flex;
         width: 100%;
     }
 }
 .navbar-item {
     @media (min-width: @mqBreakpoint) {
         display: table-cell;
+        flex: auto;
 
         .no-display-table & {
             float: left;

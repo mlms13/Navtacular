@@ -15,6 +15,10 @@
 @media (min-width: 630px) {
   .navbar-list {
     display: table;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
   }
 }
@@ -22,6 +26,10 @@
 @media (min-width: 630px) {
   .navbar-item {
     display: table-cell;
+    -webkit-box-flex: auto;
+    -webkit-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
   }
 
   .no-display-table .navbar-item {
@@ -73,6 +81,9 @@
 .navbar-menu {
   background: #fff;
   background: rgba(255, 255, 255, 0.97);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: none;
   font-size: 12.6px;
   padding-top: 24px;
@@ -86,6 +97,10 @@
     -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     display: table;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     opacity: 0;
     min-width: 160px;
     position: absolute;
@@ -103,6 +118,10 @@
 @media (min-width: 630px) {
   :hover > .navbar-menu {
     display: table;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     opacity: 1;
     padding-top: 0;
     padding-bottom: 0;
@@ -115,6 +134,10 @@
 @media (min-width: 630px) {
   .navbar-menu .navbar-menu-group {
     display: table-cell;
+    -webkit-box-flex: auto;
+    -webkit-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
     padding: 0 24px;
   }
 
