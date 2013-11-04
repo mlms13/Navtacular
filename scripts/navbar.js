@@ -16,5 +16,13 @@ $(function () {
                 $menu.parent().addClass('menu-align-right');
             }
         });
+
+        $navbar.find('.navbar-label').on('click', function () {
+            $('html').toggleClass('nav-visible');
+            return false;
+        });
+        $(document).on('click', function () {
+            $('html').removeClass('nav-visible');
+        });
     });
 });

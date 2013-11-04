@@ -9,6 +9,15 @@
 }
 
 .navbar-list {
+  bottom: 0;
+  left: -200px;
+  min-width: 195px;
+  position: absolute;
+  top: 0;
+}
+
+.no-js .navbar-list {
+  left: auto;
   position: relative;
 }
 
@@ -19,6 +28,8 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    left: auto;
+    position: relative;
     width: 100%;
   }
 }
@@ -72,10 +83,30 @@
   }
 }
 
+.navbar-label {
+  cursor: pointer;
+}
+
+.no-js .navbar-label {
+  display: none;
+}
+
 @media (min-width: 630px) {
   .navbar-label {
     display: none;
   }
+}
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  -webkit-transition: left 200ms;
+  transition: left 200ms;
+}
+
+html.nav-visible {
+  left: 200px;
 }
 
 .navbar-menu {
@@ -206,7 +237,6 @@
   font-weight: normal;
   line-height: 40px;
   min-height: 40px;
-  text-align: center;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
 }
 

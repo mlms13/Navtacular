@@ -11,11 +11,22 @@
     }
 }
 .navbar-list {
-    position: relative;
+    bottom: 0;
+    left: -200px;
+    min-width: 195px;
+    position: absolute;
+    top: 0;
+
+    .no-js & {
+        left: auto;
+        position: relative;
+    }
 
     @media (min-width: @mqBreakpoint) {
         display: table;
         display: flex;
+        left: auto;
+        position: relative;
         width: 100%;
     }
 }
@@ -63,9 +74,30 @@
 }
 
 .navbar-label {
+    cursor: pointer;
+
+    .no-js & {
+        display: none;
+    }
+
     @media (min-width: @mqBreakpoint) {
         // The nav section label can be hidden in the full desktop view
         display: none;
+    }
+}
+
+html {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    transition: left 200ms;
+
+    &.nav-visible {
+        left: 200px;
+
+        @media (min-width: @mqBreakpoint) {
+
+        }
     }
 }
 
