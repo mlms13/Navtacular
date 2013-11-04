@@ -230,14 +230,22 @@ html.nav-visible {
 
 .navbar-theme-dark .navbar-link {
   border-style: solid;
-  border-width: 0 1px;
-  border-left-color: #777777;
-  border-right-color: #333333;
+  border-width: 1px 0;
+  border-bottom-color: #474747;
+  border-top-color: #757575;
   color: #ffffff;
   font-weight: normal;
   line-height: 40px;
   min-height: 40px;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 630px) {
+  .navbar-theme-dark .navbar-link {
+    border-width: 0px 1px;
+    border-left-color: #777777;
+    border-right-color: #333333;
+  }
 }
 
 .navbar-theme-dark .navbar-item:first-child > .navbar-link {

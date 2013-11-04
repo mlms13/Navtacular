@@ -15,14 +15,20 @@
     }
     .navbar-link {
         border-style: solid;
-        border-width: 0 1px;
-        border-left-color: lighten(@bg, 6.6%);
-        border-right-color: darken(@bg, 20%);
+        border-width: 1px 0;
+        border-bottom-color: darken(@bg, 12%);
+        border-top-color: lighten(@bg, 6%);
         color: @text;
         font-weight: normal;
         line-height: @height;
         min-height: @height;
         text-shadow: -1px -1px 1px rgba(0,0,0,0.4);
+
+        @media (min-width: @mqBreakpoint) {
+            border-width: 0px 1px;
+            border-left-color: lighten(@bg, 6.6%);
+            border-right-color: darken(@bg, 20%);
+        }
     }
     .navbar-item {
         &:first-child > .navbar-link {
