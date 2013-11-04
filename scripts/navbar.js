@@ -21,6 +21,10 @@ $(function () {
             $('html').toggleClass('nav-visible');
             return false;
         });
+        $navbar.on('click', function () {
+            // clicking on the navbar shouldn't close the menu
+            return false;
+        });
         $(document).on('click', function () {
             $('html').removeClass('nav-visible');
         });
