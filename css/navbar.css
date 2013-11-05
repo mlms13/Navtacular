@@ -113,6 +113,12 @@
   }
 }
 
+.navbar-link .icon-caret-down {
+  color: #999;
+  float: right;
+  line-height: 36px;
+}
+
 .navbar-label {
   cursor: pointer;
   line-height: 1.4;
@@ -179,7 +185,7 @@ html.nav-visible {
   }
 }
 
-:hover > .navbar-menu {
+.no-js :hover > .navbar-menu {
   display: block;
 }
 

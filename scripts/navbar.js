@@ -23,7 +23,27 @@ $(function () {
             if ($navbar.has('.navbar-label').length === 0) {
                 $navbar.prepend('<h1 class="navbar-label">Navigation</h1>');
             }
-            // TODO: convert links into an accordion
+            // find all items that have a child menu
+            $('.navbar-item').each(function () {
+                var $item = $(this),
+                    $link = $item.find('.navbar-link');
+
+                if ($item.has('.navbar-menu').length > 0) {
+                    // add a dropdown icon,
+                    // and make the link toggle the menu
+                    $link.append('<i class="icon-caret-down"></i>').
+                        on('click', function () {
+                            var $nextMenu = $(this).next('.navbar-menu');
+
+                            if ($nextMenu.is(':visible')) {
+                                $nextMenu.slideUp();
+                            } else {
+                                $navbar.find('.navbar-menu').slideUp();
+                                $nextMenu.slideDown();
+                            }
+                        });
+                }
+            });
 
             // handle toggling the menu
             $navbar.find('.navbar-label').on('click', function () {

@@ -25,7 +25,9 @@
 
     // when the parent `li` is hovered, transition the menu
     :hover > & {
-        display: block;
+        .no-js & {
+            display: block;
+        }
 
         @media (min-width: @mqBreakpoint) {
             display: table;
