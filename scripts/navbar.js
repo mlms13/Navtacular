@@ -19,7 +19,10 @@ $(function () {
 
 
         if (window.matchMedia('(max-width: 630px)').matches) {
-            // TODO: make sure .navbar-label exists
+            // make sure .navbar-label exists
+            if ($navbar.has('.navbar-label').length === 0) {
+                $navbar.prepend('<h1 class="navbar-label">Navigation</h1>');
+            }
             // TODO: convert links into an accordion
 
             // handle toggling the menu
