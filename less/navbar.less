@@ -1,4 +1,5 @@
 @import "variables";
+@import "fonts";
 
 .navbar {
     font-size: @baseFontSize;
@@ -75,6 +76,13 @@
 
 .navbar-label {
     cursor: pointer;
+    line-height: 1.4;
+
+    .icon-reorder:before {
+        float: left; // to help with vertical centering...
+        line-height: 1.4;
+        padding-right: 10px;
+    }
 
     .no-js & {
         display: none;
