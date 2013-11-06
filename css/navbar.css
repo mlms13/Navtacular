@@ -129,6 +129,12 @@
   line-height: 36px;
 }
 
+@media (min-width: 630px) {
+  .navbar-link .icon-caret-down {
+    display: none;
+  }
+}
+
 .navbar-label {
   cursor: pointer;
   line-height: 1.4;
