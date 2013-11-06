@@ -54,7 +54,7 @@ $(function () {
                 // clicking on the navbar shouldn't close the menu
                 return false;
             });
-            $(document).on('click', function () {
+            $(document).on('click touchstart', function () {
                 $('html').removeClass('nav-visible');
             });
         }
