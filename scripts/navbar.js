@@ -33,13 +33,12 @@ function handleMobileNav() {
             });
 
             // handle toggling the menu
-            $navbar.find('.navbar-label').on('click', function () {
+            $navbar.find('.navbar-label').on('click touchstart', function () {
                 $('html').toggleClass('nav-visible');
                 return false;
             });
-            $navbar.on('click', function () {
-                // clicking on the navbar shouldn't close the menu
-                return false;
+            $navbar.on('click touchstart', function (e) {
+                e.stopPropagation();
             });
             $(document).on('click touchstart', function () {
                 $('html').removeClass('nav-visible');
