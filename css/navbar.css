@@ -59,7 +59,8 @@
     width: 100%;
   }
 
-  .flexbox .navbar-list {
+  .flexbox .navbar-list,
+  .flexboxlegacy .navbar-list {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -72,8 +73,10 @@
     display: table-cell;
   }
 
-  .flexbox .navbar-item {
+  .flexbox .navbar-item,
+  .flexboxlegacy .navbar-item {
     display: block;
+    -webkit-box-flex: 1;
     -webkit-box-flex: auto;
     -webkit-flex: auto;
     -ms-flex: auto;
@@ -207,7 +210,8 @@ html.nav-visible {
     visibility: visible;
   }
 
-  .flexbox :hover > .navbar-menu {
+  .flexbox :hover > .navbar-menu,
+  .flexboxlegacy :hover > .navbar-menu {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -221,7 +225,9 @@ html.nav-visible {
     padding: 0 24px;
   }
 
-  .flexbox .navbar-menu .navbar-menu-group {
+  .flexbox .navbar-menu .navbar-menu-group,
+  .flexboxlegacy .navbar-menu .navbar-menu-group {
+    -webkit-box-flex: 1;
     -webkit-box-flex: auto;
     -webkit-flex: auto;
     -ms-flex: auto;

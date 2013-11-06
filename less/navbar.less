@@ -29,7 +29,8 @@
         position: relative;
         width: 100%;
 
-        .flexbox & {
+        .flexbox &,
+        .flexboxlegacy & {
             display: flex;
         }
     }
@@ -38,8 +39,10 @@
     @media (min-width: @mqBreakpoint) {
         display: table-cell;
 
-        .flexbox & {
+        .flexbox &,
+        .flexboxlegacy & {
             display: block;
+            -webkit-box-flex: 1; // for iOS Safari 6
             flex: auto;
         }
         .no-display-table & {

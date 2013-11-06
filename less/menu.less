@@ -37,7 +37,8 @@
             transition: opacity 150ms linear;
             visibility: visible;
 
-            .flexbox & {
+            .flexbox &,
+            .flexboxlegacy & {
                 display: flex;
             }
         }
@@ -48,7 +49,9 @@
             display: table-cell;
             padding: 0 24px;
 
-            .flexbox & {
+            .flexbox &,
+            .flexboxlegacy & {
+                -webkit-box-flex: 1;
                 flex: auto;
             }
 
