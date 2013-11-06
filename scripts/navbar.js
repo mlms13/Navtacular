@@ -16,7 +16,7 @@ function handleMobileNav() {
                     // add a dropdown icon,
                     // and make the link toggle the menu
 
-                    if ($link.has('i.icon-caret-down').length === 0) {
+                    if ($link.has('.icon-caret-down').length === 0) {
                         $link.append('<i class="icon-caret-down"></i>');
                     }
                     $link.on('click', function () {
