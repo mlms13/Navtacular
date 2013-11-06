@@ -168,6 +168,12 @@ html.nav-visible {
   left: 200px;
 }
 
+@media (min-width: 630px) {
+  html.nav-visible {
+    left: 0;
+  }
+}
+
 .navbar-menu {
   background: #fff;
   background: rgba(255, 255, 255, 0.97);
