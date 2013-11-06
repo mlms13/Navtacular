@@ -1,3 +1,53 @@
+function handleMobileNav() {
+    $('.navbar').each(function () {
+        $navbar = $(this);
+
+        if (window.matchMedia && window.matchMedia('(max-width: 630px)').matches) {
+            // make sure .navbar-label exists
+            if ($navbar.has('.navbar-label').length === 0) {
+                $navbar.prepend('<h1 class="navbar-label">Navigation</h1>');
+            }
+            // find all items that have a child menu
+            $('.navbar-item').each(function () {
+                var $item = $(this),
+                    $link = $item.find('.navbar-link');
+
+                if ($item.has('.navbar-menu').length > 0) {
+                    // add a dropdown icon,
+                    // and make the link toggle the menu
+
+                    if ($link.has('i.icon-caret-down').length === 0) {
+                        $link.append('<i class="icon-caret-down"></i>');
+                    }
+                    $link.on('click', function () {
+                        var $nextMenu = $(this).next('.navbar-menu');
+
+                        if ($nextMenu.is(':visible')) {
+                            $nextMenu.slideUp();
+                        } else {
+                            $navbar.find('.navbar-menu').slideUp();
+                            $nextMenu.slideDown();
+                        }
+                    });
+                }
+            });
+
+            // handle toggling the menu
+            $navbar.find('.navbar-label').on('click', function () {
+                $('html').toggleClass('nav-visible');
+                return false;
+            });
+            $navbar.on('click', function () {
+                // clicking on the navbar shouldn't close the menu
+                return false;
+            });
+            $(document).on('click touchstart', function () {
+                $('html').removeClass('nav-visible');
+            });
+        }
+    });
+}
+
 
 $(function () {
     $('.navbar').each(function () {
@@ -16,47 +66,10 @@ $(function () {
                 $menu.parent().addClass('menu-align-right');
             }
         });
-
-
-        if (window.matchMedia('(max-width: 630px)').matches) {
-            // make sure .navbar-label exists
-            if ($navbar.has('.navbar-label').length === 0) {
-                $navbar.prepend('<h1 class="navbar-label">Navigation</h1>');
-            }
-            // find all items that have a child menu
-            $('.navbar-item').each(function () {
-                var $item = $(this),
-                    $link = $item.find('.navbar-link');
-
-                if ($item.has('.navbar-menu').length > 0) {
-                    // add a dropdown icon,
-                    // and make the link toggle the menu
-                    $link.append('<i class="icon-caret-down"></i>').
-                        on('click', function () {
-                            var $nextMenu = $(this).next('.navbar-menu');
-
-                            if ($nextMenu.is(':visible')) {
-                                $nextMenu.slideUp();
-                            } else {
-                                $navbar.find('.navbar-menu').slideUp();
-                                $nextMenu.slideDown();
-                            }
-                        });
-                }
-            });
-
-            // handle toggling the menu
-            $navbar.find('.navbar-label').on('click', function () {
-                $('html').toggleClass('nav-visible');
-                return false;
-            });
-            $navbar.on('click', function () {
-                // clicking on the navbar shouldn't close the menu
-                return false;
-            });
-            $(document).on('click touchstart', function () {
-                $('html').removeClass('nav-visible');
-            });
-        }
     });
+    handleMobileNav();
+});
+
+$(window).on('resize', function () {
+    handleMobileNav();
 });
