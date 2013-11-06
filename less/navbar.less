@@ -25,17 +25,23 @@
 
     @media (min-width: @mqBreakpoint) {
         display: table;
-        display: flex;
         left: auto;
         position: relative;
         width: 100%;
+
+        .flexbox & {
+            display: flex;
+        }
     }
 }
 .navbar-item {
     @media (min-width: @mqBreakpoint) {
         display: table-cell;
-        flex: auto;
 
+        .flexbox & {
+            display: block;
+            flex: auto;
+        }
         .no-display-table & {
             float: left;
         }

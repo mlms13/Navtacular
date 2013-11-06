@@ -54,19 +54,26 @@
 @media (min-width: 630px) {
   .navbar-list {
     display: table;
+    left: auto;
+    position: relative;
+    width: 100%;
+  }
+
+  .flexbox .navbar-list {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    left: auto;
-    position: relative;
-    width: 100%;
   }
 }
 
 @media (min-width: 630px) {
   .navbar-item {
     display: table-cell;
+  }
+
+  .flexbox .navbar-item {
+    display: block;
     -webkit-box-flex: auto;
     -webkit-flex: auto;
     -ms-flex: auto;
@@ -192,10 +199,6 @@ html.nav-visible {
 @media (min-width: 630px) {
   :hover > .navbar-menu {
     display: table;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     opacity: 1;
     padding-top: 0;
     padding-bottom: 0;
@@ -203,16 +206,26 @@ html.nav-visible {
     transition: opacity 150ms linear;
     visibility: visible;
   }
+
+  .flexbox :hover > .navbar-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media (min-width: 630px) {
   .navbar-menu .navbar-menu-group {
     display: table-cell;
+    padding: 0 24px;
+  }
+
+  .flexbox .navbar-menu .navbar-menu-group {
     -webkit-box-flex: auto;
     -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
-    padding: 0 24px;
   }
 
   .no-display-table .navbar-menu .navbar-menu-group {

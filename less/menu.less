@@ -31,20 +31,26 @@
 
         @media (min-width: @mqBreakpoint) {
             display: table;
-            display: flex;
             opacity: 1;
             padding-top: 0;
             padding-bottom: 0;
             transition: opacity 150ms linear;
             visibility: visible;
+
+            .flexbox & {
+                display: flex;
+            }
         }
     }
 
     .navbar-menu-group {
         @media (min-width: @mqBreakpoint) {
             display: table-cell;
-            flex: auto;
             padding: 0 24px;
+
+            .flexbox & {
+                flex: auto;
+            }
 
             .no-display-table & {
                 float: left;
