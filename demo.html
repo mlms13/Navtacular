@@ -113,30 +113,28 @@
         </nav>
         <section id="description">
             <h2>Themes</h2>
-           <!--  <p>
-                You can toggle between different color themes using the following links: <a href="#" class="theme-switch" data-theme="navbar-theme-dark">Dark</a> - <a href="#" class="theme-switch" data-theme="theme-tan">Tan</a>.
-            </p> -->
+            <p>
+                You can toggle between different color themes using the following links: <a href="#" class="theme-switch" data-theme="navbar-theme-dark">Dark</a> - <a href="#" class="theme-switch" data-theme="navbar-theme-tan">Tan</a>.
+            </p>
             <p>
                 It's easy to develop your own themes using CSS. As an example, see the light, dark, and green themes (written in <a href="http://lesscss.org/">LESS</a>) in the <code>/less/</code> folder. You can view the compiled CSS at the end of <a href="./styles/navbar.css"><code>navbar.css</code></a>.
             </p>
         </section>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
         <!--[if lte IE 8]>
             <script src="scripts/selectivizr.js"></script>
         <![endif]-->
 
         <script type="text/javascript" src="scripts/navbar.js"></script>
-        <script type=text/javascript>
+        <script type="text/javascript">
             $('.theme-switch').on('click', function () {
                 var $this = $(this),
                     $navbar = $('.navbar');
 
                 // remove any existing theme and add the new one
-                $navbar.removeClass('theme-dark theme-tan').addClass($this.data('theme'));
+                $navbar.removeClass('navbar-theme-dark navbar-theme-tan').addClass($this.data('theme'));
             });
         </script>
-
-        <script src="http://localhost:35729/livereload.js"></script>
     </body>
 </html>
