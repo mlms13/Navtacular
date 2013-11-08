@@ -6,7 +6,7 @@
 
         <title>CSS Navigation Demo</title>
 
-        <link rel="stylesheet" href="css/navbar.css" />
+        <link rel="stylesheet" href="styles/navbar.css" />
 
         <!--[if lte IE 8]>
             <script src="scripts/respond.js"></script>
@@ -133,7 +133,9 @@
                     $navbar = $('.navbar');
 
                 // remove any existing theme and add the new one
-                $navbar.removeClass('navbar-theme-dark navbar-theme-tan').addClass($this.data('theme'));
+                $navbar.removeClass(function (index, css) {
+                    return (css.match (/\bnavbar-theme\S+/g) || []).join(' ');
+                }).addClass($this.data('theme'));
             });
         </script>
     </body>
