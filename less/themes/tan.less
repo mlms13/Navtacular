@@ -1,80 +1,89 @@
 // Theme name: Tan
 // Theme author: Michael Martin-Smucker
 
-nav.navbar.theme-tan {
-    > ul {
-        background: #eae8db;
-        -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+@import "../variables";
+
+.navbar-theme-tan {
+    @bg: #eae8db; // background color of the navbar
+    @height: 40px; // height of the navbar
+    @text: #00684d; // text color of the menu items
+    @text-hover: #fff; // text color of the menu items on hover
+
+    .navbar-list {
+        background-color: @bg;
         box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        min-height: 40px;
+	}
+	.navbar-link {
+        border-bottom-color: darken(@bg, 20%);
+        border-top-color: lighten(@bg, 6.6%);
+		border-style: solid;
+		border-width: 1px 0;
+        color: @text;
+        line-height: @height;
+        min-height: @height;
 
-        > li {
-            > a {
-                border-left-color: #fcfaf4;
-                border-right-color: #d2cbc6;
-                color: #00684d;
-                line-height: 40px;
-                padding: 0 20px;
-            }
-            &:last-child > a, &.last-child > a {
-                &:after {
-                    border-left-color: #fcfaf4;
-                    height: 40px;
-                }
-            }
-            &:hover > a, > a:hover {
-                background-color: #00684d;
-                border-color: #00684d;
-                color: #fff;
-            }
-
-            > div.menu {
-                background: #00684d;
-                border: 0;
-                -webkit-box-shadow: 1px 3px 6px rgba(0,0,0,0.4);
-                box-shadow: 1px 3px 6px rgba(0,0,0,0.4);
-
-                h2 {
-                    border-bottom: 1px solid lighten(#00684d, 2%);
-                    color: darken(#eae8db, 7%);
-                    margin: 0 24px;
-                    padding: 8px 0 0;
-                }
-
-                ul {
-                    li {
-                        margin: 0;
-                        a {
-                            color: #fff;
-                            display: block;
-                            padding: 8px 24px;
-                        }
-                        &:hover > a, > a:hover {
-                            background: #286;
-                            text-decoration: none;
-                        }
-                        &.has-menu {
-                            &:after {
-                                color: #ddd;
-                                font-size: 20px;
-                                top: 2px;
-                            }
-
-                            > ul {
-                                background: #00684d;
-                                border: 0;
-                                -webkit-box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
-                                box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
-                                min-width: 150px;
-                            }
-                        }
-                    }
-                }
-            }
+		@media (min-width: @mqBreakpoint) {
+            border-width: 0px 1px;
+            border-left-color: lighten(@bg, 6.6%);
+            border-right-color: darken(@bg, 20%);
+			padding: 0 20px;
+		}
+	}
+    .navbar-item {
+        &:first-child > .navbar-link {
+            border-left: 0;
         }
-
-        //-------- Mobile --------//
-        @media only screen and (max-width: 630px) {
+        &:last-child > .navbar-link {
+            border-right: 0;
         }
     }
+    .navbar-item:hover > .navbar-link,
+    .navbar-link:hover {
+		background-color: @text;
+		border-color: @text;
+		color: @text-hover;
+	}
+	.navbar-menu {
+		background: @text;
+		border-width: 0;
+        color: @text-hover;
+        // work around chrome bug #103543
+        padding: 0 0 12px;
+
+		@media (min-width: @mqBreakpoint) {
+	        box-shadow: 1px 3px 6px rgba(0,0,0,0.4);
+
+			&.mega,
+			&.cols {
+				padding: 24px 0 12px;
+			}
+		}
+		&.mega,
+		&.cols {
+
+			a {
+				padding-left: 12px; 
+				padding-right: 12px; 
+			}
+		}
+		.navbar-menu-group {
+            margin: 0 12px;
+			padding: 0;
+		}
+		h2 {
+            border-bottom: 1px solid lighten(@text, 2%);
+            color: darken(@bg, 7%);
+            padding: 8px 0 0;
+		}
+        a {
+            color: @text-hover;
+            display: block;
+            padding: 8px 24px;
+
+            &:hover {
+                background: #286;
+                text-decoration: none;
+            }
+        }
+	}
 }
