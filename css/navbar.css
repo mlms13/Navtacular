@@ -364,3 +364,205 @@ html.nav-visible {
   background: #286;
   text-decoration: none;
 }
+.navbar-theme-simple {
+  /*    @media screen and (max-width: 1000px) {
+		.navbar-item {
+            border-left: 0;
+            border-right-color: #ddd;
+            color: #999;
+            font-weight: normal;
+            line-height: 18px;
+            padding: 4px 32px 4px 10px;
+            text-align: left;
+            -webkit-transition: background 250ms;
+            transition: background 250ms;
+            -webkit-transition: padding 450ms;
+            transition: padding 450ms;
+
+            > strong {
+                color: #298;
+                display: block;
+                font-weight: bold;
+            }
+        }
+    }*/
+}
+.navbar-theme-simple .navbar-link {
+  border-bottom: 1px solid #999999;
+  color: #999999;
+  font-weight: normal;
+  line-height: 18px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.navbar-theme-simple .navbar-link strong {
+  color: #229988;
+  display: block;
+  font-weight: bold;
+}
+@media (min-width: 630px) {
+  .navbar-theme-simple .navbar-link {
+    border-bottom: 0;
+    border-right: 1px solid #999999;
+  }
+}
+.navbar-theme-simple .navbar-item:last-child > .navbar-link {
+  border-right: 0;
+}
+.navbar-theme-simple .navbar-item:hover > .navbar-link,
+.navbar-theme-simple .navbar-link:hover {
+  background: #a5a5a6;
+  color: #fff;
+  -webkit-transition: color 500ms ease-out, background 200ms ease-in;
+  transition: color 500ms ease-out, background 200ms ease-in;
+}
+.navbar-theme-simple .navbar-item:hover > .navbar-link strong,
+.navbar-theme-simple .navbar-link:hover strong {
+  color: #fff;
+}
+.navbar-theme-simple .navbar-menu {
+  background: #eaeaea;
+  border: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 630px) {
+  .navbar-theme-simple .navbar-menu {
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transition: 300ms;
+    transition: 300ms;
+  }
+}
+.navbar-theme-simple .navbar-menu h2 {
+  margin: 8px 12px;
+}
+.navbar-theme-simple .navbar-menu ul li.has-menu:after {
+  font-size: 20px;
+  top: 2px;
+}
+.navbar-theme-simple .navbar-menu ul li.has-menu:hover:after {
+  color: #fff;
+}
+.navbar-theme-simple .navbar-menu ul li a {
+  color: #444;
+  display: block;
+  padding: 6px 12px;
+}
+.navbar-theme-simple .navbar-menu ul li a:hover {
+  background: #298;
+  color: #fff;
+  text-decoration: none;
+}
+@media (min-width: 630px) {
+  .navbar-theme-simple .navbar-item:hover > .navbar-menu {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+.navbar-theme-blue .navbar-list {
+  background: #6d92bf;
+  background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 630px) {
+  .navbar-theme-blue .navbar-list {
+    border-radius: 8px;
+  }
+  .flexbox .navbar-theme-blue .navbar-list.full-width > li:last-child > a {
+    border-radius: 0 8px 8px 0;
+  }
+  .navbar-theme-blue .navbar-list > li:first-child > a {
+    border-radius: 8px 0 0 8px;
+  }
+}
+.navbar-theme-blue .navbar-link {
+  border-style: solid;
+  border-width: 1px 0;
+  border-bottom-color: #3c5f8a;
+  border-top-color: #84a3c9;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 630px) {
+  .navbar-theme-blue .navbar-link {
+    border-width: 0px 1px;
+    border-left-color: #84a3c9;
+    border-right-color: #3c5f8a;
+  }
+}
+.navbar-theme-blue .navbar-link .icon-caret-down {
+  color: #84a3c9;
+}
+.navbar-theme-blue .navbar-item:first-child > .navbar-link {
+  border-left: 0;
+}
+@media (min-width: 630px) {
+  .navbar-theme-blue .navbar-item:first-child > .navbar-link {
+    border-radius: 8px 0 0 8px;
+  }
+}
+.navbar-theme-blue .navbar-item:last-child > .navbar-link {
+  border-right: 0;
+}
+@media (min-width: 630px) {
+  .navbar-theme-blue .navbar-item:last-child > .navbar-link {
+    border-radius: 0 8px 8px 0;
+  }
+}
+.navbar-theme-blue .navbar-item:hover > .navbar-link,
+.navbar-theme-blue .navbar-link:hover {
+  background-color: #8daacd;
+  background-image: url('../../../images/bg-selected.png');
+  background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  background-image: radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
+  -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.navbar-theme-blue .navbar-menu {
+  border-color: #8daacd;
+  padding: 24px;
+}
+.navbar-theme-blue .navbar-menu.wide {
+  left: 8px;
+  right: 8px;
+}
+.navbar-theme-blue .navbar-menu ul {
+  list-style: square;
+  padding-left: 18px;
+}
+.navbar-theme-blue .navbar-menu a {
+  color: #666;
+}
+.navbar-theme-blue .navbar-menu a:hover {
+  color: #333;
+}
+/*        //-------- Mobile --------//
+        @media only screen and (max-width: 630px) {
+            & {
+                .mobile-height(@height); // reset height if theme adjusted it
+                .mobile-radius(@rad); // round the correct corners when menu collapses
+
+                > li {
+                    > div.menu {
+                        padding-top: 0;
+                        padding-bottom: 0;
+
+                        &.wide {
+                            .mobile-menu-width(@rad); // reset menu position if theme has a border radius
+                        }
+                    }
+                    &:hover > div.menu {
+                        padding-top: 24px;
+                        padding-bottom: 24px;
+                    }
+                }
+            }
+        }
+    }
+}*/
