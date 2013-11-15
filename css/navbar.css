@@ -181,6 +181,9 @@ html.nav-visible {
   .flexboxlegacy :hover > .navbar-menu {
     display: flex;
   }
+  .no-display-table :hover > .navbar-menu {
+    display: block;
+  }
 }
 @media (min-width: 630px) {
   .navbar-menu .navbar-menu-group {
