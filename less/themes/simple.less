@@ -1,0 +1,110 @@
+// Theme name: Simple
+// Theme author: Michael Martin-Smucker
+
+.navbar-theme-simple {
+	@bg: #a5a5a6; // color of background on hover
+	@accent-color: #298; // color for the strong elements
+	@text: #999; // color of text and borders between items
+
+    .navbar-link {
+        border-bottom: 1px solid @text;
+        color: @text;
+        font-weight: normal;
+        line-height: 18px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        strong {
+            color: @accent-color;
+            display: block;
+            font-weight: bold;
+        }
+        @media (min-width: @mqBreakpoint) {
+            border-bottom: 0;
+            border-right: 1px solid @text;
+        }
+    }
+    .navbar-item {
+        &:last-child > .navbar-link {
+            border-right: 0;
+        }
+    }
+    .navbar-item:hover > .navbar-link,
+    .navbar-link:hover {
+        background: @bg;
+        color: #fff;
+        -webkit-transition: color 500ms ease-out, background 200ms ease-in;
+        transition: color 500ms ease-out, background 200ms ease-in;
+
+        strong {
+            color: #fff;
+        }
+    }
+    .navbar-menu {
+        background: #eaeaea;
+        border: 0;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        @media (min-width: @mqBreakpoint) {
+	        -webkit-transform-origin: 50% 0%;
+	        transform-origin: 50% 0%;
+	        -webkit-transform: rotateX(90deg);
+	        transform: rotateX(90deg);
+	        -webkit-transition: 300ms;
+	        transition: 300ms;
+	    }
+        h2 {
+            margin: 8px 12px;
+        }
+
+        ul li {
+            &.has-menu {
+                &:after {
+                    font-size: 20px;
+                    top: 2px;
+                }
+                &:hover:after {
+                    color: #fff;
+                }
+            }
+            a {
+                color: #444;
+                display: block;
+                padding: 6px 12px;
+
+                &:hover {
+                    background: #298;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    @media (min-width: @mqBreakpoint) {
+	    .navbar-item:hover > .navbar-menu {
+	        -webkit-transform: rotateX(0deg);
+	        transform: rotateX(0deg);
+	        opacity: 1;
+	    }
+	}
+/*    @media screen and (max-width: 1000px) {
+		.navbar-item {
+            border-left: 0;
+            border-right-color: #ddd;
+            color: #999;
+            font-weight: normal;
+            line-height: 18px;
+            padding: 4px 32px 4px 10px;
+            text-align: left;
+            -webkit-transition: background 250ms;
+            transition: background 250ms;
+            -webkit-transition: padding 450ms;
+            transition: padding 450ms;
+
+            > strong {
+                color: #298;
+                display: block;
+                font-weight: bold;
+            }
+        }
+    }*/
+}
