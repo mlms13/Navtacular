@@ -70,3 +70,12 @@ Menu appearance can be controlled by adding an additional class to the `.navbar-
 |---------|-------------|
 | `.cols` | All `.navbar-menu-group` children will be arranged in columns. |
 | `.mega` | Similar to `.cols`, but the menu will also stretch to the full width of the navbar. |
+
+Contributing
+-------------------------
+
+If you want to help out with development, it will be much appreciated.  Assuming you already have [Node](http://nodejs.org/) and [NPM](https://npmjs.org/) installed, you'll want to install the [Grunt CLI](http://gruntjs.com/getting-started) globally: `npm install -g grunt-cli`
+
+After you have Grunt installed, run `npm install` inside the Navtacular directory to install all dependencies.  Then, you can run `grunt` to build the project or `grunt server` to start up a simple server, open your default browser to the Navtacular demo page, and automatically reload the page when changes are saved.
+
+Open a pull request with your changes when you're ready.  No need to minify first; I only intentionally minify when making a new release.
