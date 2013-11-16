@@ -23,9 +23,28 @@
                 });
             });
         }
+        function alignRightMenus() {
+            var navbarRight = $navbar.offset().left + $navbar.outerWidth(); // right edge of the navbar
+
+            // For each non-mega menu,
+            // fix the alignment if it extends beyond the right edge of the navbar
+            $navbar.find('.navbar-menu').not('.mega').each(function () {
+                var $menu = $(this),
+                    menuRight = $menu.offset().left + $menu.outerWidth(); // right edge of the menu
+
+                // If the right edge of the menu extends past the right edge of the navbar...
+                if (menuRight > navbarRight) {
+                    // ...add a special class so that our css can align the menu to the right
+                    $menu.parent().addClass('menu-align-right');
+                } else {
+                    $menu.parent().removeClass('menu-align-right');
+                }
+            });
+        }
 
         $(window).on('resize', function () {
             handleMobileNav();
+            alignRightMenus();
         });
 
         // handle toggling the menu
@@ -39,12 +58,10 @@
         $(document).on('click touchstart', function () {
             $('html').removeClass('nav-visible');
         });
-        handleMobileNav();
 
         return this.each(function () {
             var $navbar = $(this), // the current navbar while looping through each
-                $menus = $navbar.find('.navbar-menu'),
-                navbarRight = $navbar.offset().left + $navbar.outerWidth(); // right edge of the navbar
+                $menus = $navbar.find('.navbar-menu');
 
             // make sure .navbar-label exists
             if ($navbar.has('.navbar-label').length === 0) {
@@ -60,18 +77,8 @@
                 }
             });
 
-            // For each non-mega menu,
-            // fix the alignment if it extends beyond the right edge of the navbar
-            $menus.not('.mega').each(function () {
-                var $menu = $(this),
-                    menuRight = $menu.offset().left + $menu.outerWidth(); // right edge of the menu
-
-                // If the right edge of the menu extends past the right edge of the navbar...
-                if (menuRight > navbarRight) {
-                    // ...add a special class so that our css can align the menu to the right
-                    $menu.parent().addClass('menu-align-right');
-                }
-            });
+            handleMobileNav();
+            alignRightMenus();
         });
     };
 
