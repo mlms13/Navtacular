@@ -5,20 +5,11 @@ function handleMobileNav() {
         return;
     }
 
-    // make sure .navbar-label exists
-    if ($navbar.has('.navbar-label').length === 0) {
-        $navbar.prepend('<h1 class="navbar-label">Navigation</h1>');
-    }
-
     // find all items that have a child menu
     $navbar.find('.navbar-menu').each(function () {
         var $menu = $(this),
             $link = $menu.prev('.navbar-link');
 
-        // add a dropdown icon
-        if ($link.has('.icon-caret-down').length === 0) {
-            $link.append('<i class="icon-caret-down"></i>');
-        }
         // and make the link toggle the menu
         $link.unbind().on('click', function () {
             if ($menu.is(':visible')) {
@@ -34,11 +25,26 @@ function handleMobileNav() {
 $(function () {
     $('.navbar').each(function () {
         var $navbar = $(this),
+            $menus = $navbar.find('.navbar-menu'),
             navbarRight = $navbar.offset().left + $navbar.outerWidth(); // right edge of the navbar
+
+        // make sure .navbar-label exists
+        if ($navbar.has('.navbar-label').length === 0) {
+            $navbar.prepend('<h1 class="navbar-label">Navigation</h1>');
+        }
+
+        // add a dropdown icon (will only be displayed on mobile devices)
+        $menus.each(function () {
+            var $link = $(this).prev('.navbar-link');
+
+            if ($link.has('.icon-caret-down').length === 0) {
+                $link.append('<i class="icon-caret-down"></i>');
+            }
+        });
 
         // For each non-mega menu,
         // fix the alignment if it extends beyond the right edge of the navbar
-        $navbar.find('.navbar-menu:not(.mega)').each(function () {
+        $menus.not('.mega').each(function () {
             var $menu = $(this),
                 menuRight = $menu.offset().left + $menu.outerWidth(); // right edge of the menu
 
