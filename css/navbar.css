@@ -107,6 +107,7 @@
 
 .navbar-label {
   cursor: pointer;
+  font-size: 21px;
   line-height: 1.4;
   margin: 0;
 }
@@ -263,6 +264,14 @@ html.nav-visible {
     left: auto;
     right: 0;
   }
+}
+
+.navbar-theme-dark .navbar-label {
+  background: #a6a6a6;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 5px;
 }
 
 .navbar-theme-dark .navbar-list {
