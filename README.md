@@ -22,6 +22,7 @@ Navtacular should work well on its own in modern browsers, but to get the most o
 2. The `html5shiv`, if you plan on using a `nav` element and you want to support IE < 9. `html5shiv` is included with Modernizr
 3. [Respond.js](https://github.com/scottjehl/Respond), if you don't want old IE to use the mobile layout
 4. jQuery, if you want to provide a better experience to mobile browsers that have Javascript enabled
+5. An icon font (like [FontAwesome](http://fontawesome.io/)) that includes icons named `icon-reorder` and `icon-caret-down`. The demo includes a simple icon font if you are not already using one.
 
 Structure your HTML thusly:
 
