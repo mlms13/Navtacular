@@ -70,6 +70,14 @@
             left: 0;
             right: 0;
             width: 100%;
+
+            .flexbox &,
+            .flexboxlegacy & {
+                // if we're not using display:table, there's no need to set a width,
+                // and the width causes less than desirable situations elsewhere...
+                // (see a theme with a border-radius for details)
+                width: auto;
+            }
         }
     }
 

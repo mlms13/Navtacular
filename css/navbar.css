@@ -232,6 +232,11 @@ html.nav-visible {
     right: 0;
     width: 100%;
   }
+
+  .flexbox .navbar-menu.mega,
+  .flexboxlegacy .navbar-menu.mega {
+    width: auto;
+  }
 }
 
 .navbar-menu h2 {
@@ -624,7 +629,8 @@ html.nav-visible {
 }
 
 @media (min-width: 630px) {
-  .navbar-theme-blue .navbar-menu.mega {
+  .flexbox .navbar-theme-blue .navbar-menu.mega,
+  .flexboxlegacy .navbar-theme-blue .navbar-menu.mega {
     left: 8px;
     right: 8px;
   }

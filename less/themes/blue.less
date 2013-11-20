@@ -68,8 +68,15 @@
 
         &.mega {
             @media (min-width: @mqBreakpoint) {
-                left: @rad;
-                right: @rad;
+                .flexbox &,
+                .flexboxlegacy & {
+                    // setting left and right will look bad if we're forcing a width of 100%,
+                    // which we have to do for display:table.
+                    // so we'll only offset the menu for flexbox-enabled browsers.
+                    // for all practical purposes, ie9 is the only browser that this (minorly) affects.
+                    left: @rad;
+                    right: @rad;
+                }
             }
         }
 
