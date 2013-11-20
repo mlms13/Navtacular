@@ -356,6 +356,14 @@ html.nav-visible {
   color: #333;
 }
 
+.navbar-theme-tan .navbar-label {
+  background: #eae8db;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #00684d;
+  padding: 5px;
+}
+
 .navbar-theme-tan .navbar-list {
   background-color: #eae8db;
   -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -363,8 +371,8 @@ html.nav-visible {
 }
 
 .navbar-theme-tan .navbar-link {
-  border-bottom-color: #c4bf9b;
-  border-top-color: #f6f6f0;
+  border-bottom-color: #d5d1b8;
+  border-top-color: #fbfbf8;
   border-style: solid;
   border-width: 1px 0;
   color: #00684d;
@@ -375,10 +383,14 @@ html.nav-visible {
 @media (min-width: 630px) {
   .navbar-theme-tan .navbar-link {
     border-width: 0px 1px;
-    border-left-color: #f6f6f0;
-    border-right-color: #c4bf9b;
+    border-left-color: #fffffe;
+    border-right-color: #d9d5be;
     padding: 0 20px;
   }
+}
+
+.navbar-theme-tan .navbar-link .icon-caret-down {
+  color: #bbb58a;
 }
 
 .navbar-theme-tan .navbar-item:first-child > .navbar-link {
