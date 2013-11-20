@@ -48,7 +48,7 @@
         });
 
         // handle toggling the menu
-        $navbar.find('.navbar-label').on('click touchstart', function () {
+        $navbar.find('.navbar-label').on('click', function () {
             $('html').toggleClass('nav-visible');
             return false;
         });
