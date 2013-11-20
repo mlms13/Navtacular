@@ -455,7 +455,10 @@ html.nav-visible {
   text-decoration: none;
 }
 
-
+.navbar-theme-simple .navbar-label {
+  background: #eee;
+  padding: 5px;
+}
 
 .navbar-theme-simple .navbar-link {
   border-bottom: 1px solid #999999;
@@ -520,22 +523,13 @@ html.nav-visible {
   margin: 8px 12px;
 }
 
-.navbar-theme-simple .navbar-menu ul li.has-menu:after {
-  font-size: 20px;
-  top: 2px;
-}
-
-.navbar-theme-simple .navbar-menu ul li.has-menu:hover:after {
-  color: #fff;
-}
-
-.navbar-theme-simple .navbar-menu ul li a {
+.navbar-theme-simple .navbar-menu a {
   color: #444;
   display: block;
   padding: 6px 12px;
 }
 
-.navbar-theme-simple .navbar-menu ul li a:hover {
+.navbar-theme-simple .navbar-menu a:hover {
   background: #298;
   color: #fff;
   text-decoration: none;
