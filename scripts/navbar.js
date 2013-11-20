@@ -1,6 +1,7 @@
 (function ($) {
     $.fn.navtacular = function () {
-        var $navbar = this;
+        var $navbar = this,
+            dragging = false;
 
         function handleMobileNav() {
             if ( $(window).width() > 630 ) {
@@ -52,11 +53,18 @@
             $('html').toggleClass('nav-visible');
             return false;
         });
-        $navbar.on('click touchstart', function (e) {
+        $navbar.on('click touchend', function (e) {
             e.stopPropagation();
         });
-        $(document).on('click touchstart', function () {
-            $('html').removeClass('nav-visible');
+        $(document).on('touchmove', function () {
+            // set the `dragging` flag so that touchend doesn't try to do its thing
+            dragging = true;
+        });
+        $(document).on('click touchend', function () {
+            if (!dragging) {
+                $('html').removeClass('nav-visible');
+            }
+            dragging = false;
         });
 
         return this.each(function () {
