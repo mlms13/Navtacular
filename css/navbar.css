@@ -538,10 +538,18 @@ html.nav-visible {
   }
 }
 
+.navbar-theme-blue .navbar-label {
+  background: #6d92bf;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 5px;
+}
+
 .navbar-theme-blue .navbar-list {
   background: #6d92bf;
-  background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
   background-image: -webkit-gradient(linear, top left, bottom left, from(transparent), to(rgba(0, 0, 0, 0.3)));
+  background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
   background-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
@@ -550,14 +558,6 @@ html.nav-visible {
 @media (min-width: 630px) {
   .navbar-theme-blue .navbar-list {
     border-radius: 8px;
-  }
-
-  .flexbox .navbar-theme-blue .navbar-list.full-width > li:last-child > a {
-    border-radius: 0 8px 8px 0;
-  }
-
-  .navbar-theme-blue .navbar-list > li:first-child > a {
-    border-radius: 8px 0 0 8px;
   }
 }
 
@@ -606,7 +606,6 @@ html.nav-visible {
 .navbar-theme-blue .navbar-item:hover > .navbar-link,
 .navbar-theme-blue .navbar-link:hover {
   background-color: #8daacd;
-  background-image: url('../../../images/bg-selected.png');
   background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
   background-image: radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
   -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
@@ -618,9 +617,11 @@ html.nav-visible {
   padding: 24px;
 }
 
-.navbar-theme-blue .navbar-menu.wide {
-  left: 8px;
-  right: 8px;
+@media (min-width: 630px) {
+  .navbar-theme-blue .navbar-menu.mega {
+    left: 8px;
+    right: 8px;
+  }
 }
 
 .navbar-theme-blue .navbar-menu ul {
