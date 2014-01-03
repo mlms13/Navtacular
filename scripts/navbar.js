@@ -4,6 +4,9 @@
             dragging = false;
 
         function handleMobileNav() {
+
+            $('.navbar-link').off('click.navtacular');
+
             if ( $(window).width() > 630 ) {
                 return;
             }
@@ -14,7 +17,7 @@
                     $link = $menu.prev('.navbar-link');
 
                 // and make the link toggle the menu
-                $link.unbind().on('click', function () {
+                $link.on('click.navtacular', function () {
                     if ($menu.is(':visible')) {
                         $menu.slideUp();
                     } else {
@@ -90,5 +93,7 @@
         });
     };
 
-    $('.navbar').navtacular();
+    $(document).ready( function() {
+        $('.navbar').navtacular();
+    });
 }(jQuery));
