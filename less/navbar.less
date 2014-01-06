@@ -13,7 +13,7 @@
 .navbar-list {
     bottom: 0;
     left: -200px;
-    width: 195px; // Ugly, but there's an issue where the menus go too wide
+    width: 200px; // Ugly, but there's an issue where the menus go too wide
     position: absolute;
     top: 0;
 
@@ -111,6 +111,32 @@
     @media (min-width: @mqBreakpoint) {
         // The nav section label can be hidden in the full desktop view
         display: none;
+    }
+}
+
+.navbar-cover {
+    background: rgba(0, 0, 0, 0.25);
+    height: 0;
+    opacity: 0;
+    transition: opacity 250ms;
+    width: 0;
+
+    .nav-visible & {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+
+        @media (min-width: @mqBreakpoint) {
+            height: 0;
+            opacity: 0;
+            width: 0;
+        }
     }
 }
 

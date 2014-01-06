@@ -11,7 +11,7 @@
 .navbar-list {
   bottom: 0;
   left: -200px;
-  width: 195px;
+  width: 200px;
   position: absolute;
   top: 0;
 }
@@ -125,6 +125,35 @@
 @media (min-width: 630px) {
   .navbar-label {
     display: none;
+  }
+}
+
+.navbar-cover {
+  background: rgba(0, 0, 0, 0.25);
+  height: 0;
+  opacity: 0;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  width: 0;
+}
+
+.nav-visible .navbar-cover {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+@media (min-width: 630px) {
+  .nav-visible .navbar-cover {
+    height: 0;
+    opacity: 0;
+    width: 0;
   }
 }
 
@@ -281,7 +310,7 @@ html.nav-visible {
 
 .navbar-theme-dark .navbar-list {
   background-color: #666666;
-  background-image: -webkit-gradient(linear, top left, bottom left, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.3));
   background-image: linear-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.3));
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
@@ -559,7 +588,7 @@ html.nav-visible {
 
 .navbar-theme-blue .navbar-list {
   background: #6d92bf;
-  background-image: -webkit-gradient(linear, top left, bottom left, from(transparent), to(rgba(0, 0, 0, 0.3)));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.3)));
   background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
   background-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
