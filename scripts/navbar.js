@@ -27,6 +27,7 @@
                 });
             });
         }
+
         function alignRightMenus() {
             var navbarRight = $navbar.offset().left + $navbar.outerWidth(); // right edge of the navbar
 
@@ -77,6 +78,11 @@
             // make sure .navbar-label exists
             if ($navbar.has('.navbar-label').length === 0) {
                 $navbar.prepend('<h1 class="navbar-label">Navigation</h1>');
+            }
+
+            // make sure .navbar-cover exists
+            if ($navbar.has('.navbar-cover').length === 0) {
+                $navbar.after('<div class="navbar-cover">&nbsp;</div>');
             }
 
             // add a dropdown icon (will only be displayed on mobile devices)
