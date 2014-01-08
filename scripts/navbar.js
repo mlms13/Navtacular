@@ -81,8 +81,8 @@
             }
 
             // make sure .navbar-cover exists
-            if ($navbar.has('.navbar-cover').length === 0) {
-                $navbar.after('<div class="navbar-cover">&nbsp;</div>');
+            if ($('.navbar-cover').length === 0) {
+                $navbar.before('<div class="navbar-cover">&nbsp;</div>');
             }
 
             // add a dropdown icon (will only be displayed on mobile devices)
