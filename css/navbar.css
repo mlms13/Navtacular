@@ -227,8 +227,6 @@ html {
   :hover > .navbar-menu {
     display: table;
     opacity: 1;
-    padding-top: 0;
-    padding-bottom: 0;
     -webkit-transition: opacity 150ms linear;
     transition: opacity 150ms linear;
     visibility: visible;
@@ -371,8 +369,6 @@ html {
 .navbar-theme-dark .navbar-menu {
   border-color: #4d4d4d;
   border-width: 0 1px;
-  padding-bottom: 24px;
-  padding-top: 24px;
 }
 
 @media (min-width: 630px) {
@@ -659,8 +655,6 @@ html {
 
 .navbar-theme-blue .navbar-menu {
   border-color: #8daacd;
-  padding-bottom: 24px;
-  padding-top: 24px;
 }
 
 @media (min-width: 630px) {
