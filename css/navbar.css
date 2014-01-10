@@ -198,8 +198,7 @@ html {
   box-sizing: border-box;
   display: none;
   font-size: 12.6px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 5px;
   position: relative;
 }
 
@@ -372,7 +371,8 @@ html {
 .navbar-theme-dark .navbar-menu {
   border-color: #4d4d4d;
   border-width: 0 1px;
-  padding: 24px 0;
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 
 @media (min-width: 630px) {
@@ -460,13 +460,13 @@ html {
   background: #00684d;
   border-width: 0;
   color: #ffffff;
-  padding: 0 0 12px;
 }
 
 @media (min-width: 630px) {
   .navbar-theme-tan .navbar-menu {
     -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
     box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
+    padding: 0;
   }
 
   .navbar-theme-tan .navbar-menu.mega,
@@ -479,11 +479,6 @@ html {
 .navbar-theme-tan .navbar-menu.cols a {
   padding-left: 12px;
   padding-right: 12px;
-}
-
-.navbar-theme-tan .navbar-menu .navbar-menu-group {
-  margin: 0 12px;
-  padding: 0;
 }
 
 .navbar-theme-tan .navbar-menu h2 {
@@ -565,10 +560,6 @@ html {
     -webkit-transition: 300ms;
     transition: 300ms;
   }
-}
-
-.navbar-theme-simple .navbar-menu h2 {
-  margin: 8px 12px;
 }
 
 .navbar-theme-simple .navbar-menu a {
@@ -668,7 +659,8 @@ html {
 
 .navbar-theme-blue .navbar-menu {
   border-color: #8daacd;
-  padding: 24px;
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 
 @media (min-width: 630px) {
