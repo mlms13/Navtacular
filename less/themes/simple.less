@@ -1,16 +1,16 @@
 // Theme name: Simple
 // Theme author: Michael Martin-Smucker
 
-.navbar-theme-simple {
+.navtacular-theme-simple {
     @bg: #a5a5a6; // color of background on hover
     @accent-color: #298; // color for the strong elements
     @text: #999; // color of text and borders between items
 
-    .navbar-label {
+    .navtacular-label {
         background: #eee;
         padding: 5px;
     }
-    .navbar-link {
+    .navtacular-link {
         border-bottom: 1px solid @text;
         color: @text;
         font-weight: normal;
@@ -28,13 +28,13 @@
             border-right: 1px solid @text;
         }
     }
-    .navbar-item {
-        &:last-child > .navbar-link {
+    .navtacular-item {
+        &:last-child > .navtacular-link {
             border-right: 0;
         }
     }
-    .navbar-item:hover > .navbar-link,
-    .navbar-link:hover {
+    .navtacular-item:hover > .navtacular-link,
+    .navtacular-link:hover {
         background: @bg;
         color: #fff;
         transition: color 500ms ease-out, background 200ms ease-in;
@@ -43,7 +43,7 @@
             color: #fff;
         }
     }
-    .navbar-menu {
+    .navtacular-menu {
         background: #eaeaea;
         border: 0;
         box-shadow: 0 1px 2px rgba(0,0,0,0.3);
@@ -66,7 +66,7 @@
         }
     }
     @media (min-width: @mqBreakpoint) {
-        .navbar-item:hover > .navbar-menu {
+        .navtacular-item:hover > .navtacular-menu {
             transform: rotateX(0deg);
             opacity: 1;
         }

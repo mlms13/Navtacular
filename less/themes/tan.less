@@ -3,23 +3,23 @@
 
 @import "../variables";
 
-.navbar-theme-tan {
+.navtacular-theme-tan {
     @bg: #eae8db; // background color of the navbar
     @height: 40px; // height of the navbar
     @text: #00684d; // text color of the menu items
     @text-hover: #fff; // text color of the menu items on hover
 
-    .navbar-label {
+    .navtacular-label {
         background: @bg;
         box-shadow: 0 1px 3px rgba(0,0,0,0.2);
         color: @text;
         padding: 5px;
     }
-    .navbar-list {
+    .navtacular-list {
         background-color: @bg;
         box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
-    .navbar-link {
+    .navtacular-link {
         border-bottom-color: darken(@bg, 11%);
         border-top-color: lighten(@bg, 9%);
         border-style: solid;
@@ -39,21 +39,21 @@
             color: darken(@bg, 25%);
         }
     }
-    .navbar-item {
-        &:first-child > .navbar-link {
+    .navtacular-item {
+        &:first-child > .navtacular-link {
             border-left: 0;
         }
-        &:last-child > .navbar-link {
+        &:last-child > .navtacular-link {
             border-right: 0;
         }
     }
-    .navbar-item:hover > .navbar-link,
-    .navbar-link:hover {
+    .navtacular-item:hover > .navtacular-link,
+    .navtacular-link:hover {
         background-color: @text;
         border-color: @text;
         color: @text-hover;
     }
-    .navbar-menu {
+    .navtacular-menu {
         background: @text;
         border-width: 0;
         color: @text-hover;
