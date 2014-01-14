@@ -93,7 +93,7 @@
             // determine if the "navParent" option is a jQuery object or selector string
             if (settings.navParent instanceof $) {
                 $navParent = settings.navParent;
-            } else if (typeof settings.navParent === 'string') {
+            } else {
                 $navParent = $(settings.navParent);
             }
             // add the "navtacular-parent" class to the parent element
