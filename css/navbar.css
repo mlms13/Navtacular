@@ -168,7 +168,6 @@
   left: 0;
   min-height: 100%;
   min-width: 100%;
-  padding: 0 5px;
   position: absolute;
   -webkit-transition: left 300ms;
   transition: left 300ms;
@@ -187,7 +186,6 @@
 html {
   min-height: 100%;
   min-width: 100%;
-  overflow: hidden;
   position: relative;
 }
 
