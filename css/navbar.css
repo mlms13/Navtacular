@@ -168,7 +168,6 @@
   left: 0;
   min-height: 100%;
   min-width: 100%;
-  padding: 0 5px;
   position: absolute;
   -webkit-transition: left 300ms;
   transition: left 300ms;
@@ -187,7 +186,6 @@
 html {
   min-height: 100%;
   min-width: 100%;
-  overflow: hidden;
   position: relative;
 }
 
@@ -208,7 +206,6 @@ html {
     border: 1px solid #000;
     -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-    display: table !important;
     display: flex !important;
     opacity: 0;
     min-width: 160px;
@@ -217,6 +214,11 @@ html {
     transition: opacity 300ms linear, visibility 0 linear 300ms;
     visibility: hidden;
     z-index: 100;
+  }
+
+  .no-flexbox .navtacular-menu,
+  .no-flexboxlegacy .navtacular-menu {
+    display: table !important;
   }
 }
 
@@ -255,7 +257,7 @@ html {
   .flexbox .navtacular-menu .navtacular-menu-group,
   .flexboxlegacy .navtacular-menu .navtacular-menu-group {
     -webkit-box-flex: 1;
-    display: block;
+    float: left;
     -webkit-box-flex: auto;
     -webkit-flex: auto;
     -ms-flex: auto;
