@@ -95,8 +95,10 @@
 
 .navtacular-link .icon-caret-down {
   color: #999;
-  float: right;
+  position: absolute;
   line-height: 36px;
+  right: 15px;
+  top: 4px;
 }
 
 @media (min-width: 630px) {
@@ -505,8 +507,8 @@ html {
   color: #999999;
   font-weight: normal;
   line-height: 18px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding: 4px 15px;
+  text-align: left;
 }
 
 .navtacular-theme-simple .navtacular-link strong {
