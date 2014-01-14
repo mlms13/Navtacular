@@ -254,6 +254,7 @@ html {
   .flexbox .navtacular-menu .navtacular-menu-group,
   .flexboxlegacy .navtacular-menu .navtacular-menu-group {
     -webkit-box-flex: 1;
+    display: block;
     -webkit-box-flex: auto;
     -webkit-flex: auto;
     -ms-flex: auto;
