@@ -1,5 +1,9 @@
 (function ($) {
-    $.fn.navtacular = function () {
+    $.fn.navtacular = function (options) {
+        var settings = $.extend({
+            navParent: $(this).parent() // pass in a selector or a jQuery object
+        }, options);
+
         var $navbar = this,
             dragging = false;
 
@@ -73,7 +77,8 @@
 
         return this.each(function () {
             var $navbar = $(this), // the current navbar while looping through each
-                $menus = $navbar.find('.navtacular-menu');
+                $menus = $navbar.find('.navtacular-menu'),
+                $navParent;
 
             // make sure .navbar-label exists
             if ($navbar.has('.navtacular-label').length === 0) {
@@ -82,7 +87,23 @@
 
             // make sure .navbar-cover exists
             if ($('.navtacular-cover').length === 0) {
-                $navbar.before('<div class="navtacular-cover">&nbsp;</div>');
+                $navbar.before('<div class="navtacular-cover"></div>');
+            }
+
+            // determine if the "navParent" option is a jQuery object or selector string
+            if (settings.navParent instanceof $) {
+                $navParent = settings.navParent;
+            } else if (typeof settings.navParent === 'string' && (settings.navParent.indexOf('.') === 0 || settings.navParent.indexOf('#') === 0)) {
+                $navParent = $(settings.navParent);
+            } else {
+                console.error('The selector in the "navParent" option is invalid.');
+            }
+            // give a helpful error if the item doesn't exist
+            if ($navParent.length === 0) {
+                console.error('The selector in the "navParent" option doesn\'t exist on the page.');
+            } else if (!$navParent.hasClass('navtacular-parent')) {
+                // add the "navtacular-parent" class to the parent element
+                $navParent.addClass('navtacular-parent');
             }
 
             // add a dropdown icon (will only be displayed on mobile devices)

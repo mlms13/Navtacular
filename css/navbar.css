@@ -160,7 +160,7 @@
   }
 }
 
-.container {
+.navtacular-parent {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -173,12 +173,12 @@
   transition: left 300ms;
 }
 
-.nav-visible .container {
+.nav-visible .navtacular-parent {
   left: 200px;
 }
 
 @media (min-width: 630px) {
-  .nav-visible .container {
+  .nav-visible .navtacular-parent {
     left: 0;
   }
 }
