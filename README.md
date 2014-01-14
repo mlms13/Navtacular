@@ -11,7 +11,7 @@ Features
 - Javascript is an optional enhancement (except for old IE)
 - Easy theming, and several themes included by default
 - Basic support for all modern browsers, including IE7+
-- Just under 1KB CSS, gzipped (plus ~70 lines of optional Javascript)
+- Just under 1KB CSS, gzipped (plus ~120 lines of optional Javascript)
 
 Using Navtacular
 -------------------------
@@ -63,7 +63,7 @@ Browser Support
 Options and Customization
 -------------------------
 
-Navtacular 2 currenly includes only one theme: dark. You can include this theme by adding the class `navtacular-theme-dark` to your root `.navtacular` element. A tan theme was developed for Navtacular 1, and it will be udpated soon.
+Navtacular 2 includes four themes: dark, tan, blue and simple. You can include these themes by adding the class `navtacular-theme-<color>` to your root `.navtacular` element.
 
 Menu appearance can be controlled by adding an additional class to the `.navtacular-menu` item:
 
@@ -71,6 +71,20 @@ Menu appearance can be controlled by adding an additional class to the `.navtacu
 |---------|-------------|
 | `.cols` | All `.navtacular-menu-group` children will be arranged in columns. |
 | `.mega` | Similar to `.cols`, but the menu will also stretch to the full width of the navbar. |
+
+In order to allow the menu to slide out when on small screens, the js plugin needs to know what holds the content. If you have the navbar nested more than one level past a content container, you will need to specify what element to move when on small screens. This is set when calling the js plugin.
+
+| Option | Value |
+|--------|-------|
+| `navParent` | jQuery object or selector |
+
+```
+$(document).ready( function() {
+  $('.navtacular').navtacular({
+    navParent: '.container'
+  });
+});
+```
 
 Contributing
 -------------------------
