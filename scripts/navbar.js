@@ -93,16 +93,11 @@
             // determine if the "navParent" option is a jQuery object or selector string
             if (settings.navParent instanceof $) {
                 $navParent = settings.navParent;
-            } else if (typeof settings.navParent === 'string' && (settings.navParent.indexOf('.') === 0 || settings.navParent.indexOf('#') === 0)) {
+            } else if (typeof settings.navParent === 'string') {
                 $navParent = $(settings.navParent);
-            } else {
-                console.error('The selector in the "navParent" option is invalid.');
             }
-            // give a helpful error if the item doesn't exist
-            if ($navParent.length === 0) {
-                console.error('The selector in the "navParent" option doesn\'t exist on the page.');
-            } else if (!$navParent.hasClass('navtacular-parent')) {
-                // add the "navtacular-parent" class to the parent element
+            // add the "navtacular-parent" class to the parent element
+			if (!$navParent.hasClass('navtacular-parent')) {
                 $navParent.addClass('navtacular-parent');
             }
 
