@@ -95,8 +95,10 @@
 
 .navtacular-link .icon-caret-down {
   color: #999;
-  float: right;
+  position: absolute;
   line-height: 36px;
+  right: 15px;
+  top: 4px;
 }
 
 @media (min-width: 630px) {
@@ -133,14 +135,13 @@
   height: 0;
   opacity: 0;
   position: absolute;
-  -webkit-transition: opacity 350ms, height 10ms 350ms, width 10ms 350ms;
-  transition: opacity 350ms, height 10ms 350ms, width 10ms 350ms;
+  -webkit-transition: opacity 350ms, height 0 350ms, width 0 350ms;
+  transition: opacity 350ms, height 0 350ms, width 0 350ms;
   width: 0;
   z-index: 9999;
 }
 
 .nav-visible .navtacular-cover {
-  bottom: 0;
   height: 100%;
   left: 0;
   opacity: 1;
@@ -160,7 +161,7 @@
   }
 }
 
-.container {
+.navtacular-parent {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -173,12 +174,12 @@
   transition: left 300ms;
 }
 
-.nav-visible .container {
+.nav-visible .navtacular-parent {
   left: 200px;
 }
 
 @media (min-width: 630px) {
-  .nav-visible .container {
+  .nav-visible .navtacular-parent {
     left: 0;
   }
 }
@@ -254,6 +255,7 @@ html {
   .flexbox .navtacular-menu .navtacular-menu-group,
   .flexboxlegacy .navtacular-menu .navtacular-menu-group {
     -webkit-box-flex: 1;
+    display: block;
     -webkit-box-flex: auto;
     -webkit-flex: auto;
     -ms-flex: auto;
@@ -504,8 +506,8 @@ html {
   color: #999999;
   font-weight: normal;
   line-height: 18px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding: 4px 15px;
+  text-align: left;
 }
 
 .navtacular-theme-simple .navtacular-link strong {
@@ -608,7 +610,6 @@ html {
   border-bottom-color: #3c5f8a;
   border-top-color: #84a3c9;
   color: #ffffff;
-  text-align: center;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -622,6 +623,7 @@ html {
 
 .navtacular-theme-blue .navtacular-link .icon-caret-down {
   color: #84a3c9;
+  top: 1px;
 }
 
 .navtacular-theme-blue .navtacular-item:first-child > .navtacular-link {

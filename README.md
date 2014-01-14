@@ -11,7 +11,7 @@ Features
 - Javascript is an optional enhancement (except for old IE)
 - Easy theming, and several themes included by default
 - Basic support for all modern browsers, including IE7+
-- Just under 1KB CSS, gzipped (plus ~70 lines of optional Javascript)
+- Just under 1KB CSS, gzipped (plus ~120 lines of optional Javascript)
 
 Using Navtacular
 -------------------------
@@ -27,14 +27,14 @@ Navtacular should work well on its own in modern browsers, but to get the most o
 Structure your HTML thusly:
 
 ```html
-<nav class="navbar">
-  <h1 class="navbar-label">Navigation</h1>
-  <ul class="navbar-list">
-    <li class="navbar-item"><a class="navbar-link" href="#">Home</a></li>
-    <li class="navbar-item">
-      <a class="navbar-link" href="#">Home</a>
-      <section class="navbar-menu">
-        <section class="navbar-menu-group">
+<nav class="navtacular">
+  <h1 class="navtacular-label">Navigation</h1>
+  <ul class="navtacular-list">
+    <li class="navtacular-item"><a class="navtacular-link" href="#">Home</a></li>
+    <li class="navtacular-item">
+      <a class="navtacular-link" href="#">Home</a>
+      <section class="navtacular-menu">
+        <section class="navtacular-menu-group">
           <ul>
             <li><a href="#">More Links</a></li>
             <li><a href="#">More Links</a></li>
@@ -42,7 +42,7 @@ Structure your HTML thusly:
         </section>
       </section>
     </li>
-    <li class="navbar-item"><a class="navbar-link" href="#">Contact</a></li>
+    <li class="navtacular-item"><a class="navtacular-link" href="#">Contact</a></li>
   </ul>
 </nav>
 ```
@@ -63,14 +63,28 @@ Browser Support
 Options and Customization
 -------------------------
 
-Navtacular 2 currenly includes only one theme: dark. You can include this theme by adding the class `navbar-theme-dark` to your root `.navbar` element. A tan theme was developed for Navtacular 1, and it will be udpated soon.
+Navtacular 2 includes four themes: dark, tan, blue and simple. You can include these themes by adding the class `navtacular-theme-<color>` to your root `.navtacular` element.
 
-Menu appearance can be controlled by adding an additional class to the `.navbar-menu` item:
+Menu appearance can be controlled by adding an additional class to the `.navtacular-menu` item:
 
 | Class   | Description |
 |---------|-------------|
-| `.cols` | All `.navbar-menu-group` children will be arranged in columns. |
+| `.cols` | All `.navtacular-menu-group` children will be arranged in columns. |
 | `.mega` | Similar to `.cols`, but the menu will also stretch to the full width of the navbar. |
+
+In order to allow the menu to slide out when on small screens, the js plugin needs to know what holds the content. If you have the navbar nested more than one level past a content container, you will need to specify what element to move when on small screens. This is set when calling the js plugin.
+
+| Option | Value |
+|--------|-------|
+| `navParent` | jQuery object or selector |
+
+```
+$(document).ready( function() {
+  $('.navtacular').navtacular({
+    navParent: '.container'
+  });
+});
+```
 
 Contributing
 -------------------------

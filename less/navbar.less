@@ -83,8 +83,10 @@
 
     .icon-caret-down {
         color: #999;
-        float: right;
+        position: absolute;
         line-height: @navHeight;
+        right: 15px;
+        top: 4px;
 
         @media (min-width: @mqBreakpoint) {
             display: none;
@@ -119,12 +121,11 @@
     height: 0;
     opacity: 0;
     position: absolute;
-    transition: opacity 350ms, height 10ms 350ms, width 10ms 350ms;
+    transition: opacity 350ms, height 0 350ms, width 0 350ms;
     width: 0;
     z-index: 9999;
 
     .nav-visible & {
-        bottom: 0;
         height: 100%;
         left: 0;
         opacity: 1;
@@ -142,7 +143,7 @@
     }
 }
 
-.container {
+.navtacular-parent {
     box-sizing: border-box;
     left: 0;
     min-height: 100%;
