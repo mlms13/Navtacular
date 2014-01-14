@@ -20,7 +20,6 @@
         visibility: hidden;
         z-index: 100;
 
-        .no-flexbox &,
         .no-flexboxlegacy & {
             display: table !important; // Fixes bug in Safari
         }
@@ -57,7 +56,7 @@
             .flexboxlegacy & {
                 -webkit-box-flex: 1;
                 // display: block; // Fixes issue in Firefox where mega menus aren't working --- Breaks Safari
-                float: left; // Fixes issue in Firefox where mega menus aren't working
+                // float: left; // Fixes issue in Firefox where mega menus aren't working --- Also Breaks Safari
                 flex: auto;
             }
 
