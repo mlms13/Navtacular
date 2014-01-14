@@ -27,14 +27,14 @@ Navtacular should work well on its own in modern browsers, but to get the most o
 Structure your HTML thusly:
 
 ```html
-<nav class="navbar">
-  <h1 class="navbar-label">Navigation</h1>
-  <ul class="navbar-list">
-    <li class="navbar-item"><a class="navbar-link" href="#">Home</a></li>
-    <li class="navbar-item">
-      <a class="navbar-link" href="#">Home</a>
-      <section class="navbar-menu">
-        <section class="navbar-menu-group">
+<nav class="navtacular">
+  <h1 class="navtacular-label">Navigation</h1>
+  <ul class="navtacular-list">
+    <li class="navtacular-item"><a class="navtacular-link" href="#">Home</a></li>
+    <li class="navtacular-item">
+      <a class="navtacular-link" href="#">Home</a>
+      <section class="navtacular-menu">
+        <section class="navtacular-menu-group">
           <ul>
             <li><a href="#">More Links</a></li>
             <li><a href="#">More Links</a></li>
@@ -42,7 +42,7 @@ Structure your HTML thusly:
         </section>
       </section>
     </li>
-    <li class="navbar-item"><a class="navbar-link" href="#">Contact</a></li>
+    <li class="navtacular-item"><a class="navtacular-link" href="#">Contact</a></li>
   </ul>
 </nav>
 ```
@@ -63,13 +63,13 @@ Browser Support
 Options and Customization
 -------------------------
 
-Navtacular 2 currenly includes only one theme: dark. You can include this theme by adding the class `navbar-theme-dark` to your root `.navbar` element. A tan theme was developed for Navtacular 1, and it will be udpated soon.
+Navtacular 2 currenly includes only one theme: dark. You can include this theme by adding the class `navtacular-theme-dark` to your root `.navtacular` element. A tan theme was developed for Navtacular 1, and it will be udpated soon.
 
-Menu appearance can be controlled by adding an additional class to the `.navbar-menu` item:
+Menu appearance can be controlled by adding an additional class to the `.navtacular-menu` item:
 
 | Class   | Description |
 |---------|-------------|
-| `.cols` | All `.navbar-menu-group` children will be arranged in columns. |
+| `.cols` | All `.navtacular-menu-group` children will be arranged in columns. |
 | `.mega` | Similar to `.cols`, but the menu will also stretch to the full width of the navbar. |
 
 Contributing
