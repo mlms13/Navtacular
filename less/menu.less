@@ -1,13 +1,12 @@
 @import "variables";
 
-.navbar-menu {
+.navtacular-menu {
     background: #fff;
     background: rgba(255,255,255,0.97);
     box-sizing: border-box;
     display: none;
     font-size: (@baseFontSize * 0.9);
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 5px;
     position: relative;
 
     @media (min-width: @mqBreakpoint) {
@@ -32,8 +31,6 @@
         @media (min-width: @mqBreakpoint) {
             display: table;
             opacity: 1;
-            padding-top: 0;
-            padding-bottom: 0;
             transition: opacity 150ms linear;
             visibility: visible;
 
@@ -47,7 +44,7 @@
         }
     }
 
-    .navbar-menu-group {
+    .navtacular-menu-group {
         @media (min-width: @mqBreakpoint) {
             display: table-cell;
             padding: 0 24px;
@@ -109,7 +106,7 @@
     .menu-align-right {
         position: relative;
 
-        .navbar-menu {
+        .navtacular-menu {
             left: auto;
             right: 0;
         }

@@ -3,24 +3,24 @@
 
 @import "../variables";
 
-.navbar-theme-dark {
+.navtacular-theme-dark {
     @bg: #666; // background color of the navbar
     @height: 40px; // height of the navbar
     @text: #fff; // text color of the menu items
 
-    .navbar-label {
+    .navtacular-label {
         background: lighten(@bg, 25%);
         box-shadow: 0 1px 3px rgba(0,0,0,0.2);
         color: #fff;
         padding: 5px;
     }
 
-    .navbar-list {
+    .navtacular-list {
         background-color: @bg;
         background-image: linear-gradient(rgba(0,0,0,0) 10%, rgba(0,0,0,0.3));
         box-shadow: 0 0 8px rgba(0,0,0,0.3);
     }
-    .navbar-link {
+    .navtacular-link {
         border-style: solid;
         border-width: 1px 0;
         border-bottom-color: darken(@bg, 12%);
@@ -37,26 +37,24 @@
             border-right-color: darken(@bg, 20%);
         }
     }
-    .navbar-item {
-        &:first-child > .navbar-link {
+    .navtacular-item {
+        &:first-child > .navtacular-link {
             border-left: 0;
         }
-        &:last-child > .navbar-link {
+        &:last-child > .navtacular-link {
             border-right: 0;
         }
     }
-    .navbar-item:hover > .navbar-link,
-    .navbar-link:hover {
+    .navtacular-item:hover > .navtacular-link,
+    .navtacular-link:hover {
         background-color: darken(@bg, 13.2%);
         background-image: radial-gradient(center 120px, ellipse cover, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.08) 50%, transparent 80%);
         box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
         color: @text;
     }
-    .navbar-menu {
+    .navtacular-menu {
         border-color: darken(@bg, 10%);
         border-width: 0 1px;
-        // work around chrome bug #103543
-        padding: 24px 0;
 
         @media (min-width: @mqBreakpoint) {
             border-width: 6px 4px 4px;

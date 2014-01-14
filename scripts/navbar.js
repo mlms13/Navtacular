@@ -5,34 +5,35 @@
 
         function handleMobileNav() {
 
-            $('.navbar-link').off('click.navtacular');
+            $('.navtacular-link').off('click.navtacular');
 
             if ( $(window).width() > 630 ) {
                 return;
             }
 
             // find all items that have a child menu
-            $navbar.find('.navbar-menu').each(function () {
+            $navbar.find('.navtacular-menu').each(function () {
                 var $menu = $(this),
-                    $link = $menu.prev('.navbar-link');
+                    $link = $menu.prev('.navtacular-link');
 
                 // and make the link toggle the menu
                 $link.on('click.navtacular', function () {
                     if ($menu.is(':visible')) {
                         $menu.slideUp();
                     } else {
-                        $navbar.find('.navbar-menu').slideUp();
+                        $navbar.find('.navtacular-menu').slideUp();
                         $menu.slideDown();
                     }
                 });
             });
         }
+
         function alignRightMenus() {
             var navbarRight = $navbar.offset().left + $navbar.outerWidth(); // right edge of the navbar
 
             // For each non-mega menu,
             // fix the alignment if it extends beyond the right edge of the navbar
-            $navbar.find('.navbar-menu').not('.mega').each(function () {
+            $navbar.find('.navtacular-menu').not('.mega').each(function () {
                 var $menu = $(this),
                     menuRight = $menu.offset().left + $menu.outerWidth(); // right edge of the menu
 
@@ -52,7 +53,7 @@
         });
 
         // handle toggling the menu
-        $navbar.find('.navbar-label').on('click', function () {
+        $navbar.find('.navtacular-label').on('click', function () {
             $('html').toggleClass('nav-visible');
             return false;
         });
@@ -72,16 +73,21 @@
 
         return this.each(function () {
             var $navbar = $(this), // the current navbar while looping through each
-                $menus = $navbar.find('.navbar-menu');
+                $menus = $navbar.find('.navtacular-menu');
 
             // make sure .navbar-label exists
-            if ($navbar.has('.navbar-label').length === 0) {
-                $navbar.prepend('<h1 class="navbar-label">Navigation</h1>');
+            if ($navbar.has('.navtacular-label').length === 0) {
+                $navbar.prepend('<h1 class="navtacular-label">Navigation</h1>');
+            }
+
+            // make sure .navbar-cover exists
+            if ($('.navtacular-cover').length === 0) {
+                $navbar.before('<div class="navtacular-cover">&nbsp;</div>');
             }
 
             // add a dropdown icon (will only be displayed on mobile devices)
             $menus.each(function () {
-                var $link = $(this).prev('.navbar-link');
+                var $link = $(this).prev('.navtacular-link');
 
                 if ($link.has('.icon-caret-down').length === 0) {
                     $link.append('<i class="icon-caret-down"></i>');
@@ -94,6 +100,6 @@
     };
 
     $(document).ready( function() {
-        $('.navbar').navtacular();
+        $('.navtacular').navtacular();
     });
 }(jQuery));

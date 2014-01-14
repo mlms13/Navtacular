@@ -75,103 +75,105 @@
         <script type="text/javascript" src="scripts/modernizr.js"></script>
     </head>
     <body>
-        <header>
-            <h1>CSS Navigation Demo</h1>
-        </header>
-        <nav class="navbar navbar-theme-dark">
-            <h1 class="navbar-label"><i class="icon-reorder"></i>Navigation</h1>
-            <ul class="navbar-list">
-                <li class="navbar-item"><a href="#" class="navbar-link">Home</a></li>
-                <li class="navbar-item">
-                    <a href="#" class="navbar-link">About</a>
-                    <section class="navbar-menu cols">
-                        <section class="navbar-menu-group">
-                            <h2>About Us</h2>
+        <div class="container">
+            <header>
+                <h1>CSS Navigation Demo</h1>
+            </header>
+            <nav class="navtacular navtacular-theme-dark">
+                <h1 class="navtacular-label"><i class="icon-reorder"></i>Navigation</h1>
+                <ul class="navtacular-list">
+                    <li class="navtacular-item"><a href="#" class="navtacular-link">Home</a></li>
+                    <li class="navtacular-item">
+                        <a href="#" class="navtacular-link">About</a>
+                        <section class="navtacular-menu cols">
+                            <section class="navtacular-menu-group">
+                                <h2>About Us</h2>
+                                <ul>
+                                    <li><a href="#">Team</a></li>
+                                    <li><a href="#">Mission</a></li>
+                                    <li><a href="#">Goals</a></li>
+                                </ul>
+                            </section>
+                            <section class="navtacular-menu-group">
+                                <h2>History</h2>
+                                <ul>
+                                    <li><a href="#">Sub Item #1</a></li>
+                                    <li><a href="#">Sub Item #2</a></li>
+                                    <li><a href="#">Sub Item #3</a></li>
+                                </ul>
+                            </section>
+                        </section>
+                    </li>
+                    <li class="navtacular-item"><a href="#" class="navtacular-link">Services</a></li>
+                    <li class="navtacular-item">
+                        <a href="#" class="navtacular-link">Resources</a>
+                        <section class="navtacular-menu mega">
+                            <section class="navtacular-menu-group">
+                                <h2>Resources for Students</h2>
+                                <ul>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Forms</a></li>
+                                    <li><a href="#">Links</a></li>
+                                </ul>
+                            </section>
+                            <section class="navtacular-menu-group">
+                                <h2>Resources for Staff</h2>
+                                <ul>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Forms</a></li>
+                                    <li><a href="#">Links</a></li>
+                                </ul>
+                            </section>
+                            <section class="navtacular-menu-group">
+                                <h2>Resources for Alumni</h2>
+                                <ul>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Forms</a></li>
+                                    <li><a href="#">Links</a></li>
+                                </ul>
+                            </section>
+                        </section>
+                    </li>
+                    <li class="navtacular-item">
+                        <a href="#" class="navtacular-link">Contact</a>
+                        <section class="navtacular-menu">
                             <ul>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Mission</a></li>
-                                <li><a href="#">Goals</a></li>
+                                <li><a href="#">Contact Academic Advisors</a></li>
+                                <li><a href="#">Contact Tech Support</a></li>
                             </ul>
                         </section>
-                        <section class="navbar-menu-group">
-                            <h2>History</h2>
-                            <ul>
-                                <li><a href="#">Sub Item #1</a></li>
-                                <li><a href="#">Sub Item #2</a></li>
-                                <li><a href="#">Sub Item #3</a></li>
-                            </ul>
-                        </section>
-                    </section>
-                </li>
-                <li class="navbar-item"><a href="#" class="navbar-link">Services</a></li>
-                <li class="navbar-item">
-                    <a href="#" class="navbar-link">Resources</a>
-                    <section class="navbar-menu mega">
-                        <section class="navbar-menu-group">
-                            <h2>Resources for Students</h2>
-                            <ul>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Forms</a></li>
-                                <li><a href="#">Links</a></li>
-                            </ul>
-                        </section>
-                        <section class="navbar-menu-group">
-                            <h2>Resources for Staff</h2>
-                            <ul>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Forms</a></li>
-                                <li><a href="#">Links</a></li>
-                            </ul>
-                        </section>
-                        <section class="navbar-menu-group">
-                            <h2>Resources for Alumni</h2>
-                            <ul>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Forms</a></li>
-                                <li><a href="#">Links</a></li>
-                            </ul>
-                        </section>
-                    </section>
-                </li>
-                <li class="navbar-item">
-                    <a href="#" class="navbar-link">Contact</a>
-                    <section class="navbar-menu">
-                        <ul>
-                            <li><a href="#">Contact Academic Advisors</a></li>
-                            <li><a href="#">Contact Tech Support</a></li>
-                        </ul>
-                    </section>
-                </li>
-            </ul>
-        </nav>
-        <section id="description">
-            <h2>Themes</h2>
-            <p>
-                You can toggle between different color themes using the following links: <a href="#" class="theme-switch" data-theme="navbar-theme-dark">Dark</a> - <a href="#" class="theme-switch" data-theme="navbar-theme-tan">Tan</a> - <a href="#" class="theme-switch" data-theme="navbar-theme-blue">Blue</a> - <a href="#" class="theme-switch" data-theme="navbar-theme-simple">Simple</a>.
-            </p>
-            <p>
-                It's easy to develop your own themes using CSS. As an example, see the light, dark, and green themes (written in <a href="http://lesscss.org/">LESS</a>) in the <code>/less/</code> folder. You can view the compiled CSS at the end of <a href="./styles/navbar.css"><code>navbar.css</code></a>.
-            </p>
-        </section>
-        <script type="text/javascript" src="scripts/jquery.js"></script>
+                    </li>
+                </ul>
+            </nav>
+            <section id="description">
+                <h2>Themes</h2>
+                <p>
+                    You can toggle between different color themes using the following links: <a href="#" class="theme-switch" data-theme="navtacular-theme-dark">Dark</a> - <a href="#" class="theme-switch" data-theme="navtacular-theme-tan">Tan</a> - <a href="#" class="theme-switch" data-theme="navtacular-theme-blue">Blue</a> - <a href="#" class="theme-switch" data-theme="navtacular-theme-simple">Simple</a>.
+                </p>
+                <p>
+                    It's easy to develop your own themes using CSS. As an example, see the light, dark, and green themes (written in <a href="http://lesscss.org/">LESS</a>) in the <code>/less/</code> folder. You can view the compiled CSS at the end of <a href="./styles/navbar.css"><code>navbar.css</code></a>.
+                </p>
+            </section>
+            <script type="text/javascript" src="scripts/jquery.js"></script>
 
-        <!--[if lte IE 8]>
-            <script src="scripts/selectivizr.js"></script>
-        <![endif]-->
+            <!--[if lte IE 8]>
+                <script src="scripts/selectivizr.js"></script>
+            <![endif]-->
 
-        <script type="text/javascript" src="scripts/navbar.js"></script>
-        <script type="text/javascript">
-            $('.theme-switch').on('click', function () {
-                var $this = $(this),
-                    $navbar = $('.navbar');
+            <script type="text/javascript" src="scripts/navbar.js"></script>
+            <script type="text/javascript">
+                $('.theme-switch').on('click', function () {
+                    var $this = $(this),
+                        $navbar = $('.navtacular');
 
-                // remove any existing theme and add the new one
-                $navbar.removeClass(function (index, css) {
-                    return (css.match (/\bnavbar-theme\S+/g) || []).join(' ');
-                }).addClass($this.data('theme'));
-            });
-        </script>
+                    // remove any existing theme and add the new one
+                    $navbar.removeClass(function (index, css) {
+                        return (css.match (/\bnavtacular-theme\S+/g) || []).join(' ');
+                    }).addClass($this.data('theme'));
+                });
+            </script>
 
-        <script src="http://localhost:35729/livereload.js"></script>
+            <script src="http://localhost:35729/livereload.js"></script>
+        </div>
     </body>
 </html>
