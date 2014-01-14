@@ -142,7 +142,6 @@
 }
 
 .nav-visible .navtacular-cover {
-  bottom: 0;
   height: 100%;
   left: 0;
   opacity: 1;
@@ -625,6 +624,7 @@ html {
 
 .navtacular-theme-blue .navtacular-link .icon-caret-down {
   color: #84a3c9;
+  top: 1px;
 }
 
 .navtacular-theme-blue .navtacular-item:first-child > .navtacular-link {
