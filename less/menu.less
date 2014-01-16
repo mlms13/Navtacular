@@ -20,7 +20,7 @@
         visibility: hidden;
         z-index: 100;
 
-        .no-flexboxlegacy & {
+        .no-flexbox.no-flexboxlegacy & {
             display: table !important; // Fixes bug in Safari
         }
     }
@@ -42,7 +42,7 @@
                 display: flex;
             }
             .no-display-table & {
-	            display: block;
+                display: block;
             }
         }
     }
