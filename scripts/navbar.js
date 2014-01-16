@@ -97,7 +97,7 @@
                 $navParent = $(settings.navParent);
             }
             // add the "navtacular-parent" class to the parent element
-			if (!$navParent.hasClass('navtacular-parent')) {
+            if (!$navParent.hasClass('navtacular-parent')) {
                 $navParent.addClass('navtacular-parent');
             }
 
