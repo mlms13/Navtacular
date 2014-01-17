@@ -208,7 +208,7 @@ html.nav-visible {
     border: 1px solid #000;
     -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-    display: flex !important;
+    display: block !important;
     opacity: 0;
     min-width: 160px;
     position: absolute;
@@ -220,6 +220,11 @@ html.nav-visible {
 
   .no-flexbox.no-flexboxlegacy .navtacular-menu {
     display: table !important;
+  }
+
+  .flexbox .navtacular-menu,
+  .flexboxlegacy .navtacular-menu {
+    display: flex !important;
   }
 }
 
