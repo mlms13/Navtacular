@@ -12,7 +12,8 @@
     @media (min-width: @mqBreakpoint) {
         border: 1px solid #000;
         box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
-        display: block !important;
+        display: block;
+        display: table;
         opacity: 0;
         min-width: 160px;
         position: absolute;
@@ -20,12 +21,10 @@
         visibility: hidden;
         z-index: 100;
 
-        .no-flexbox.no-flexboxlegacy & {
-            display: table !important; // Fixes bug in Safari
-        }
         .flexbox &,
         .flexboxlegacy & {
-            display: flex !important;
+            -webkit-box-flex: 1; // Old Safari needs this
+            display: flex;
         }
     }
 
@@ -43,6 +42,7 @@
 
             .flexbox &,
             .flexboxlegacy & {
+                -webkit-box-flex: 1; // Old Safari needs this
                 display: flex;
             }
             .no-display-table & {
@@ -58,9 +58,8 @@
 
             .flexbox &,
             .flexboxlegacy & {
-                -webkit-box-flex: 1;
-                // display: block; // Fixes issue in Firefox where mega menus aren't working --- Breaks Safari
-                // float: left; // Fixes issue in Firefox where mega menus aren't working --- Also Breaks Safari
+                -webkit-box-flex: 1; // Old Safari needs this
+                display: block; // Fixes issue in Firefox and Safari where mega menus aren't working
                 flex: auto;
             }
 

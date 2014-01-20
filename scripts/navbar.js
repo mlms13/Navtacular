@@ -23,7 +23,9 @@
                 // and make the link toggle the menu
                 $link.on('click.navtacular', function () {
                     if ($menu.is(':visible')) {
-                        $menu.slideUp();
+                        $menu.slideUp(400, function() {
+                            $(this).css('display', ''); // on completion, clear out inline styles
+                        });
                     } else {
                         $navbar.find('.navtacular-menu').slideUp();
                         $menu.slideDown();
