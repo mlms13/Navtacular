@@ -136,8 +136,8 @@
   height: 0;
   opacity: 0;
   position: absolute;
-  -webkit-transition: opacity 350ms, height 0 350ms, width 0 350ms;
-  transition: opacity 350ms, height 0 350ms, width 0 350ms;
+  -webkit-transition: opacity 400ms, height 0 400ms, width 0 400ms;
+  transition: opacity 400ms, height 0 400ms, width 0 400ms;
   width: 0;
   z-index: 9999;
 }
