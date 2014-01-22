@@ -112,7 +112,8 @@
   cursor: pointer;
   font-size: 21px;
   line-height: 1.4;
-  margin: 0;
+  margin: 8px 0;
+  padding: 8px 15px;
 }
 
 .navtacular-label .icon-reorder:before {
@@ -329,7 +330,6 @@ html.nav-visible {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   color: #fff;
-  padding: 5px;
 }
 
 .navtacular-theme-dark .navtacular-list {
@@ -418,7 +418,6 @@ html.nav-visible {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   color: #00684d;
-  padding: 5px;
 }
 
 .navtacular-theme-tan .navtacular-list {
@@ -509,7 +508,6 @@ html.nav-visible {
 
 .navtacular-theme-simple .navtacular-label {
   background: #eee;
-  padding: 5px;
 }
 
 .navtacular-theme-simple .navtacular-list {
@@ -612,7 +610,6 @@ html.nav-visible {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   color: #fff;
-  padding: 5px;
 }
 
 .navtacular-theme-blue .navtacular-list {
