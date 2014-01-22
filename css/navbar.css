@@ -201,7 +201,7 @@ html.nav-visible {
   box-sizing: border-box;
   display: none;
   font-size: 12.6px;
-  padding: 24px 5px;
+  padding: 24px 8px;
   position: relative;
 }
 
@@ -441,7 +441,6 @@ html.nav-visible {
     border-width: 0px 1px;
     border-left-color: #fffffe;
     border-right-color: #d9d5be;
-    padding: 0 20px;
   }
 }
 
