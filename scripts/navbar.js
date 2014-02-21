@@ -117,7 +117,9 @@
         });
     };
 
-    $(document).ready( function() {
-        $('.navtacular').navtacular();
+    $(function() {
+        if (document.querySelector('.navtacular')) {
+            $('.navtacular').navtacular();
+        }
     });
 }(jQuery));
