@@ -53,11 +53,6 @@
             });
         }
 
-        $(window).on('resize', function () {
-            handleMobileNav();
-            alignRightMenus();
-        });
-
         // handle toggling the menu
         $navbar.find('.navtacular-label').on('click', function () {
             $('html').toggleClass('nav-visible');
@@ -114,12 +109,14 @@
 
             handleMobileNav();
             alignRightMenus();
+	        $(window).on('resize', function () {
+	            handleMobileNav();
+	            alignRightMenus();
+	        });
         });
     };
 
     $(function() {
-        if (document.querySelector('.navtacular')) {
-            $('.navtacular').navtacular();
-        }
+        $('.navtacular').navtacular();
     });
 }(jQuery));
