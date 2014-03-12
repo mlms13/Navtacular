@@ -31,7 +31,6 @@
 
   .flexbox .navtacular-list,
   .flexboxlegacy .navtacular-list {
-    -webkit-box-flex: 1;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -46,7 +45,6 @@
 
   .flexbox .navtacular-item,
   .flexboxlegacy .navtacular-item {
-    display: block;
     -webkit-box-flex: 1;
     -webkit-box-flex: auto;
     -webkit-flex: auto;
@@ -224,7 +222,6 @@ html.nav-visible {
 
   .flexbox .navtacular-menu,
   .flexboxlegacy .navtacular-menu {
-    -webkit-box-flex: 1;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -247,7 +244,6 @@ html.nav-visible {
 
   .flexbox :hover > .navtacular-menu,
   .flexboxlegacy :hover > .navtacular-menu {
-    -webkit-box-flex: 1;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -268,7 +264,6 @@ html.nav-visible {
   .flexbox .navtacular-menu .navtacular-menu-group,
   .flexboxlegacy .navtacular-menu .navtacular-menu-group {
     -webkit-box-flex: 1;
-    display: block;
     -webkit-box-flex: auto;
     -webkit-flex: auto;
     -ms-flex: auto;
