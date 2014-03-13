@@ -303,6 +303,7 @@ html.nav-visible {
 }
 
 .navtacular-menu a {
+  display: block;
   text-decoration: none;
 }
 
@@ -460,45 +461,35 @@ html.nav-visible {
 }
 
 .navtacular-theme-tan .navtacular-menu {
-  background: #00684d;
-  border-width: 0;
-  color: #ffffff;
+  border-color: #00684d;
+  border-width: 0 1px;
 }
 
 @media (min-width: 630px) {
   .navtacular-theme-tan .navtacular-menu {
-    -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
-    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
-    padding: 0;
+    border-width: 3px 2px 2px;
   }
-
-  .navtacular-theme-tan .navtacular-menu.mega,
-  .navtacular-theme-tan .navtacular-menu.cols {
-    padding: 24px 0 12px;
-  }
-}
-
-.navtacular-theme-tan .navtacular-menu.mega a,
-.navtacular-theme-tan .navtacular-menu.cols a {
-  padding-left: 12px;
-  padding-right: 12px;
 }
 
 .navtacular-theme-tan .navtacular-menu h2 {
-  border-bottom: 1px solid #007255;
-  color: #dddac4;
-  padding: 8px 0 0;
+  color: #00684d;
+}
+
+.navtacular-theme-tan .navtacular-menu ul {
+  list-style: square;
+  padding-left: 18px;
+}
+
+.navtacular-theme-tan .navtacular-menu li {
+  margin-bottom: 4px;
 }
 
 .navtacular-theme-tan .navtacular-menu a {
-  color: #ffffff;
-  display: block;
-  padding: 8px 24px;
+  color: #666;
 }
 
 .navtacular-theme-tan .navtacular-menu a:hover {
-  background: #286;
-  text-decoration: none;
+  color: #008260;
 }
 
 .navtacular-theme-simple .navtacular-label {
