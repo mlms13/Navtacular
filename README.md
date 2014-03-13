@@ -11,7 +11,7 @@ Features
 - Javascript is an optional enhancement (except for old IE)
 - Easy theming, and several themes included by default
 - Basic support for all modern browsers, including IE7+
-- Just under 1KB CSS, gzipped (plus ~120 lines of optional Javascript)
+- Just under 2KB CSS gzipped (plus ~120 lines of optional Javascript)
 
 Using Navtacular
 -------------------------
