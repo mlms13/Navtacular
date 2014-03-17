@@ -516,7 +516,7 @@ html.nav-visible {
 }
 
 .navtacular-theme-simple .navtacular-link strong {
-  color: #229988;
+  color: #009374;
   display: block;
   font-weight: bold;
 }
@@ -534,7 +534,7 @@ html.nav-visible {
 
 .navtacular-theme-simple .navtacular-item:hover > .navtacular-link,
 .navtacular-theme-simple .navtacular-link:hover {
-  background: #a5a5a6;
+  background: #009374;
   color: #fff;
   -webkit-transition: color 500ms ease-out, background 200ms ease-in;
   transition: color 500ms ease-out, background 200ms ease-in;
@@ -545,16 +545,24 @@ html.nav-visible {
   color: #fff;
 }
 
+.navtacular-theme-simple.navtacular-variant-dark .navtacular-item:hover > .navtacular-link,
+.navtacular-theme-simple.navtacular-variant-dark .navtacular-link:hover {
+  background: #a5a5a6;
+}
+
 .navtacular-theme-simple .navtacular-menu {
   background: #fff;
   border: 0;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 @media (min-width: 630px) {
   .navtacular-theme-simple .navtacular-menu {
-    background: #eaeaea;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f6f6f6));
+    background: -webkit-linear-gradient(#ffffff, #f6f6f6);
+    background: linear-gradient(#ffffff, #f6f6f6);
+    border-bottom: 2px solid #ddd;
     -webkit-transform-origin: 50% 0%;
     -ms-transform-origin: 50% 0%;
     transform-origin: 50% 0%;
@@ -567,7 +575,7 @@ html.nav-visible {
 }
 
 .navtacular-theme-simple .navtacular-menu h2 {
-  color: #333;
+  color: #666;
 }
 
 .navtacular-theme-simple .navtacular-menu a {
@@ -577,8 +585,7 @@ html.nav-visible {
 }
 
 .navtacular-theme-simple .navtacular-menu a:hover {
-  background: #298;
-  color: #fff;
+  background: #eee;
   text-decoration: none;
 }
 
