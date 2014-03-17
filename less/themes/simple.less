@@ -2,8 +2,8 @@
 // Theme author: Michael Martin-Smucker
 
 .navtacular-theme-simple {
-    @bg: #a5a5a6; // color of background on hover
-    @accent-color: #298; // color for the strong elements
+    @bg: #009374; // color of background on hover
+    @bg2: #a5a5a6; // color of gray variation
     @text: #999; // color of text and borders between items
 
     .navtacular-label {
@@ -25,7 +25,7 @@
         text-align: left;
 
         strong {
-            color: @accent-color;
+            color: @bg;
             display: block;
             font-weight: bold;
         }
@@ -49,19 +49,24 @@
             color: #fff;
         }
     }
+    &.navtacular-variant-dark .navtacular-item:hover > .navtacular-link,
+    &.navtacular-variant-dark .navtacular-link:hover {
+        background: @bg2;
+    }
     .navtacular-menu {
         background: #fff;
         border: 0;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        box-shadow: none;
 
         @media (min-width: @mqBreakpoint) {
-            background: #eaeaea;
+            background: linear-gradient(#fff, #f6f6f6);
+            border-bottom: 2px solid #ddd;
             transform-origin: 50% 0%;
             transform: rotateX(90deg);
             transition: 300ms;
         }
         h2 {
-            color: #333;
+            color: #666;
         }
         a {
             color: #444;
@@ -69,8 +74,7 @@
             padding: 6px 12px;
 
             &:hover {
-                background: #298;
-                color: #fff;
+                background: #eee;
                 text-decoration: none;
             }
         }
