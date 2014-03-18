@@ -89,8 +89,8 @@ $(document).ready( function() {
 Contributing
 -------------------------
 
-If you want to help out with development, it will be much appreciated.  Assuming you already have [Node](http://nodejs.org/) and [NPM](https://npmjs.org/) installed, you'll want to install the [Grunt CLI](http://gruntjs.com/getting-started) globally: `npm install -g grunt-cli`
+If you want to help out with development, it will be much appreciated.  Assuming you already have [Node](http://nodejs.org/) and [NPM](https://npmjs.org/) installed, you'll want to install [Gulp](http://gulpjs.com/) globally: `npm install -g gulp`
 
-After you have Grunt installed, run `npm install` inside the Navtacular directory to install all dependencies.  Then, you can run `grunt` to build the project or `grunt server` to start up a simple server, open your default browser to the Navtacular demo page, and automatically reload the page when changes are saved.
+After you have Gulp installed, run `npm install` inside the Navtacular directory to install all dependencies.  Then, you can run `gulp` to build the project or `gulp server` to start up a simple server, open your default browser to the Navtacular demo page, and automatically reload the page when changes are saved.
 
 Open a pull request with your changes when you're ready.  No need to minify first; I only intentionally minify when making a new release.
