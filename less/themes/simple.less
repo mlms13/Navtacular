@@ -40,7 +40,9 @@
         }
     }
     .navtacular-item:hover > .navtacular-link,
-    .navtacular-link:hover {
+    .navtacular-item.focus > .navtacular-link,
+    .navtacular-link:hover,
+    .navtacular-link:focus {
         background: @bg;
         color: #fff;
         transition: color 500ms ease-out, background 200ms ease-in;
@@ -50,7 +52,9 @@
         }
     }
     &.navtacular-variant-dark .navtacular-item:hover > .navtacular-link,
-    &.navtacular-variant-dark .navtacular-link:hover {
+    &.navtacular-variant-dark .navtacular-item.focus > .navtacular-link,
+    &.navtacular-variant-dark .navtacular-link:hover,
+    &.navtacular-variant-dark .navtacular-link:focus {
         background: @bg2;
     }
     .navtacular-menu {
@@ -73,14 +77,16 @@
             display: block;
             padding: 6px 12px;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 background: #eee;
                 text-decoration: none;
             }
         }
     }
     @media (min-width: @mqBreakpoint) {
-        .navtacular-item:hover > .navtacular-menu {
+        .navtacular-item:hover > .navtacular-menu,
+        .navtacular-item.focus > .navtacular-menu {
             transform: rotateX(0deg);
             opacity: 1;
         }

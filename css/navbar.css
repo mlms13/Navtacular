@@ -61,9 +61,12 @@
   transition: 200ms;
 }
 :hover > .navtacular-link,
-.navtacular-link:hover {
+.focus > .navtacular-link,
+.navtacular-link:hover,
+.navtacular-link:focus {
   background-color: #444;
   color: #fff;
+  outline: none;
   text-decoration: none;
   -webkit-transition: 100ms;
   transition: 100ms;
@@ -198,11 +201,15 @@ html.nav-visible {
     display: flex;
   }
 }
-.no-js :hover > .navtacular-menu {
+.no-js :hover > .navtacular-menu,
+.no-js :focus > .navtacular-menu,
+.no-js .focus > .navtacular-menu {
   display: block;
 }
 @media (min-width: 630px) {
-  :hover > .navtacular-menu {
+  :hover > .navtacular-menu,
+  :focus > .navtacular-menu,
+  .focus > .navtacular-menu {
     display: table;
     opacity: 1;
     -webkit-transition: opacity 150ms linear;
@@ -210,13 +217,19 @@ html.nav-visible {
     visibility: visible;
   }
   .flexbox :hover > .navtacular-menu,
-  .flexboxlegacy :hover > .navtacular-menu {
+  .flexbox :focus > .navtacular-menu,
+  .flexbox .focus > .navtacular-menu,
+  .flexboxlegacy :hover > .navtacular-menu,
+  .flexboxlegacy :focus > .navtacular-menu,
+  .flexboxlegacy .focus > .navtacular-menu {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
-  .no-display-table :hover > .navtacular-menu {
+  .no-display-table :hover > .navtacular-menu,
+  .no-display-table :focus > .navtacular-menu,
+  .no-display-table .focus > .navtacular-menu {
     display: block;
   }
 }
@@ -262,7 +275,8 @@ html.nav-visible {
   display: block;
   text-decoration: none;
 }
-.navtacular-menu a:hover {
+.navtacular-menu a:hover,
+.navtacular-menu a:focus {
   text-decoration: underline;
 }
 @media (min-width: 630px) {
@@ -313,7 +327,10 @@ html.nav-visible {
   border-right: 0;
 }
 .navtacular-theme-dark .navtacular-item:hover > .navtacular-link,
-.navtacular-theme-dark .navtacular-link:hover {
+.navtacular-theme-dark .navtacular-item:focus > .navtacular-link,
+.navtacular-theme-dark .navtacular-item.focus > .navtacular-link,
+.navtacular-theme-dark .navtacular-link:hover,
+.navtacular-theme-dark .navtacular-link:focus {
   background-color: #444444;
   background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
   background-image: radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
@@ -345,7 +362,8 @@ html.nav-visible {
 .navtacular-theme-dark .navtacular-menu a {
   color: #666;
 }
-.navtacular-theme-dark .navtacular-menu a:hover {
+.navtacular-theme-dark .navtacular-menu a:hover,
+.navtacular-theme-dark .navtacular-menu a:focus {
   color: #333;
 }
 .navtacular-theme-tan .navtacular-label {
@@ -385,7 +403,10 @@ html.nav-visible {
   border-right: 0;
 }
 .navtacular-theme-tan .navtacular-item:hover > .navtacular-link,
-.navtacular-theme-tan .navtacular-link:hover {
+.navtacular-theme-tan .navtacular-item:focus > .navtacular-link,
+.navtacular-theme-tan .navtacular-item.focus > .navtacular-link,
+.navtacular-theme-tan .navtacular-link:hover,
+.navtacular-theme-tan .navtacular-link:focus {
   background-color: #00684d;
   border-color: #00684d;
   color: #ffffff;
@@ -412,7 +433,8 @@ html.nav-visible {
 .navtacular-theme-tan .navtacular-menu a {
   color: #666;
 }
-.navtacular-theme-tan .navtacular-menu a:hover {
+.navtacular-theme-tan .navtacular-menu a:hover,
+.navtacular-theme-tan .navtacular-menu a:focus {
   color: #008260;
 }
 .navtacular-theme-simple .navtacular-label {
@@ -449,18 +471,24 @@ html.nav-visible {
   border-right: 0;
 }
 .navtacular-theme-simple .navtacular-item:hover > .navtacular-link,
-.navtacular-theme-simple .navtacular-link:hover {
+.navtacular-theme-simple .navtacular-item.focus > .navtacular-link,
+.navtacular-theme-simple .navtacular-link:hover,
+.navtacular-theme-simple .navtacular-link:focus {
   background: #009374;
   color: #fff;
   -webkit-transition: color 500ms ease-out, background 200ms ease-in;
   transition: color 500ms ease-out, background 200ms ease-in;
 }
 .navtacular-theme-simple .navtacular-item:hover > .navtacular-link strong,
-.navtacular-theme-simple .navtacular-link:hover strong {
+.navtacular-theme-simple .navtacular-item.focus > .navtacular-link strong,
+.navtacular-theme-simple .navtacular-link:hover strong,
+.navtacular-theme-simple .navtacular-link:focus strong {
   color: #fff;
 }
 .navtacular-theme-simple.navtacular-variant-dark .navtacular-item:hover > .navtacular-link,
-.navtacular-theme-simple.navtacular-variant-dark .navtacular-link:hover {
+.navtacular-theme-simple.navtacular-variant-dark .navtacular-item.focus > .navtacular-link,
+.navtacular-theme-simple.navtacular-variant-dark .navtacular-link:hover,
+.navtacular-theme-simple.navtacular-variant-dark .navtacular-link:focus {
   background: #a5a5a6;
 }
 .navtacular-theme-simple .navtacular-menu {
@@ -493,12 +521,14 @@ html.nav-visible {
   display: block;
   padding: 6px 12px;
 }
-.navtacular-theme-simple .navtacular-menu a:hover {
+.navtacular-theme-simple .navtacular-menu a:hover,
+.navtacular-theme-simple .navtacular-menu a:focus {
   background: #eee;
   text-decoration: none;
 }
 @media (min-width: 630px) {
-  .navtacular-theme-simple .navtacular-item:hover > .navtacular-menu {
+  .navtacular-theme-simple .navtacular-item:hover > .navtacular-menu,
+  .navtacular-theme-simple .navtacular-item.focus > .navtacular-menu {
     -webkit-transform: rotateX(0deg);
     -ms-transform: rotateX(0deg);
     transform: rotateX(0deg);
@@ -560,7 +590,9 @@ html.nav-visible {
   }
 }
 .navtacular-theme-blue .navtacular-item:hover > .navtacular-link,
-.navtacular-theme-blue .navtacular-link:hover {
+.navtacular-theme-blue .navtacular-item.focus > .navtacular-link,
+.navtacular-theme-blue .navtacular-link:hover,
+.navtacular-theme-blue .navtacular-link:focus {
   background-color: #8daacd;
   background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
   background-image: radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
@@ -584,6 +616,7 @@ html.nav-visible {
 .navtacular-theme-blue .navtacular-menu a {
   color: #666;
 }
-.navtacular-theme-blue .navtacular-menu a:hover {
+.navtacular-theme-blue .navtacular-menu a:hover,
+.navtacular-theme-blue .navtacular-menu a:focus {
   color: #333;
 }

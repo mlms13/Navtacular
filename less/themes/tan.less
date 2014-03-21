@@ -46,7 +46,10 @@
         }
     }
     .navtacular-item:hover > .navtacular-link,
-    .navtacular-link:hover {
+    .navtacular-item:focus > .navtacular-link,
+    .navtacular-item.focus > .navtacular-link,
+    .navtacular-link:hover,
+    .navtacular-link:focus {
         background-color: @text;
         border-color: @text;
         color: @text-hover;
@@ -71,7 +74,8 @@
         a {
             color: #666;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 color: lighten(@text, 5%);
             }
         }

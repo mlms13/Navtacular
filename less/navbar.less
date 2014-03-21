@@ -63,9 +63,12 @@
 
     // when the parent is hovered, or when the a is hovered
     :hover > &,
-    &:hover {
+    .focus > &,
+    &:hover,
+    &:focus {
         background-color: #444;
         color: #fff;
+        outline: none;
         text-decoration: none;
         transition: 100ms;
     }

@@ -74,6 +74,7 @@
 
         return this.each(function () {
             var $navbar = $(this), // the current navbar while looping through each
+                $item = $navbar.find('.navtacular-item'),
                 $menus = $navbar.find('.navtacular-menu'),
                 $navParent;
 
@@ -93,6 +94,7 @@
             } else {
                 $navParent = $(settings.navParent);
             }
+
             // add the "navtacular-parent" class to the parent element
             if (!$navParent.hasClass('navtacular-parent')) {
                 $navParent.addClass('navtacular-parent');
@@ -107,8 +109,21 @@
                 }
             });
 
+            // allow links to stay open when keyboard navigating
+            $item.each(function () {
+                var $self = $(this),
+                    $link = $self.find('a');
+
+                $link.focus(function () {
+                    $self.addClass('focus');
+                }).blur(function () {
+                    $self.removeClass('focus');
+                });
+            });
+
             handleMobileNav();
             alignRightMenus();
+
             $(window).on('resize', function () {
                 handleMobileNav();
                 alignRightMenus();
