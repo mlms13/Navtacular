@@ -26,9 +26,6 @@
   }
   .flexbox .navtacular-list,
   .flexboxlegacy .navtacular-list {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -38,9 +35,8 @@
   }
   .flexbox .navtacular-item,
   .flexboxlegacy .navtacular-item {
+    display: block;
     -webkit-box-flex: 1;
-    -webkit-flex: auto;
-    -ms-flex: auto;
     flex: auto;
   }
   .no-display-table .navtacular-item {
@@ -57,7 +53,6 @@
   padding-right: 16px;
   position: relative;
   text-decoration: none;
-  -webkit-transition: 200ms;
   transition: 200ms;
 }
 :hover > .navtacular-link,
@@ -68,7 +63,6 @@
   color: #fff;
   outline: none;
   text-decoration: none;
-  -webkit-transition: 100ms;
   transition: 100ms;
 }
 @media (min-width: 630px) {
@@ -84,8 +78,8 @@
 }
 .navtacular-link .icon-caret-down {
   color: #999;
-  position: absolute;
   line-height: 36px;
+  position: absolute;
   right: 15px;
   top: 4px;
 }
@@ -99,6 +93,8 @@
   font-size: 21px;
   line-height: 1.4;
   margin: 8px 0;
+  min-height: 36px;
+  overflow: hidden;
   padding: 8px 15px;
 }
 .navtacular-label .icon-reorder:before {
@@ -119,7 +115,6 @@
   height: 0;
   opacity: 0;
   position: absolute;
-  -webkit-transition: opacity 400ms, height 0 400ms, width 0 400ms;
   transition: opacity 400ms, height 0 400ms, width 0 400ms;
   width: 0;
   z-index: 9999;
@@ -130,7 +125,6 @@
   opacity: 1;
   right: 0;
   top: 0;
-  -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
   width: 100%;
   z-index: 999;
@@ -143,8 +137,6 @@
   }
 }
 .navtacular-parent {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   left: 0;
   min-height: 100%;
@@ -170,8 +162,6 @@ html.nav-visible {
 .navtacular-menu {
   background: #fff;
   background: rgba(255, 255, 255, 0.97);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: none;
   font-size: 12.6px;
@@ -181,23 +171,18 @@ html.nav-visible {
 @media (min-width: 630px) {
   .navtacular-menu {
     border: 1px solid #000;
-    -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     display: block;
     display: table;
     opacity: 0;
     min-width: 160px;
     position: absolute;
-    -webkit-transition: opacity 300ms linear, visibility 0 linear 300ms;
     transition: opacity 300ms linear, visibility 0 linear 300ms;
     visibility: hidden;
     z-index: 100;
   }
   .flexbox .navtacular-menu,
   .flexboxlegacy .navtacular-menu {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -212,7 +197,6 @@ html.nav-visible {
   .focus > .navtacular-menu {
     display: table;
     opacity: 1;
-    -webkit-transition: opacity 150ms linear;
     transition: opacity 150ms linear;
     visibility: visible;
   }
@@ -222,9 +206,6 @@ html.nav-visible {
   .flexboxlegacy :hover > .navtacular-menu,
   .flexboxlegacy :focus > .navtacular-menu,
   .flexboxlegacy .focus > .navtacular-menu {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
   }
   .no-display-table :hover > .navtacular-menu,
@@ -241,8 +222,6 @@ html.nav-visible {
   .flexbox .navtacular-menu .navtacular-menu-group,
   .flexboxlegacy .navtacular-menu .navtacular-menu-group {
     -webkit-box-flex: 1;
-    -webkit-flex: auto;
-    -ms-flex: auto;
     flex: auto;
   }
   .no-display-table .navtacular-menu .navtacular-menu-group {
@@ -290,16 +269,12 @@ html.nav-visible {
 }
 .navtacular-theme-dark .navtacular-label {
   background: #a6a6a6;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   color: #fff;
 }
 .navtacular-theme-dark .navtacular-list {
   background-color: #666666;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.3));
   background-image: linear-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.3));
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 .navtacular-theme-dark .navtacular-link {
@@ -332,9 +307,7 @@ html.nav-visible {
 .navtacular-theme-dark .navtacular-link:hover,
 .navtacular-theme-dark .navtacular-link:focus {
   background-color: #444444;
-  background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
   background-image: radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
-  -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
   color: #ffffff;
 }
@@ -368,13 +341,11 @@ html.nav-visible {
 }
 .navtacular-theme-tan .navtacular-label {
   background: #eae8db;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   color: #00684d;
 }
 .navtacular-theme-tan .navtacular-list {
   background-color: #eae8db;
-  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .navtacular-theme-tan .navtacular-link {
@@ -476,7 +447,6 @@ html.nav-visible {
 .navtacular-theme-simple .navtacular-link:focus {
   background: #009374;
   color: #fff;
-  -webkit-transition: color 500ms ease-out, background 200ms ease-in;
   transition: color 500ms ease-out, background 200ms ease-in;
 }
 .navtacular-theme-simple .navtacular-item:hover > .navtacular-link strong,
@@ -494,22 +464,14 @@ html.nav-visible {
 .navtacular-theme-simple .navtacular-menu {
   background: #fff;
   border: 0;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 @media (min-width: 630px) {
   .navtacular-theme-simple .navtacular-menu {
-    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f6f6f6));
-    background: -webkit-linear-gradient(#ffffff, #f6f6f6);
     background: linear-gradient(#ffffff, #f6f6f6);
     border-bottom: 2px solid #ddd;
-    -webkit-transform-origin: 50% 0%;
-    -ms-transform-origin: 50% 0%;
     transform-origin: 50% 0%;
-    -webkit-transform: rotateX(90deg);
-    -ms-transform: rotateX(90deg);
     transform: rotateX(90deg);
-    -webkit-transition: 300ms;
     transition: 300ms;
   }
 }
@@ -529,24 +491,19 @@ html.nav-visible {
 @media (min-width: 630px) {
   .navtacular-theme-simple .navtacular-item:hover > .navtacular-menu,
   .navtacular-theme-simple .navtacular-item.focus > .navtacular-menu {
-    -webkit-transform: rotateX(0deg);
-    -ms-transform: rotateX(0deg);
     transform: rotateX(0deg);
     opacity: 1;
   }
 }
 .navtacular-theme-blue .navtacular-label {
   background: #6d92bf;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   color: #fff;
+  min-height: 35px;
 }
 .navtacular-theme-blue .navtacular-list {
   background: #6d92bf;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.3)));
-  background-image: -webkit-linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
   background-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.3));
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 @media (min-width: 630px) {
@@ -594,9 +551,7 @@ html.nav-visible {
 .navtacular-theme-blue .navtacular-link:hover,
 .navtacular-theme-blue .navtacular-link:focus {
   background-color: #8daacd;
-  background-image: -webkit-radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
   background-image: radial-gradient(center 120px, ellipse cover, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.08) 50%, transparent 80%);
-  -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 .navtacular-theme-blue .navtacular-menu {

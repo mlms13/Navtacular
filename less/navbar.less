@@ -40,6 +40,7 @@
 
         .flexbox &,
         .flexboxlegacy & {
+            display: block; // fixes firefox bug
             -webkit-box-flex: 1; // for iOS Safari 6
             flex: auto;
         }
@@ -103,6 +104,7 @@
     line-height: 1.4;
     margin: 8px 0;
     min-height: @navHeight;
+    overflow: hidden; // clearfix
     padding: 8px 15px;
 
     .icon-reorder:before {
