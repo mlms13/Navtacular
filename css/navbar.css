@@ -35,7 +35,7 @@
   }
   .flexbox .navtacular-item,
   .flexboxlegacy .navtacular-item {
-    display: block;
+    display: inline-block;
     -webkit-box-flex: 1;
     flex: auto;
   }
