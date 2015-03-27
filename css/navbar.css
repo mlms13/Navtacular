@@ -12,6 +12,7 @@
   width: 200px;
   position: absolute;
   top: 0;
+  z-index: 1000;
 }
 .no-js .navtacular-list {
   left: auto;
